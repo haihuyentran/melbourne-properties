@@ -29,6 +29,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
+app.get('/', (req, res) => {
+    res.redirect(302, '/melbourne-properties.html');
+});
+
 // API endpoint to get all suburbs data
 app.get('/api/suburbs', (req, res) => {
     if (!suburbData) {
