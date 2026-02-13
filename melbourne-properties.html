@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Property Finder</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        #map {
+            flex: 1;
+            height: 100%;
+        }
+        
+        .sidebar {
+            width: 450px;
+            background: white;
+            overflow-y: auto;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar-content {
+            padding: 30px;
+        }
+        
+        .criteria-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .criteria-box h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .criteria-box ul {
+            list-style: none;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .criteria-box li {
+            padding: 4px 0;
+        }
+        
+        .criteria-box li:before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .instruction {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .suburb-info {
+            display: none;
+        }
+        
+        .suburb-info.active {
+            display: block;
+        }
+        
+        .suburb-header {
+            border-bottom: 3px solid #2196f3;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .suburb-name {
+            font-size: 28px;
+            color: #1976d2;
+            margin-bottom: 5px;
+        }
+        
+        .recommendation {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        
+        .recommendation.good {
+            background: #c8e6c9;
+            border-left: 4px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        .recommendation.moderate {
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            color: #f57f17;
+        }
+        
+        .recommendation.poor {
+            background: #ffcdd2;
+            border-left: 4px solid #f44336;
+            color: #c62828;
+        }
+        
+        .info-section {
+            margin: 20px 0;
+        }
+        
+        .info-section h3 {
+            color: #1976d2;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .info-item {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        .info-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        
+        .info-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .chart-container {
+            margin: 20px 0;
+            height: 200px;
+        }
+        
+        .listing {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .listing-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 5px;
+        }
+        
+        .listing-details {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .listing-address {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #2196f3;
+            color: white;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        
+        .leaflet-popup-content {
+            font-size: 14px;
+            min-width: 200px;
+        }
+        
+        .popup-suburb {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #1976d2;
+        }
+        
+        .popup-price {
+            color: #666;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e0e0e0;
+            border-top: 4px solid #2196f3;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .data-source {
+            background: #fff3e0;
+            border: 1px solid #ffcc80;
+            border-radius: 4px;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            color: #e65100;
+        }
+        
+        .listing a:hover {
+            text-decoration: underline;
+        }
+        
+        .api-status {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            font-size: 12px;
+            z-index: 1000;
+        }
+        
+        .api-status.connected {
+            border-left: 4px solid #4caf50;
+        }
+        
+        .api-status.disconnected {
+            border-left: 4px solid #f44336;
+        }
+
+        .assess-listing-box {
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .assess-listing-box h3 {
+            color: #1976d2;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .assess-url-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .assess-url-row input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .assess-url-row input:focus {
+            outline: none;
+            border-color: #2196f3;
+        }
+        .assess-url-row button {
+            padding: 10px 16px;
+            background: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .assess-url-row button:hover {
+            background: #1976d2;
+        }
+        .assess-url-row button:disabled {
+            background: #90caf9;
+            cursor: not-allowed;
+        }
+        .assess-note {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .help-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .help-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            margin-left: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #666;
+            background: #e0e0e0;
+            border-radius: 50%;
+            cursor: help;
+        }
+        .help-wrapper:hover .help-icon {
+            color: #1976d2;
+            background: #e3f2fd;
+        }
+        .instruction-tooltip {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            margin-top: 6px;
+            padding: 10px 12px;
+            width: 280px;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 100;
+        }
+        .help-wrapper:hover .instruction-tooltip {
+            display: block;
+        }
+        .tooltip-fake-btn {
+            display: inline-block;
+            margin: 0 2px;
+            padding: 2px 6px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #1976d2;
+            background: #e3f2fd;
+            border: 1px solid #1976d2;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .tooltip-fake-btn:hover {
+            background: #bbdefb;
+        }
+        .btn-arrow {
+            margin-left: 6px;
+            font-size: 14px;
+        }
+        .assess-manual-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            background: #2e7d32;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        .assess-manual-btn:hover {
+            background: #1b5e20;
+        }
+        .assess-result {
+            margin-top: 16px;
+            padding: 16px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            display: none;
+        }
+        .assess-result.visible {
+            display: block;
+        }
+        .assess-result h4 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        .assess-criteria-list {
+            list-style: none;
+        }
+        .assess-criteria-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .assess-criteria-list li:last-child {
+            border-bottom: none;
+        }
+        .assess-criteria-list .criteria-pass::before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .assess-criteria-list .criteria-fail::before {
+            content: "✗";
+            color: #f44336;
+            font-weight: bold;
+        }
+        .assess-criteria-list .criteria-unknown::before {
+            content: "?";
+            color: #ff9800;
+            font-weight: bold;
+        }
+        .assess-summary {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .assess-summary.good {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        .assess-summary.moderate {
+            background: #fff9c4;
+            color: #f57f17;
+        }
+        .assess-summary.poor {
+            background: #ffcdd2;
+            color: #c62828;
+        }
+        .assess-listing-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #1976d2;
+            font-size: 14px;
+        }
+        .manual-form {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .manual-form h4 {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .manual-form .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .manual-form label {
+            font-size: 12px;
+            color: #555;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .manual-form input, .manual-form select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .manual-form button.secondary {
+            background: #757575;
+            margin-top: 8px;
+        }
+        .manual-form button.secondary:hover {
+            background: #616161;
+        }
+        .reset-btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 16px;
+            padding: 8px 12px;
+            font-size: 13px;
+            color: #666;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .reset-btn:hover {
+            background: #eee;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="map"></div>
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <h1>Melbourne Property Finder</h1>
+                <p class="instruction">Click on any suburb on the map to view detailed information</p>
+                
+                <div class="criteria-box">
+                    <h3>Your Search Criteria</h3>
+                    <ul>
+                        <li>Budget: $1.0M - $1.4M AUD</li>
+                        <li>Property: House or stand-alone unit</li>
+                        <li>4 bedrooms, 2+ bathrooms, 1+ garage</li>
+                        <li>Garden required, no pool</li>
+                        <li>Within 1h 15min to Southern Cross & Collingwood</li>
+                    </ul>
+                </div>
+                <button type="button" id="resetAssessmentBtn" class="reset-btn">Reset</button>
+
+                <div class="assess-listing-box">
+                    <h3>Assess a listing</h3>
+                    <div class="manual-form">
+                        <h4>Paste from listing page <span class="help-wrapper">
+                            <span class="help-icon">?</span>
+                            <span class="instruction-tooltip">1. Open the listing on Domain or realestate.com.au in another tab.<br>2. Select the key details on the page (price, address, beds, baths, parking).<br>3. Copy with Cmd+C (Mac) or Ctrl+C (Windows).<br>4. Click <button type="button" class="tooltip-fake-btn" id="tooltipPasteBtn">Paste from listing page</button> button right below to fill the form, then click &lsquo;Assess manual entry&rsquo;.</span>
+                        </span></h4>
+                        <button type="button" id="pasteFromListingBtn" class="secondary" style="margin-bottom:12px;">Paste from listing page <span class="btn-arrow">→</span></button>
+                        <div id="assessResult" class="assess-result">
+                            <!-- Filled when you click "Assess manual entry" -->
+                        </div>
+                        <div class="form-grid">
+                            <div>
+                                <label>Price (AUD)</label>
+                                <input type="number" id="manualPrice" placeholder="1200000" min="0" step="10000" />
+                            </div>
+                            <div>
+                                <label>Suburb</label>
+                                <input type="text" id="manualSuburb" placeholder="e.g. Kew" />
+                            </div>
+                            <div>
+                                <label>Bedrooms</label>
+                                <input type="number" id="manualBeds" placeholder="4" min="0" max="20" />
+                            </div>
+                            <div>
+                                <label>Bathrooms</label>
+                                <input type="number" id="manualBaths" placeholder="2" min="0" max="20" />
+                            </div>
+                            <div>
+                                <label>Garage / car spaces</label>
+                                <input type="number" id="manualGarage" placeholder="1" min="0" max="10" />
+                            </div>
+                            <div>
+                                <label>Property type</label>
+                                <select id="manualType">
+                                    <option value="">Select...</option>
+                                    <option value="House">House</option>
+                                    <option value="Unit">Unit</option>
+                                    <option value="Townhouse">Townhouse</option>
+                                    <option value="Villa">Villa</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Garden</label>
+                                <select id="manualGarden">
+                                    <option value="unknown">Unknown</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Pool</label>
+                                <select id="manualPool">
+                                    <option value="unknown">Unknown</option>
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" id="assessManualBtn" class="assess-manual-btn">Assess manual entry</button>
+                        <p id="pasteFromListingStatus" style="font-size:12px;color:#666;margin-top:8px;min-height:18px;"></p>
+                    </div>
+
+                    <div class="transit-box" style="margin-top:20px;padding:16px;background:#f9f9f9;border-radius:8px;border:1px solid #e0e0e0;">
+                        <h4 style="margin-bottom:8px;color:#1976d2;">Transit to Southern Cross & Rupert St Collingwood</h4>
+                        <p class="assess-note" style="margin-bottom:10px;">Shown automatically after pasting a listing. Or enter a suburb/address and click Get transit for nearest stops and estimated commute times.</p>
+                        <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+                            <input type="text" id="transitAddressInput" placeholder="e.g. South Morang or 5 Wilton Vale Road, South Morang" style="flex:1;min-width:200px;padding:10px;border:1px solid #ccc;border-radius:6px;" />
+                            <button type="button" id="getTransitBtn" style="padding:10px 16px;background:#1976d2;color:white;border:none;border-radius:6px;cursor:pointer;font-weight:500;">Get transit</button>
+                        </div>
+                        <div id="transitResult" style="font-size:14px;color:#333;"></div>
+                    </div>
+                </div>
+                
+                <div class="data-source" id="dataSource">
+                    <strong>Data Source:</strong> Victorian Property Sales Report<br>
+                    <span style="font-size:11px;">Official government property sales data</span>
+                </div>
+                
+                <div class="suburb-info" id="suburbInfo">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API Configuration - use relative path for production
+        const API_BASE = '/api';
+
+        // Global data cache
+        let allSuburbsData = null;
+        let metadata = null;
+
+        // Commute times (static - could be enhanced with Google Maps API later)
+        const commuteTimes = {
+            'Glen Waverley': { southernCross: '45 min by train', collingwood: '55 min' },
+            'Box Hill': { southernCross: '35 min by train', collingwood: '50 min' },
+            'Doncaster': { southernCross: '50 min by bus', collingwood: '40 min' },
+            'Ringwood': { southernCross: '45 min by train', collingwood: '1h 10min' },
+            'Camberwell': { southernCross: '25 min by train', collingwood: '20 min' },
+            'Moorabbin': { southernCross: '35 min by train', collingwood: '1h' },
+            'Preston': { southernCross: '25 min by train', collingwood: '25 min' },
+            'Blackburn': { southernCross: '40 min by train', collingwood: '58 min' },
+            'Reservoir': { southernCross: '30 min by train', collingwood: '35 min' },
+            'Coburg': { southernCross: '25 min by train', collingwood: '30 min' },
+            'Brunswick': { southernCross: '20 min by train', collingwood: '25 min' },
+            'Footscray': { southernCross: '15 min by train', collingwood: '30 min' },
+            'Sunshine': { southernCross: '25 min by train', collingwood: '40 min' },
+            'St Albans': { southernCross: '35 min by train', collingwood: '50 min' },
+            'Werribee': { southernCross: '45 min by train', collingwood: '1h' },
+            'Point Cook': { southernCross: '50 min by bus', collingwood: '1h 10min' },
+            'Craigieburn': { southernCross: '45 min by train', collingwood: '55 min' },
+            'South Morang': { southernCross: '50 min by train', collingwood: '45 min' },
+            'Epping': { southernCross: '45 min by train', collingwood: '40 min' },
+            'Bundoora': { southernCross: '40 min by bus', collingwood: '35 min' },
+            'Heidelberg': { southernCross: '30 min by train', collingwood: '25 min' },
+            'Ivanhoe': { southernCross: '25 min by train', collingwood: '20 min' },
+            'Kew': { southernCross: '20 min by bus', collingwood: '15 min' },
+            'Hawthorn': { southernCross: '15 min by train', collingwood: '15 min' },
+            'Malvern': { southernCross: '20 min by train', collingwood: '25 min' },
+            'Caulfield': { southernCross: '20 min by train', collingwood: '30 min' },
+            'Bentleigh': { southernCross: '30 min by train', collingwood: '40 min' },
+            'Cheltenham': { southernCross: '35 min by train', collingwood: '45 min' },
+            'Mentone': { southernCross: '40 min by train', collingwood: '50 min' },
+            'Frankston': { southernCross: '55 min by train', collingwood: '1h 10min' },
+            'Clayton': { southernCross: '35 min by train', collingwood: '45 min' },
+            'Dandenong': { southernCross: '45 min by train', collingwood: '55 min' },
+            'Berwick': { southernCross: '50 min by train', collingwood: '1h' },
+            'Croydon': { southernCross: '55 min by train', collingwood: '1h 5min' },
+            'Lilydale': { southernCross: '60 min by train', collingwood: '1h 10min' },
+            'Belgrave': { southernCross: '65 min by train', collingwood: '1h 15min' },
+            'Williamstown': { southernCross: '25 min by train', collingwood: '35 min' },
+            'Altona': { southernCross: '35 min by train', collingwood: '45 min' },
+            'Newport': { southernCross: '20 min by train', collingwood: '30 min' },
+            'Essendon': { southernCross: '20 min by train', collingwood: '30 min' },
+            'Moonee Ponds': { southernCross: '15 min by train', collingwood: '25 min' },
+            'Pascoe Vale': { southernCross: '25 min by train', collingwood: '30 min' },
+            'Niddrie': { southernCross: '25 min by bus', collingwood: '35 min' },
+            'Northcote': { southernCross: '20 min by train', collingwood: '15 min' },
+            'Thornbury': { southernCross: '22 min by train', collingwood: '18 min' },
+            'Fairfield': { southernCross: '20 min by train', collingwood: '15 min' },
+            'Mount Waverley': { southernCross: '40 min by train', collingwood: '50 min' },
+            'Mulgrave': { southernCross: '45 min by bus', collingwood: '55 min' },
+            'Wheelers Hill': { southernCross: '50 min by bus', collingwood: '1h' },
+            'Mill Park': { southernCross: '40 min by train', collingwood: '35 min' },
+            'Doreen': { southernCross: '55 min by bus', collingwood: '50 min' },
+            'Mernda': { southernCross: '55 min by train', collingwood: '50 min' }
+        };
+
+        // Fetch all suburb data from local API
+        async function fetchAllSuburbData() {
+            try {
+                const response = await fetch(`${API_BASE}/suburbs`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const data = await response.json();
+                allSuburbsData = data.suburbs;
+                metadata = data.metadata;
+                
+                // Update data source display
+                const dataSourceEl = document.getElementById('dataSource');
+                if (dataSourceEl && metadata) {
+                    dataSourceEl.innerHTML = `
+                        <strong>Data:</strong> ${metadata.source}<br>
+                        <span style="font-size:11px;">Quarter: ${metadata.dataQuarter} | Updated: ${metadata.lastUpdated}</span>
+                    `;
+                }
+                
+                return true;
+            } catch (error) {
+                console.error('Failed to load suburb data:', error);
+                return false;
+            }
+        }
+
+        // Calculate match score based on user criteria
+        function calculateMatchScore(suburb) {
+            let score = 50; // Base score
+            const price = suburb.medianPrice;
+
+            // Price scoring (max 35 points)
+            if (price >= 1000000 && price <= 1400000) {
+                score += 35;
+            } else if (price < 1000000) {
+                score += 30; // Under budget is good
+            } else if (price <= 1500000) {
+                score += 20; // Slightly over
+            } else if (price <= 1700000) {
+                score += 10; // More over
+            }
+
+            // Transport scoring (max 15 points)
+            if (suburb.transport?.trainStation) {
+                score += 15;
+            } else {
+                score += 5; // Bus only
+            }
+
+            return Math.min(score, 100);
+        }
+
+        function getColorByMatch(score) {
+            if (score >= 80) return '#4caf50';
+            if (score >= 65) return '#fbc02d';
+            return '#f44336';
+        }
+
+        // Store markers for updating
+        const suburbMarkers = {};
+
+        // Initialize map centered on Melbourne
+        const map = L.map('map').setView([-37.8136, 144.9631], 11);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Reference point icons
+        const southernCrossIcon = L.divIcon({
+            className: 'custom-icon',
+            html: '<div style="background:#e74c3c;color:white;padding:5px;border-radius:50%;width:12px;height:12px;"></div>',
+            iconSize: [12, 12]
+        });
+
+        const collingwoodIcon = L.divIcon({
+            className: 'custom-icon',
+            html: '<div style="background:#9b59b6;color:white;padding:5px;border-radius:50%;width:12px;height:12px;"></div>',
+            iconSize: [12, 12]
+        });
+
+        L.marker([-37.8183, 144.9528], {icon: southernCrossIcon}).addTo(map)
+            .bindPopup('<b>Southern Cross Station</b>');
+        
+        L.marker([-37.8041, 144.9886], {icon: collingwoodIcon}).addTo(map)
+            .bindPopup('<b>30 Rupert St, Collingwood</b>');
+
+        // Initialize suburb markers after data loads
+        async function initializeMarkers() {
+            const loaded = await fetchAllSuburbData();
+            if (!loaded) {
+                console.error('Failed to load suburb data');
+                return;
+            }
+
+            Object.entries(allSuburbsData).forEach(([suburbName, suburb]) => {
+                const matchScore = calculateMatchScore(suburb);
+                
+                const marker = L.circleMarker(suburb.coords, {
+                    radius: 15,
+                    fillColor: getColorByMatch(matchScore),
+                    color: '#fff',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.7
+                }).addTo(map);
+
+                marker.bindPopup(`
+                    <div class="popup-suburb">${suburbName}</div>
+                    <div class="popup-price">Median: $${(suburb.medianPrice / 1000).toFixed(0)}k</div>
+                    <div style="margin-top:5px;color:#666;">Match: ${matchScore}%</div>
+                    <div style="font-size:11px;color:#999;margin-top:3px;">Annual change: ${suburb.annualChange > 0 ? '+' : ''}${suburb.annualChange}%</div>
+                `);
+
+                marker.on('click', () => {
+                    displaySuburbInfo(suburbName, suburb, matchScore);
+                });
+
+                suburbMarkers[suburbName] = marker;
+            });
+
+            // Update API status
+            const apiStatus = document.querySelector('.api-status');
+            if (apiStatus) {
+                apiStatus.className = 'api-status connected';
+                apiStatus.innerHTML = `● Data loaded: ${Object.keys(allSuburbsData).length} suburbs`;
+                setTimeout(() => {
+                    apiStatus.style.opacity = '0';
+                    apiStatus.style.transition = 'opacity 0.5s';
+                }, 3000);
+            }
+        }
+
+        let priceChart = null;
+
+        function displaySuburbInfo(name, suburb, matchScore) {
+            const info = document.getElementById('suburbInfo');
+            
+            // Destroy existing chart if it exists
+            if (priceChart) {
+                priceChart.destroy();
+            }
+            
+            const recommendation = getRecommendation(matchScore);
+            const commute = commuteTimes[name] || { southernCross: 'N/A', collingwood: 'N/A' };
+            
+            // Format schools
+            const schoolsList = suburb.schools.map(s => 
+                `<div style="padding:5px 0;color:#555;">• ${s.name} <span style="color:#888;font-size:12px;">(${s.type}, ${s.rating})</span></div>`
+            ).join('');
+            
+            // Format transport
+            const transportInfo = suburb.transport.trainStation 
+                ? `${suburb.transport.trainLine} line (${suburb.transport.trainStation} station). Bus routes: ${suburb.transport.busRoutes.join(', ')}`
+                : `Bus routes: ${suburb.transport.busRoutes.join(', ')}. No direct train.`;
+            
+            // Format demographics
+            const demo = suburb.demographics;
+            const demographicsInfo = `Population: ${demo.population.toLocaleString()}, Median age: ${demo.medianAge}, Family households: ${demo.familyHouseholds}, Owner-occupied: ${demo.ownerOccupied}, Born overseas: ${demo.bornOverseas}`;
+            
+            info.innerHTML = `
+                <div class="suburb-header">
+                    <div class="suburb-name">${name}</div>
+                    <div style="color:#666;font-size:14px;">Match Score: ${matchScore}% | ${suburb.municipality}</div>
+                </div>
+
+                <div class="recommendation ${recommendation.class}">
+                    <strong>${recommendation.title}</strong><br>
+                    ${recommendation.message}
+                </div>
+
+                <div class="info-section">
+                    <h3>Price & Property</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">Median House Price</div>
+                            <div class="info-value">$${(suburb.medianPrice / 1000).toFixed(0)}k</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Annual Change</div>
+                            <div class="info-value" style="color:${suburb.annualChange >= 0 ? '#4caf50' : '#f44336'}">
+                                ${suburb.annualChange >= 0 ? '+' : ''}${suburb.annualChange}%
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Median Unit Price</div>
+                            <div class="info-value">$${(suburb.medianPriceUnit / 1000).toFixed(0)}k</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Sales (Last Year)</div>
+                            <div class="info-value">${suburb.salesCount}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>10-Year Price Trend</h3>
+                    <div class="chart-container">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Commute Times</h3>
+                    <div class="info-item" style="margin-bottom:10px;">
+                        <div class="info-label">To Southern Cross Station</div>
+                        <div class="info-value" style="font-size:16px;">${commute.southernCross}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">To Collingwood</div>
+                        <div class="info-value" style="font-size:16px;">${commute.collingwood}</div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Schools</h3>
+                    ${schoolsList}
+                </div>
+
+                <div class="info-section">
+                    <h3>Public Transport</h3>
+                    <div style="color:#555;">${transportInfo}</div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Demographics</h3>
+                    <div style="color:#555;">${demographicsInfo}</div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Amenities</h3>
+                    <div style="color:#555;">${suburb.amenities.join(' • ')}</div>
+                </div>
+                
+                <div style="margin-top:20px;padding:15px;background:#e3f2fd;border-radius:8px;">
+                    <a href="https://www.domain.com.au/sale/${name.toLowerCase().replace(' ', '-')}-vic-${suburb.postcode}/?bedrooms=4-any&bathrooms=2-any&price=1000000-1400000" 
+                       target="_blank" 
+                       style="color:#1976d2;font-weight:500;text-decoration:none;">
+                        View current listings on Domain.com.au →
+                    </a>
+                </div>
+            `;
+            
+            info.classList.add('active');
+            
+            // Create price trend chart
+            const ctx = document.getElementById('priceChart').getContext('2d');
+            const years = Object.keys(suburb.priceHistory);
+            const prices = Object.values(suburb.priceHistory);
+            
+            priceChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [{
+                        label: 'Median Price',
+                        data: prices,
+                        borderColor: '#2196f3',
+                        backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + (value / 1000000).toFixed(1) + 'M';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function getRecommendation(score) {
+            if (score >= 80) {
+                return {
+                    class: 'good',
+                    title: '✓ Excellent Match',
+                    message: 'This suburb fits your budget with good transport and amenities. Highly recommended for your search.'
+                };
+            } else if (score >= 65) {
+                return {
+                    class: 'moderate',
+                    title: '⚠ Moderate Match',
+                    message: 'This suburb partially meets your criteria. Median price may be above budget or transport options limited.'
+                };
+            } else {
+                return {
+                    class: 'poor',
+                    title: '✗ Over Budget',
+                    message: 'This suburb\'s median price exceeds your budget. Consider nearby suburbs for better value.'
+                };
+            }
+        }
+
+        // --- Assess a listing (URL or manual entry) ---
+        const BUDGET_MIN = 1000000;
+        const BUDGET_MAX = 1400000;
+        const MAX_COMMUTE_MIN = 75; // 1h 15min
+
+        function parseCommuteToMinutes(str) {
+            if (!str || str === 'N/A') return null;
+            const hMatch = str.match(/(\d+)\s*h\s*(\d*)\s*min?/i);
+            if (hMatch) {
+                const h = parseInt(hMatch[1], 10);
+                const m = (hMatch[2] && hMatch[2].trim()) ? parseInt(hMatch[2], 10) : 0;
+                return h * 60 + m;
+            }
+            const minMatch = str.match(/(\d+)\s*min/i);
+            if (minMatch) return parseInt(minMatch[1], 10);
+            return null;
+        }
+
+        function assessListing(normalized) {
+            const c = [];
+            let score = 50;
+
+            const price = normalized.price;
+            const inBudget = price != null && price >= BUDGET_MIN && price <= BUDGET_MAX;
+            const underBudget = price != null && price < BUDGET_MIN;
+            const overBudget = price != null && price > BUDGET_MAX;
+            if (price == null) {
+                c.push({ text: 'Budget $1.0M – $1.4M', status: 'unknown', detail: 'Price not available' });
+            } else if (inBudget) {
+                c.push({ text: 'Budget $1.0M – $1.4M', status: 'pass', detail: `$${(price / 1e6).toFixed(2)}M` });
+                score += 25;
+            } else if (underBudget) {
+                c.push({ text: 'Budget $1.0M – $1.4M', status: 'pass', detail: `Under budget: $${(price / 1e6).toFixed(2)}M` });
+                score += 20;
+            } else {
+                c.push({ text: 'Budget $1.0M – $1.4M', status: 'fail', detail: `Over budget: $${(price / 1e6).toFixed(2)}M` });
+                score -= 10;
+            }
+
+            const houseOrUnit = /house|unit|villa|townhouse/i.test(normalized.propertyType);
+            const typeOk = normalized.propertyType ? houseOrUnit : null;
+            if (typeOk === true) {
+                c.push({ text: 'House or stand-alone unit', status: 'pass', detail: normalized.propertyType });
+                score += 10;
+            } else if (typeOk === false) {
+                c.push({ text: 'House or stand-alone unit', status: 'fail', detail: normalized.propertyType || 'Unknown type' });
+                score -= 5;
+            } else {
+                c.push({ text: 'House or stand-alone unit', status: 'unknown', detail: 'Not specified' });
+            }
+
+            const bedsOk = normalized.bedrooms != null && normalized.bedrooms >= 4;
+            const bathsOk = normalized.bathrooms != null && normalized.bathrooms >= 2;
+            const garageOk = normalized.garage != null && normalized.garage >= 1;
+            if (normalized.bedrooms != null) {
+                c.push({ text: '4+ bedrooms', status: bedsOk ? 'pass' : 'fail', detail: `${normalized.bedrooms} bedrooms` });
+                if (bedsOk) score += 10;
+            } else {
+                c.push({ text: '4+ bedrooms', status: 'unknown', detail: 'Not specified' });
+            }
+            if (normalized.bathrooms != null) {
+                c.push({ text: '2+ bathrooms', status: bathsOk ? 'pass' : 'fail', detail: `${normalized.bathrooms} bathrooms` });
+                if (bathsOk) score += 5;
+            } else {
+                c.push({ text: '2+ bathrooms', status: 'unknown', detail: 'Not specified' });
+            }
+            if (normalized.garage != null) {
+                c.push({ text: '1+ garage', status: garageOk ? 'pass' : 'fail', detail: `${normalized.garage} car space(s)` });
+                if (garageOk) score += 5;
+            } else {
+                c.push({ text: '1+ garage', status: 'unknown', detail: 'Not specified' });
+            }
+
+            if (normalized.garden === 'yes') {
+                c.push({ text: 'Garden required', status: 'pass', detail: 'Yes' });
+                score += 5;
+            } else if (normalized.garden === 'no') {
+                c.push({ text: 'Garden required', status: 'fail', detail: 'No' });
+                score -= 5;
+            } else {
+                c.push({ text: 'Garden required', status: 'unknown', detail: 'Unknown' });
+            }
+            if (normalized.pool === 'yes') {
+                c.push({ text: 'No pool', status: 'fail', detail: 'Has pool' });
+                score -= 10;
+            } else if (normalized.pool === 'no') {
+                c.push({ text: 'No pool', status: 'pass', detail: 'No pool' });
+                score += 5;
+            } else {
+                c.push({ text: 'No pool', status: 'unknown', detail: 'Unknown' });
+            }
+
+            const suburbName = normalized.suburb ? normalized.suburb.trim() : '';
+            const commuteKey = suburbName ? Object.keys(commuteTimes).find(k => k.toLowerCase() === suburbName.toLowerCase()) : null;
+            const commute = commuteKey ? commuteTimes[commuteKey] : null;
+            if (commute) {
+                const toSC = parseCommuteToMinutes(commute.southernCross);
+                const toColl = parseCommuteToMinutes(commute.collingwood);
+                const scOk = toSC != null && toSC <= MAX_COMMUTE_MIN;
+                const collOk = toColl != null && toColl <= MAX_COMMUTE_MIN;
+                const bothOk = scOk && collOk;
+                c.push({
+                    text: 'Within 1h 15min to Southern Cross & Collingwood',
+                    status: bothOk ? 'pass' : (toSC != null || toColl != null ? 'fail' : 'unknown'),
+                    detail: commute.southernCross + ' / ' + commute.collingwood
+                });
+                if (bothOk) score += 15;
+            } else {
+                c.push({
+                    text: 'Within 1h 15min to Southern Cross & Collingwood',
+                    status: 'unknown',
+                    detail: suburbName ? `Suburb "${suburbName}" not in our commute data` : 'Suburb not specified'
+                });
+            }
+
+            score = Math.max(0, Math.min(100, score));
+            let summaryClass = 'poor';
+            let summaryText = 'Does not meet most criteria.';
+            if (score >= 75) {
+                summaryClass = 'good';
+                summaryText = 'Meets most or all of your criteria. Worth a look.';
+            } else if (score >= 55) {
+                summaryClass = 'moderate';
+                summaryText = 'Partially meets your criteria. Check details.';
+            }
+            return { criteria: c, score, summaryClass, summaryText };
+        }
+
+        function renderAssessResult(normalized, result, listingUrl) {
+            const el = document.getElementById('assessResult');
+            const priceStr = normalized.price != null ? `$${(normalized.price / 1000).toFixed(0)}k` : 'Price n/a';
+            const linkHtml = listingUrl
+                ? `<a href="${listingUrl}" target="_blank" rel="noopener" class="assess-listing-link">View listing →</a>`
+                : '';
+            el.innerHTML = `
+                <h4>${normalized.displayAddress || normalized.suburb || 'Listing'} – ${priceStr}</h4>
+                <ul class="assess-criteria-list">
+                    ${result.criteria.map(r => `
+                        <li class="criteria-${r.status}">
+                            <span>${r.text}</span>
+                            <span style="color:#666;font-size:13px;">${r.detail}</span>
+                        </li>
+                    `).join('')}
+                </ul>
+                <div class="assess-summary ${result.summaryClass}">
+                    Match score: ${result.score}% – ${result.summaryText}
+                </div>
+                ${linkHtml}
+            `;
+            el.classList.add('visible');
+            const transitInput = document.getElementById('transitAddressInput');
+            if (transitInput) {
+                const addr = normalized.displayAddress || (normalized.suburb ? normalized.suburb + ', VIC' : '');
+                if (addr) transitInput.value = addr;
+            }
+        }
+
+        async function fetchTransitToSouthernCross() {
+            const input = document.getElementById('transitAddressInput');
+            const resultEl = document.getElementById('transitResult');
+            const btn = document.getElementById('getTransitBtn');
+            const address = (input && input.value && input.value.trim()) || '';
+            if (!address) {
+                resultEl.innerHTML = '<span style="color:#f57f17;">Enter a suburb or address above.</span>';
+                return;
+            }
+            btn.disabled = true;
+            resultEl.innerHTML = '<span style="color:#666;">Loading…</span>';
+            try {
+                const res = await fetch(`${API_BASE}/transit-to-southern-cross?address=${encodeURIComponent(address)}`);
+                const data = await res.json();
+                if (!res.ok) {
+                    resultEl.innerHTML = `<span style="color:#c62828;">${data.error || 'Request failed'}</span>`;
+                    return;
+                }
+                if (data.message) {
+                    resultEl.innerHTML = `<span style="color:#666;">${data.message}</span>`;
+                    return;
+                }
+                let html = '';
+                if (data.durationText || data.durationTextCollingwood) {
+                    if (data.durationText) {
+                        html += `<p style="font-weight:600;margin-bottom:4px;">To Southern Cross Station: <strong>${data.durationText}</strong></p>`;
+                    }
+                    if (data.durationTextCollingwood) {
+                        html += `<p style="font-weight:600;margin-bottom:8px;">To Rupert St Collingwood: <strong>${data.durationTextCollingwood}</strong></p>`;
+                    }
+                } else {
+                    html += '<p style="color:#666;margin-bottom:8px;">Suburb not in our commute database — see nearest stops below.</p>';
+                }
+                if (data.walkToFirstStop) {
+                    html += `<p style="color:#555;margin-bottom:6px;">Walk to first stop: ${data.walkToFirstStop.distance} (${data.walkToFirstStop.duration})</p>`;
+                }
+                if (data.steps && data.steps.length > 0) {
+                    html += '<p style="margin:8px 0 4px 0;font-weight:500;">Transit:</p><ul style="margin:0;padding-left:20px;color:#333;">';
+                    data.steps.forEach(s => {
+                        html += `<li><strong>${s.departureStop}</strong> – ${s.vehicleType}${s.lineShortName ? ' ' + s.lineShortName : ''}</li>`;
+                    });
+                    html += '</ul>';
+                }
+                resultEl.innerHTML = html || '<span style="color:#666;">No transit steps returned.</span>';
+            } catch (err) {
+                resultEl.innerHTML = `<span style="color:#c62828;">${err.message || 'Network error'}</span>`;
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        document.getElementById('getTransitBtn').addEventListener('click', fetchTransitToSouthernCross);
+
+        document.getElementById('resetAssessmentBtn').addEventListener('click', function () {
+            document.getElementById('assessResult').innerHTML = '';
+            document.getElementById('assessResult').classList.remove('visible');
+            document.getElementById('manualPrice').value = '';
+            document.getElementById('manualSuburb').value = '';
+            document.getElementById('manualBeds').value = '';
+            document.getElementById('manualBaths').value = '';
+            document.getElementById('manualGarage').value = '';
+            document.getElementById('manualType').value = '';
+            document.getElementById('manualGarden').value = 'unknown';
+            document.getElementById('manualPool').value = 'unknown';
+            document.getElementById('transitAddressInput').value = '';
+            document.getElementById('transitResult').innerHTML = '';
+            document.getElementById('pasteFromListingStatus').textContent = '';
+            document.getElementById('suburbInfo').innerHTML = '';
+            document.getElementById('suburbInfo').classList.remove('active');
+        });
+
+        // Parse pasted listing text (from Domain/realestate page) and return fields for manual form
+        function parsePastedListingText(text) {
+            if (!text || typeof text !== 'string') return {};
+            const t = text;
+            const out = {};
+
+            const priceRange = t.match(/\$[\d,]+(?:\s*-\s*\$?[\d,]+)?/);
+            if (priceRange) {
+                const first = priceRange[0].replace(/\$/g, '').replace(/,/g, '').split(/\s*-\s*/)[0].trim();
+                const num = parseInt(first, 10);
+                if (!isNaN(num) && num > 10000) out.price = num;
+            }
+            if (out.price == null) {
+                const priceM = t.match(/\$(\d(?:\.\d)?)\s*[mM]/);
+                if (priceM) out.price = Math.round(parseFloat(priceM[1]) * 1e6);
+            }
+
+            const bedsMatch = t.match(/(\d+)\s*Bed(?:s|room)?/i);
+            if (bedsMatch) out.bedrooms = parseInt(bedsMatch[1], 10);
+            const bathsMatch = t.match(/(\d+)\s*Bath(?:s|room)?/i);
+            if (bathsMatch) out.bathrooms = parseInt(bathsMatch[1], 10);
+            const parkMatch = t.match(/(\d+)\s*(?:Parking|Car|Garage)/i);
+            if (parkMatch) out.garage = parseInt(parkMatch[1], 10);
+
+            const suburbNames = Object.keys(commuteTimes);
+            for (const name of suburbNames) {
+                if (t.includes(name)) { out.suburb = name; break; }
+            }
+            if (out.suburb == null) {
+                const suburbVic = t.match(/([A-Za-z\s]+),\s*VIC\s+\d{4}/);
+                if (suburbVic) out.suburb = suburbVic[1].trim().replace(/\b\w/g, c => c.toUpperCase());
+            }
+
+            if (/House/i.test(t) && !/Townhouse|Unit|Villa|Apartment/i.test(t)) out.propertyType = 'House';
+            else if (/Townhouse/i.test(t)) out.propertyType = 'Townhouse';
+            else if (/Unit|Apartment/i.test(t)) out.propertyType = 'Unit';
+            else if (/Villa/i.test(t)) out.propertyType = 'Villa';
+
+            if (/garden|courtyard|yard/i.test(t)) out.garden = 'yes';
+            if (/swimming\s*pool|pool/i.test(t)) out.pool = 'yes';
+
+            return out;
+        }
+
+        document.getElementById('tooltipPasteBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('pasteFromListingBtn').click();
+        });
+        document.getElementById('pasteFromListingBtn').addEventListener('click', async function () {
+            const statusEl = document.getElementById('pasteFromListingStatus');
+            try {
+                const text = await navigator.clipboard.readText();
+                const parsed = parsePastedListingText(text);
+                let filled = 0;
+                if (parsed.price != null) {
+                    document.getElementById('manualPrice').value = parsed.price;
+                    filled++;
+                }
+                if (parsed.suburb) {
+                    document.getElementById('manualSuburb').value = parsed.suburb;
+                    const transitInput = document.getElementById('transitAddressInput');
+                    if (transitInput) transitInput.value = parsed.suburb + ', VIC';
+                    filled++;
+                }
+                if (parsed.bedrooms != null) {
+                    document.getElementById('manualBeds').value = parsed.bedrooms;
+                    filled++;
+                }
+                if (parsed.bathrooms != null) {
+                    document.getElementById('manualBaths').value = parsed.bathrooms;
+                    filled++;
+                }
+                if (parsed.garage != null) {
+                    document.getElementById('manualGarage').value = parsed.garage;
+                    filled++;
+                }
+                if (parsed.propertyType) {
+                    document.getElementById('manualType').value = parsed.propertyType;
+                    filled++;
+                }
+                if (parsed.garden) document.getElementById('manualGarden').value = parsed.garden;
+                if (parsed.pool) document.getElementById('manualPool').value = parsed.pool;
+
+                if (filled > 0) {
+                    statusEl.textContent = 'Form filled from pasted text. Check the values and click "Assess manual entry".';
+                    statusEl.style.color = '#2e7d32';
+                    const addrForTransit = parsed.suburb ? (parsed.suburb + ', VIC') : '';
+                    if (addrForTransit) {
+                        document.getElementById('transitAddressInput').value = addrForTransit;
+                        fetchTransitToSouthernCross();
+                    }
+                    if (parsed.suburb && allSuburbsData) {
+                        const suburbKey = Object.keys(allSuburbsData).find(k => k.toLowerCase() === parsed.suburb.toLowerCase());
+                        if (suburbKey) {
+                            const suburbData = allSuburbsData[suburbKey];
+                            const matchScore = calculateMatchScore(suburbData);
+                            displaySuburbInfo(suburbKey, suburbData, matchScore);
+                        }
+                    }
+                } else {
+                    statusEl.textContent = 'No listing details found in clipboard. Copy the price, address, beds/baths from the listing page and try again.';
+                    statusEl.style.color = '#f57f17';
+                }
+            } catch (err) {
+                statusEl.textContent = 'Could not read clipboard. Use "Paste" (Ctrl/Cmd+V) after copying from the listing, or type the details manually.';
+                statusEl.style.color = '#c62828';
+            }
+        });
+
+        document.getElementById('assessManualBtn').addEventListener('click', function () {
+            const price = document.getElementById('manualPrice').value;
+            const suburb = document.getElementById('manualSuburb').value.trim();
+            const beds = document.getElementById('manualBeds').value;
+            const baths = document.getElementById('manualBaths').value;
+            const garage = document.getElementById('manualGarage').value;
+            const propertyType = document.getElementById('manualType').value;
+            const garden = document.getElementById('manualGarden').value;
+            const pool = document.getElementById('manualPool').value;
+
+            const normalized = {
+                price: price ? parseInt(price.replace(/[^0-9]/g, ''), 10) : null,
+                suburb: suburb || null,
+                bedrooms: beds !== '' ? parseInt(beds, 10) : null,
+                bathrooms: baths !== '' ? parseInt(baths, 10) : null,
+                garage: garage !== '' ? parseInt(garage, 10) : null,
+                propertyType: propertyType || '',
+                garden,
+                pool,
+                listingUrl: null,
+                displayAddress: suburb ? [suburb, 'VIC'].filter(Boolean).join(', ') : 'Manual entry'
+            };
+            if (isNaN(normalized.price)) normalized.price = null;
+
+            const result = assessListing(normalized);
+            renderAssessResult(normalized, result, null);
+        });
+
+        // Initialize when page loads
+        initializeMarkers();
+
+        // Add legend
+        const legend = L.control({position: 'bottomright'});
+        legend.onAdd = function(map) {
+            const div = L.DomUtil.create('div', 'legend');
+            div.style.background = 'white';
+            div.style.padding = '10px';
+            div.style.borderRadius = '5px';
+            div.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
+            div.innerHTML = `
+                <div style="font-weight:bold;margin-bottom:5px;">Match Score</div>
+                <div><span style="color:#4caf50;">●</span> 80%+ Excellent</div>
+                <div><span style="color:#fbc02d;">●</span> 65-79% Moderate</div>
+                <div><span style="color:#f44336;">●</span> <65% Over Budget</div>
+            `;
+            return div;
+        };
+        legend.addTo(map);
+
+        // API Status indicator
+        const apiStatusDiv = document.createElement('div');
+        apiStatusDiv.className = 'api-status disconnected';
+        apiStatusDiv.innerHTML = 'Loading suburb data...';
+        document.body.appendChild(apiStatusDiv);
+    </script>
+</body>
+</html>

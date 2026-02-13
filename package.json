@@ -1,0 +1,18 @@
+{
+  "name": "melbourne-properties",
+  "version": "1.0.0",
+  "description": "Melbourne Property Finder with Domain API integration",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.4",
+    "express": "^4.21.2"
+  }
+}
