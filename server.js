@@ -324,12 +324,33 @@ const COMMUTE_TO_COLLINGWOOD = {
     'Wheelers Hill': '1h', 'Mill Park': '35 min', 'Doreen': '50 min', 'Mernda': '50 min'
 };
 
+// Office locations for distance display (listing → office)
+const SIEMENS_OFFICE = { lat: -37.8190, lon: 144.9460, label: 'Siemens (380 Docklands Dr, Docklands)' };
+const CANVA_OFFICE = { lat: -37.8024, lon: 144.9927, label: 'Canva (30 Rupert St, Collingwood)' };
+
 function haversineKm(lat1, lon1, lat2, lon2) {
     const R = 6371;
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
     const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon / 2) ** 2;
     return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+// Driving distance/duration via OSRM (OpenStreetMap-based). Coordinates: lon,lat (GeoJSON order).
+async function getDrivingRouteOSRM(lat1, lon1, lat2, lon2) {
+    const coords = `${lon1},${lat1};${lon2},${lat2}`;
+    const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=false`;
+    try {
+        const res = await fetch(url, { headers: { 'User-Agent': 'MelbournePropertyFinder/1.0' } });
+        const data = await res.json();
+        if (data.code !== 'Ok' || !data.routes?.[0]) return null;
+        const r = data.routes[0];
+        const distanceKm = Math.round((r.distance / 1000) * 100) / 100;
+        const durationMinutes = Math.round(r.duration / 60);
+        return { distanceKm, durationMinutes };
+    } catch (e) {
+        return null;
+    }
 }
 
 // Fetch nearest train, tram, bus stops from OpenStreetMap (Overpass). Used for suburb analysis.
@@ -453,6 +474,16 @@ app.get('/api/transit-to-southern-cross', async (req, res) => {
             const walkMin = Math.round(walkKm * 12);
             walkToFirstStop = { distance: walkKm < 1 ? `${Math.round(walkKm * 1000)} m` : `${walkKm.toFixed(1)} km`, duration: `~${walkMin} min walk` };
         }
+        const haversineSiemens = Math.round(haversineKm(latNum, lonNum, SIEMENS_OFFICE.lat, SIEMENS_OFFICE.lon) * 100) / 100;
+        const haversineCanva = Math.round(haversineKm(latNum, lonNum, CANVA_OFFICE.lat, CANVA_OFFICE.lon) * 100) / 100;
+        const [driveSiemens, driveCanva] = await Promise.all([
+            getDrivingRouteOSRM(latNum, lonNum, SIEMENS_OFFICE.lat, SIEMENS_OFFICE.lon),
+            getDrivingRouteOSRM(latNum, lonNum, CANVA_OFFICE.lat, CANVA_OFFICE.lon)
+        ]);
+        const distanceSiemensKm = driveSiemens ? driveSiemens.distanceKm : haversineSiemens;
+        const distanceCanvaKm = driveCanva ? driveCanva.distanceKm : haversineCanva;
+        const distanceSiemensSource = driveSiemens ? 'driving' : 'straight-line';
+        const distanceCanvaSource = driveCanva ? 'driving' : 'straight-line';
         return res.json({
             address: display_name,
             destination: 'Southern Cross Station',
@@ -461,7 +492,13 @@ app.get('/api/transit-to-southern-cross', async (req, res) => {
             durationValue: null,
             steps,
             walkToFirstStop,
-            suburb: matchedSuburb || null
+            suburb: matchedSuburb || null,
+            distanceSiemensKm,
+            distanceCanvaKm,
+            distanceSiemensSource,
+            distanceCanvaSource,
+            durationSiemensDrivingMin: driveSiemens ? driveSiemens.durationMinutes : null,
+            durationCanvaDrivingMin: driveCanva ? driveCanva.durationMinutes : null
         });
     } catch (error) {
         console.error('Transit (OSM) error:', error);

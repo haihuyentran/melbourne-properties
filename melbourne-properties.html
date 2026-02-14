@@ -604,8 +604,8 @@
                     </div>
 
                     <div class="transit-box" style="margin-top:20px;padding:16px;background:#f9f9f9;border-radius:8px;border:1px solid #e0e0e0;">
-                        <h4 style="margin-bottom:8px;color:#1976d2;">Transit to Southern Cross & Rupert St Collingwood</h4>
-                        <p class="assess-note" style="margin-bottom:10px;">Shown automatically after pasting a listing. Or enter a suburb/address and click Get transit for nearest stops and estimated commute times.</p>
+                        <h4 style="margin-bottom:8px;color:#1976d2;">Distance &amp; commute to offices</h4>
+                        <p class="assess-note" style="margin-bottom:10px;">Shown automatically after pasting a listing. Or enter a suburb/address and click Get transit for distance to Siemens (Docklands) and Canva (Collingwood), plus commute times.</p>
                         <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
                             <input type="text" id="transitAddressInput" placeholder="e.g. South Morang or 5 Wilton Vale Road, South Morang" style="flex:1;min-width:200px;padding:10px;border:1px solid #ccc;border-radius:6px;" />
                             <button type="button" id="getTransitBtn" style="padding:10px 16px;background:#1976d2;color:white;border:none;border-radius:6px;cursor:pointer;font-weight:500;">Get transit</button>
@@ -1211,15 +1211,21 @@
                     return;
                 }
                 let html = '';
-                if (data.durationText || data.durationTextCollingwood) {
-                    if (data.durationText) {
-                        html += `<p style="font-weight:600;margin-bottom:4px;">To Southern Cross Station: <strong>${data.durationText}</strong></p>`;
+                if (data.distanceSiemensKm != null || data.distanceCanvaKm != null) {
+                    if (data.distanceSiemensKm != null) {
+                        const distLabel = data.distanceSiemensSource === 'driving' ? `${data.distanceSiemensKm} km (driving)` : `~${data.distanceSiemensKm} km (straight-line)`;
+                        const driveTime = data.durationSiemensDrivingMin != null ? ` · ${data.durationSiemensDrivingMin} min drive` : '';
+                        html += `<p style="font-weight:600;margin-bottom:4px;">Siemens (380 Docklands Dr, Docklands): <strong>${distLabel}</strong>${driveTime}${data.durationText ? ` · ${data.durationText} (PT)` : ''}</p>`;
                     }
-                    if (data.durationTextCollingwood) {
-                        html += `<p style="font-weight:600;margin-bottom:8px;">To Rupert St Collingwood: <strong>${data.durationTextCollingwood}</strong></p>`;
+                    if (data.distanceCanvaKm != null) {
+                        const distLabel = data.distanceCanvaSource === 'driving' ? `${data.distanceCanvaKm} km (driving)` : `~${data.distanceCanvaKm} km (straight-line)`;
+                        const driveTime = data.durationCanvaDrivingMin != null ? ` · ${data.durationCanvaDrivingMin} min drive` : '';
+                        html += `<p style="font-weight:600;margin-bottom:8px;">Canva (30 Rupert St, Collingwood): <strong>${distLabel}</strong>${driveTime}${data.durationTextCollingwood ? ` · ${data.durationTextCollingwood} (PT)` : ''}</p>`;
                     }
                 } else {
-                    html += '<p style="color:#666;margin-bottom:8px;">Suburb not in our commute database — see nearest stops below.</p>';
+                    if (data.durationText) html += `<p style="font-weight:600;margin-bottom:4px;">To Southern Cross: <strong>${data.durationText}</strong></p>`;
+                    if (data.durationTextCollingwood) html += `<p style="font-weight:600;margin-bottom:8px;">To Collingwood: <strong>${data.durationTextCollingwood}</strong></p>`;
+                    if (!data.durationText && !data.durationTextCollingwood) html += '<p style="color:#666;margin-bottom:8px;">Suburb not in our commute database — see nearest stops below.</p>';
                 }
                 if (data.walkToFirstStop) {
                     html += `<p style="color:#555;margin-bottom:6px;">Walk to first stop: ${data.walkToFirstStop.distance} (${data.walkToFirstStop.duration})</p>`;
