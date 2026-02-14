@@ -396,6 +396,75 @@ app.get('/api/nearby-stops', async (req, res) => {
     }
 });
 
+// REIV suburb page cache (slug -> { data, at }) to avoid hammering REIV
+const reivCache = new Map();
+const REIV_CACHE_TTL_MS = 5 * 60 * 1000;
+
+function parsePriceFromText(text) {
+    if (!text || typeof text !== 'string') return null;
+    const cleaned = text.replace(/,/g, '').trim();
+    const milMatch = cleaned.match(/\$?\s*(\d(?:\.\d+)?)\s*mi?l/i);
+    if (milMatch) return Math.round(parseFloat(milMatch[1]) * 1e6);
+    const kMatch = cleaned.match(/\$?\s*(\d+(?:\.\d+)?)\s*k/i);
+    if (kMatch) return Math.round(parseFloat(kMatch[1]) * 1000);
+    const numMatch = cleaned.match(/\$?\s*([\d,]+)/);
+    if (numMatch) return parseInt(numMatch[1].replace(/,/g, ''), 10);
+    return null;
+}
+
+async function fetchREIVSuburbPrices(slug) {
+    const now = Date.now();
+    const cached = reivCache.get(slug);
+    if (cached && (now - cached.at) < REIV_CACHE_TTL_MS) return cached.data;
+
+    const url = `https://reiv.com.au/market-insights/suburb/${encodeURIComponent(slug)}`;
+    const res = await fetch(url, {
+        headers: { 'User-Agent': 'MelbournePropertyFinder/1.0 (market data)' }
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
+
+    const result = { medianPrice: null, medianPriceUnit: null, quarterlyChange: null, source: 'reiv' };
+    // Median sale price: e.g. "$1mil" or "$643k" in the page
+    const medianSaleMatch = html.match(/Median\s*sale\s*price[\s\S]*?\$[\s\S]*?(\d+(?:\.\d+)?\s*(?:mil|m|k|,\d{3}))/i)
+        || html.match(/\$(\d(?:\.\d+)?)\s*mi?l/i)
+        || html.match(/\$(\d+(?:\.\d+)?)\s*k/i)
+        || html.match(/\$([\d,]+)/);
+    if (medianSaleMatch) {
+        const raw = medianSaleMatch[1].replace(/,/g, '').trim();
+        if (/mil|m\b/i.test(html.substring(html.indexOf(medianSaleMatch[0]), html.indexOf(medianSaleMatch[0]) + 50)))
+            result.medianPrice = Math.round(parseFloat(raw) * 1e6);
+        else if (/k/i.test(raw)) result.medianPrice = Math.round(parseFloat(raw) * 1000);
+        else result.medianPrice = parseInt(raw, 10);
+    }
+    // Try to find Units median from table (e.g. "Units" tab or table row)
+    const unitsSection = html.match(/Units[\s\S]*?(?:median|price)[\s\S]*?\$[\s\S]*?(\d+(?:\.\d+)?\s*(?:mil|m|k)|[\d,]+)/i);
+    if (unitsSection) {
+        const unitPrice = parsePriceFromText(unitsSection[0]);
+        if (unitPrice) result.medianPriceUnit = unitPrice;
+    }
+    // Quarterly price change: e.g. "9.7%"
+    const qChangeMatch = html.match(/Quarterly\s*price\s*change[\s\S]*?([-]?\d+(?:\.\d+)?)\s*%/i);
+    if (qChangeMatch) result.quarterlyChange = parseFloat(qChangeMatch[1]);
+
+    reivCache.set(slug, { data: result, at: now });
+    return result;
+}
+
+app.get('/api/reiv/suburb/:slug', async (req, res) => {
+    let slug = (req.params.slug || '').trim();
+    if (!slug) return res.status(400).json({ error: 'Missing suburb slug' });
+    slug = decodeURIComponent(slug).replace(/\s+/g, ' ');
+    try {
+        const data = await fetchREIVSuburbPrices(slug);
+        if (!data) return res.status(404).json({ error: 'REIV data not found for this suburb' });
+        return res.json(data);
+    } catch (error) {
+        console.error('REIV fetch error:', error);
+        return res.status(502).json({ error: error.message });
+    }
+});
+
 // Transit info using OpenStreetMap (Nominatim + Overpass). No API key required.
 app.get('/api/transit-to-southern-cross', async (req, res) => {
     const address = (req.query.address || '').trim();

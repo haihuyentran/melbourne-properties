@@ -614,6 +614,10 @@
                 </div>
                 <button type="button" id="resetAssessmentBtn" class="reset-btn">Reset</button>
 
+                <div class="suburb-info" id="suburbInfo">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+
                 <div class="assess-listing-box">
                     <h3>Assess a listing</h3>
                     <div class="manual-form">
@@ -692,10 +696,6 @@
                 <div class="data-source" id="dataSource">
                     <strong>Data Source:</strong> Victorian Property Sales Report<br>
                     <span style="font-size:11px;">Official government property sales data</span>
-                </div>
-                
-                <div class="suburb-info" id="suburbInfo">
-                    <!-- Content will be dynamically inserted here -->
                 </div>
             </div>
         </div>
@@ -797,12 +797,12 @@
         // Calculate match score based on user criteria
         function calculateMatchScore(suburb) {
             let score = 50; // Base score
-            const price = suburb.medianPrice;
+            const price = suburb.medianPrice != null ? suburb.medianPrice : 0;
 
             // Price scoring (max 35 points)
             if (price >= 1000000 && price <= 1400000) {
                 score += 35;
-            } else if (price < 1000000) {
+            } else if (price > 0 && price < 1000000) {
                 score += 30; // Under budget is good
             } else if (price <= 1500000) {
                 score += 20; // Slightly over
@@ -826,8 +826,39 @@
             return '#f44336';
         }
 
-        // Store markers for updating
+        // Store markers for updating (only suburbs with coords; markers created but not shown until direction selected)
         const suburbMarkers = {};
+        const MAP_CENTER = [-37.8136, 144.9631]; // Melbourne CBD for bearing
+        const COMPASS_SECTORS = {
+            'N': [337.5, 22.5], 'NE': [22.5, 67.5], 'E': [67.5, 112.5], 'SE': [112.5, 157.5],
+            'S': [157.5, 202.5], 'SW': [202.5, 247.5], 'W': [247.5, 292.5], 'NW': [292.5, 337.5]
+        };
+        let selectedDirection = null;
+
+        function bearingDeg(lat1, lon1, lat2, lon2) {
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const y = Math.sin(dLon) * Math.cos(lat2 * Math.PI / 180);
+            const x = Math.cos(lat1 * Math.PI / 180) * Math.sin(lat2 * Math.PI / 180) - Math.sin(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.cos(dLon);
+            let b = Math.atan2(y, x) * 180 / Math.PI + 360;
+            return b % 360;
+        }
+
+        function isInSector(bearing, sectorKey) {
+            const [lo, hi] = COMPASS_SECTORS[sectorKey];
+            if (lo <= hi) return bearing >= lo && bearing < hi;
+            return bearing >= lo || bearing < hi;
+        }
+
+        function updateCompassVisibility() {
+            Object.entries(suburbMarkers).forEach(([name, obj]) => {
+                if (obj.marker.hasLayer(map)) map.removeLayer(obj.marker);
+            });
+            if (!selectedDirection) return;
+            const [lo, hi] = COMPASS_SECTORS[selectedDirection];
+            Object.entries(suburbMarkers).forEach(([name, obj]) => {
+                if (isInSector(obj.bearing, selectedDirection)) obj.marker.addTo(map);
+            });
+        }
 
         // Initialize map centered on Melbourne
         const map = L.map('map').setView([-37.8136, 144.9631], 11);
@@ -839,6 +870,40 @@
         }).addTo(map);
 
         window.addEventListener('resize', () => map.invalidateSize());
+
+        // Compass control (top right): 8 directions
+        const compassHtml = `
+            <div class="leaflet-compass-control" style="background:white;padding:8px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,0.4);font-size:11px;">
+                <div style="font-weight:600;margin-bottom:6px;">Show suburbs</div>
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">
+                    <button type="button" data-dir="NW" title="North West">NW</button>
+                    <button type="button" data-dir="N" title="North">N</button>
+                    <button type="button" data-dir="NE" title="North East">NE</button>
+                    <button type="button" data-dir="E" title="East">E</button>
+                    <button type="button" data-dir="SE" title="South East">SE</button>
+                    <button type="button" data-dir="S" title="South">S</button>
+                    <button type="button" data-dir="SW" title="South West">SW</button>
+                    <button type="button" data-dir="W" title="West">W</button>
+                </div>
+                <button type="button" data-dir="" style="margin-top:6px;width:100%;" title="Hide all">Hide all</button>
+            </div>`;
+        const CompassControl = L.Control.extend({
+            onAdd: function() {
+                const div = L.DomUtil.create('div', '');
+                div.innerHTML = compassHtml;
+                div.querySelectorAll('button[data-dir]').forEach(btn => {
+                    btn.style.cssText = 'padding:6px 8px;border:1px solid #ccc;border-radius:4px;cursor:pointer;background:#f5f5f5;';
+                    btn.addEventListener('click', () => {
+                        selectedDirection = btn.getAttribute('data-dir') || null;
+                        div.querySelectorAll('button[data-dir]').forEach(b => { b.style.background = '#f5f5f5'; });
+                        if (selectedDirection) btn.style.background = '#e3f2fd';
+                        updateCompassVisibility();
+                    });
+                });
+                return div;
+            }
+        });
+        map.addControl(new CompassControl({ position: 'topright' }));
 
         // Reference point icons
         const southernCrossIcon = L.divIcon({
@@ -859,7 +924,7 @@
         L.marker([-37.8041, 144.9886], {icon: collingwoodIcon}).addTo(map)
             .bindPopup('<b>30 Rupert St, Collingwood</b>');
 
-        // Initialize suburb markers after data loads
+        // Initialize suburb markers after data loads (only with coords; smaller radius; not shown until direction selected)
         async function initializeMarkers() {
             const loaded = await fetchAllSuburbData();
             if (!loaded) {
@@ -867,48 +932,42 @@
                 return;
             }
 
-            Object.entries(allSuburbsData).forEach(([suburbName, suburb]) => {
+            const withCoords = Object.entries(allSuburbsData).filter(([, s]) => s.coords && s.coords.length === 2);
+            withCoords.forEach(([suburbName, suburb]) => {
                 const matchScore = calculateMatchScore(suburb);
-                
+                const bearing = bearingDeg(MAP_CENTER[0], MAP_CENTER[1], suburb.coords[0], suburb.coords[1]);
                 const marker = L.circleMarker(suburb.coords, {
-                    radius: 15,
+                    radius: 8,
                     fillColor: getColorByMatch(matchScore),
                     color: '#fff',
-                    weight: 2,
+                    weight: 1.5,
                     opacity: 1,
                     fillOpacity: 0.7
-                }).addTo(map);
-
+                });
+                const priceStr = suburb.medianPrice != null ? `$${(suburb.medianPrice / 1000).toFixed(0)}k` : 'N/A';
+                const changeStr = suburb.annualChange != null ? `${suburb.annualChange > 0 ? '+' : ''}${suburb.annualChange}%` : '-';
                 marker.bindPopup(`
                     <div class="popup-suburb">${suburbName}</div>
-                    <div class="popup-price">Median: $${(suburb.medianPrice / 1000).toFixed(0)}k</div>
+                    <div class="popup-price">Median: ${priceStr}</div>
                     <div style="margin-top:5px;color:#666;">Match: ${matchScore}%</div>
-                    <div style="font-size:11px;color:#999;margin-top:3px;">Annual change: ${suburb.annualChange > 0 ? '+' : ''}${suburb.annualChange}%</div>
+                    <div style="font-size:11px;color:#999;margin-top:3px;">Annual change: ${changeStr}</div>
                 `);
-
-                marker.on('click', () => {
-                    displaySuburbInfo(suburbName, suburb, matchScore);
-                });
-
-                suburbMarkers[suburbName] = marker;
+                marker.on('click', () => displaySuburbInfo(suburbName, suburb, matchScore));
+                suburbMarkers[suburbName] = { marker, bearing };
             });
 
-            // Fit map to show all suburbs (Melbourne + Geelong/Lara) with padding
-            const coords = Object.values(allSuburbsData).map(s => s.coords).filter(Boolean);
+            // Fit map to show all suburbs with coords
+            const coords = withCoords.map(([, s]) => s.coords);
             if (coords.length > 0) {
                 const bounds = L.latLngBounds(coords.map(c => [c[0], c[1]]));
                 map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
             }
 
-            // Update API status
             const apiStatus = document.querySelector('.api-status');
             if (apiStatus) {
                 apiStatus.className = 'api-status connected';
-                apiStatus.innerHTML = `● Data loaded: ${Object.keys(allSuburbsData).length} suburbs`;
-                setTimeout(() => {
-                    apiStatus.style.opacity = '0';
-                    apiStatus.style.transition = 'opacity 0.5s';
-                }, 3000);
+                apiStatus.innerHTML = `● Data: ${Object.keys(allSuburbsData).length} suburbs (${withCoords.length} on map). Select direction to show.`;
+                setTimeout(() => { apiStatus.style.opacity = '0'; apiStatus.style.transition = 'opacity 0.5s'; }, 3000);
             }
         }
 
@@ -923,8 +982,23 @@
             
             const recommendation = getRecommendation(matchScore);
             const commute = commuteTimes[name] || { southernCross: 'N/A', collingwood: 'N/A' };
+
+            // Fetch live REIV prices when available (slug = name lowercase, spaces)
+            let reivPrices = null;
+            const reivSlug = (suburb.reivSlug || name.toLowerCase().replace(/\s+/g, ' ')).trim();
+            if (reivSlug) {
+                try {
+                    const res = await fetch(`${API_BASE}/reiv/suburb/${encodeURIComponent(reivSlug)}`);
+                    if (res.ok) reivPrices = await res.json();
+                } catch (e) { /* use static data */ }
+            }
+            const medianHouse = (reivPrices && reivPrices.medianPrice != null) ? reivPrices.medianPrice : suburb.medianPrice;
+            const medianUnit = (reivPrices && reivPrices.medianPriceUnit != null) ? reivPrices.medianPriceUnit : suburb.medianPriceUnit;
+            const priceSourceNote = reivPrices && (reivPrices.medianPrice != null || reivPrices.medianPriceUnit != null) ? ' <span style="font-size:11px;color:#888;">(REIV live)</span>' : '';
+            const changeVal = (reivPrices && reivPrices.quarterlyChange != null) ? reivPrices.quarterlyChange : suburb.annualChange;
             
-            const schoolsList = suburb.schools.map(s => 
+            const schools = suburb.schools || [];
+            const schoolsList = schools.map(s => 
                 `<div style="padding:5px 0;color:#555;">• ${s.name} <span style="color:#888;font-size:12px;">(${s.type}, ${s.rating})</span></div>`
             ).join('');
             
@@ -953,14 +1027,18 @@
                     : `Bus: ${(suburb.transport.busRoutes || []).join(', ') || 'N/A'}`;
             }
             
-            // Format demographics
-            const demo = suburb.demographics;
-            const demographicsInfo = `Population: ${demo.population.toLocaleString()}, Median age: ${demo.medianAge}, Family households: ${demo.familyHouseholds}, Owner-occupied: ${demo.ownerOccupied}, Born overseas: ${demo.bornOverseas}`;
+            const demo = suburb.demographics || {};
+            const demographicsInfo = `Population: ${(demo.population != null ? demo.population : 0).toLocaleString()}, Median age: ${demo.medianAge != null ? demo.medianAge : '-'}, Family households: ${demo.familyHouseholds || '-'}, Owner-occupied: ${demo.ownerOccupied || '-'}, Born overseas: ${demo.bornOverseas || '-'}`;
+            const housePriceStr = medianHouse != null ? `$${(medianHouse / 1000).toFixed(0)}k` : 'N/A';
+            const unitPriceStr = medianUnit != null ? `$${(medianUnit / 1000).toFixed(0)}k` : 'N/A';
+            const changeStr = changeVal != null ? `${changeVal >= 0 ? '+' : ''}${changeVal}%` : 'N/A';
+            const salesStr = suburb.salesCount != null ? suburb.salesCount : 'N/A';
+            const amenitiesStr = (suburb.amenities && suburb.amenities.length) ? suburb.amenities.join(' • ') : '—';
             
             info.innerHTML = `
                 <div class="suburb-header">
                     <div class="suburb-name">${name}</div>
-                    <div style="color:#666;font-size:14px;">Match Score: ${matchScore}% | ${suburb.municipality}</div>
+                    <div style="color:#666;font-size:14px;">Match Score: ${matchScore}% | ${suburb.municipality || ''}</div>
                 </div>
 
                 <div class="recommendation ${recommendation.class}">
@@ -973,21 +1051,21 @@
                     <div class="info-grid">
                         <div class="info-item">
                             <div class="info-label">Median House Price</div>
-                            <div class="info-value">$${(suburb.medianPrice / 1000).toFixed(0)}k</div>
+                            <div class="info-value">${housePriceStr}${priceSourceNote}</div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">Annual Change</div>
-                            <div class="info-value" style="color:${suburb.annualChange >= 0 ? '#4caf50' : '#f44336'}">
-                                ${suburb.annualChange >= 0 ? '+' : ''}${suburb.annualChange}%
+                            <div class="info-label">Quarterly / Annual Change</div>
+                            <div class="info-value" style="color:${changeVal != null && changeVal >= 0 ? '#4caf50' : '#f44336'}">
+                                ${changeStr}
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Median Unit Price</div>
-                            <div class="info-value">$${(suburb.medianPriceUnit / 1000).toFixed(0)}k</div>
+                            <div class="info-value">${unitPriceStr}</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Sales (Last Year)</div>
-                            <div class="info-value">${suburb.salesCount}</div>
+                            <div class="info-value">${salesStr}</div>
                         </div>
                     </div>
                 </div>
@@ -1013,7 +1091,7 @@
 
                 <div class="info-section">
                     <h3>Schools</h3>
-                    ${schoolsList}
+                    ${schoolsList || '<div style="color:#888;">No data</div>'}
                 </div>
 
                 <div class="info-section">
@@ -1028,11 +1106,11 @@
 
                 <div class="info-section">
                     <h3>Amenities</h3>
-                    <div style="color:#555;">${suburb.amenities.join(' • ')}</div>
+                    <div style="color:#555;">${amenitiesStr}</div>
                 </div>
                 
                 <div style="margin-top:20px;padding:15px;background:#e3f2fd;border-radius:8px;">
-                    <a href="https://www.domain.com.au/sale/${name.toLowerCase().replace(' ', '-')}-vic-${suburb.postcode}/?bedrooms=4-any&bathrooms=2-any&price=1000000-1400000" 
+                    <a href="https://www.domain.com.au/sale/${name.toLowerCase().replace(/\s+/g, '-')}-vic-${suburb.postcode || ''}/?bedrooms=4-any&bathrooms=2-any&price=1000000-1400000" 
                        target="_blank" 
                        style="color:#1976d2;font-weight:500;text-decoration:none;">
                         View current listings on Domain.com.au →
@@ -1042,12 +1120,13 @@
             
             info.classList.add('active');
             
-            // Create price trend chart
-            const ctx = document.getElementById('priceChart').getContext('2d');
-            const years = Object.keys(suburb.priceHistory);
-            const prices = Object.values(suburb.priceHistory);
-            
-            priceChart = new Chart(ctx, {
+            // Create price trend chart (only if we have history)
+            const priceHistory = suburb.priceHistory || {};
+            const years = Object.keys(priceHistory).sort();
+            const prices = years.map(y => priceHistory[y]);
+            const ctx = document.getElementById('priceChart');
+            if (ctx && years.length > 0) {
+                priceChart = new Chart(ctx.getContext('2d'), {
                 type: 'line',
                 data: {
                     labels: years,
@@ -1080,6 +1159,9 @@
                     }
                 }
             });
+            } else {
+                priceChart = null;
+            }
         }
 
         function getRecommendation(score) {
