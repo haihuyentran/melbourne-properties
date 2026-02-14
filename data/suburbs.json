@@ -4,7 +4,7 @@
     "sourceUrl": "https://www.land.vic.gov.au/valuations/resources-and-reports/property-sales-statistics",
     "lastUpdated": "2025-12-01",
     "dataQuarter": "Q2 2025 (Jun 2025)",
-    "notes": "Median prices from VPSR June 2025 quarter where available; otherwise prior data retained. Demographics from ABS Census. All REIV Victorian suburbs included; those without coords do not appear on map. All REIV Victorian suburbs included; those without coords do not appear on map."
+    "notes": "Median prices from VPSR June 2025 quarter where available; otherwise prior data retained. Demographics from ABS Census. Prices from REIV where VPSR not available."
   },
   "suburbs": {
     "Glen Waverley": {
@@ -3152,12 +3152,17 @@
     "Abbeyard": {
       "postcode": "",
       "municipality": "",
-      "coords": null,
-      "medianPrice": null,
-      "medianPriceUnit": null,
+      "coords": [
+        -37.0181419,
+        146.7936043
+      ],
+      "medianPrice": 461000,
+      "medianPriceUnit": 643000,
       "annualChange": null,
       "salesCount": null,
-      "priceHistory": {},
+      "priceHistory": {
+        "2025": 461000
+      },
       "demographics": {
         "population": 0,
         "medianAge": null,
@@ -3173,12 +3178,17 @@
     "Abbotsford": {
       "postcode": "",
       "municipality": "",
-      "coords": null,
-      "medianPrice": null,
-      "medianPriceUnit": null,
-      "annualChange": null,
+      "coords": [
+        -37.8045508,
+        144.9988542
+      ],
+      "medianPrice": 657000,
+      "medianPriceUnit": 1300000,
+      "annualChange": -6.4,
       "salesCount": null,
-      "priceHistory": {},
+      "priceHistory": {
+        "2025": 657000
+      },
       "demographics": {
         "population": 0,
         "medianAge": null,
@@ -3194,12 +3204,17 @@
     "Aberfeldie": {
       "postcode": "",
       "municipality": "",
-      "coords": null,
-      "medianPrice": null,
-      "medianPriceUnit": null,
-      "annualChange": null,
+      "coords": [
+        -37.7596196,
+        144.8974571
+      ],
+      "medianPrice": 656000,
+      "medianPriceUnit": 1800000,
+      "annualChange": 0.5,
       "salesCount": null,
-      "priceHistory": {},
+      "priceHistory": {
+        "2025": 656000
+      },
       "demographics": {
         "population": 0,
         "medianAge": null,
@@ -3215,7 +3230,10 @@
     "Aberfeldy": {
       "postcode": "",
       "municipality": "",
-      "coords": null,
+      "coords": [
+        -37.7021795,
+        146.3790538
+      ],
       "medianPrice": null,
       "medianPriceUnit": null,
       "annualChange": null,
@@ -3236,7 +3254,10 @@
     "Acheron": {
       "postcode": "",
       "municipality": "",
-      "coords": null,
+      "coords": [
+        -37.2705795,
+        145.7082441
+      ],
       "medianPrice": null,
       "medianPriceUnit": null,
       "annualChange": null,

@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Melbourne Property Finder with Domain API integration",
   "main": "server.js",
-  "engines": {
-    "node": ">=18.0.0"
-  },
+  "engines": { "node": ">=18.0.0" },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
@@ -15,5 +13,8 @@
     "dotenv": "^17.2.4",
     "express": "^4.21.2",
     "pdf-parse": "^2.4.5"
+  },
+  "optionalDependencies": {
+    "puppeteer": "^23.0.0"
   }
 }

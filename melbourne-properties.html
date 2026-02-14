@@ -826,36 +826,34 @@
             return '#f44336';
         }
 
-        // Store markers for updating (only suburbs with coords; markers created but not shown until direction selected)
+        // Store markers for updating (only suburbs with coords; shown by selected region)
         const suburbMarkers = {};
-        const MAP_CENTER = [-37.8136, 144.9631]; // Melbourne CBD for bearing
-        const COMPASS_SECTORS = {
-            'N': [337.5, 22.5], 'NE': [22.5, 67.5], 'E': [67.5, 112.5], 'SE': [112.5, 157.5],
-            'S': [157.5, 202.5], 'SW': [202.5, 247.5], 'W': [247.5, 292.5], 'NW': [292.5, 337.5]
-        };
-        let selectedDirection = null;
+        let selectedRegionKey = null;
 
-        function bearingDeg(lat1, lon1, lat2, lon2) {
-            const dLon = (lon2 - lon1) * Math.PI / 180;
-            const y = Math.sin(dLon) * Math.cos(lat2 * Math.PI / 180);
-            const x = Math.cos(lat1 * Math.PI / 180) * Math.sin(lat2 * Math.PI / 180) - Math.sin(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.cos(dLon);
-            let b = Math.atan2(y, x) * 180 / Math.PI + 360;
-            return b % 360;
-        }
+        const REGIONS = [
+            { key: 'innerCity', label: 'Inner City (CBD & Surrounds)', suburbs: ['Melbourne', 'Docklands', 'Southbank', 'South Wharf', 'West Melbourne', 'East Melbourne', 'Port Melbourne', 'Parkville', 'North Melbourne'] },
+            { key: 'north', label: 'North', suburbs: ['Carlton', 'Carlton North', 'Princes Hill', 'Brunswick', 'Brunswick East', 'Brunswick West', 'Coburg', 'Coburg North', 'Preston', 'Thornbury', 'Northcote', 'Fairfield', 'Alphington', 'Pascoe Vale', 'Pascoe Vale South', 'Reservoir', 'Glenroy', 'Fawkner', 'Broadmeadows', 'Epping', 'Lalor', 'Thomastown', 'Craigieburn', 'Roxburgh Park', 'Meadow Heights', 'Coolaroo', 'Oak Park', 'Hadfield', 'Wollert', 'Campbellfield'] },
+            { key: 'northEast', label: 'North East', suburbs: ['Ivanhoe', 'Ivanhoe East', 'Heidelberg', 'Heidelberg Heights', 'Rosanna', 'Eaglemont', 'Macleod', 'Viewbank', 'Lower Plenty', 'Greensborough', 'Eltham', 'Warrandyte', 'Montmorency', 'Watsonia', 'Bundoora'] },
+            { key: 'east', label: 'East', suburbs: ['Kew', 'Kew East', 'Hawthorn', 'Hawthorn East', 'Camberwell', 'Canterbury', 'Deepdene', 'Balwyn', 'Balwyn North', 'Mont Albert', 'Surrey Hills', 'Glen Iris', 'Doncaster', 'Doncaster East', 'Templestowe', 'Templestowe Lower', 'Bulleen', 'Donvale', 'Box Hill', 'Box Hill North', 'Blackburn', 'Ringwood', 'Croydon', 'Nunawading', 'Mitcham', 'Ashwood', 'Ashburton', 'Chadstone'] },
+            { key: 'southEast', label: 'South East', suburbs: ['Malvern', 'Malvern East', 'Caulfield', 'Caulfield North', 'Elsternwick', 'Gardenvale', 'Oakleigh', 'Murrumbeena', 'Ormond', 'Bentleigh', 'Bentleigh East', 'McKinnon', 'Frankston', 'Cranbourne', 'Cranbourne North', 'Cranbourne East', 'Dandenong', 'Berwick', 'Narre Warren', 'Rowville', 'Keysborough', 'Springvale', 'Clayton', 'Clayton South', 'Lynbrook', 'Clyde North', 'Frankston North'] },
+            { key: 'south', label: 'South', suburbs: ['Brighton', 'Brighton East', 'Hampton', 'Hampton East', 'Sandringham', 'Black Rock', 'Beaumaris', 'Highett', 'Mentone', 'Cheltenham', 'Mordialloc', 'Edithvale', 'Chelsea', 'Carrum Downs', 'Albert Park', 'Middle Park', 'South Yarra', 'St Kilda', 'St Kilda West', 'Balaclava', 'Ripponlea', 'Portsea'] },
+            { key: 'west', label: 'West', suburbs: ['Footscray', 'West Footscray', 'Seddon', 'Yarraville', 'Newport', 'Williamstown', 'Maribyrnong', 'Maidstone', 'Braybrook', 'Brooklyn', 'Altona', 'Altona North', 'South Kingsville', 'Sunshine', 'Sunshine West', 'Point Cook', 'Werribee', 'Tarneit', 'Truganina', 'Wyndham Vale', 'Melton', 'Melton South', 'Caroline Springs', 'Burnside', 'Cairnlea', 'Derrimut', 'Albanvale', 'Rockbank', 'Fraser Rise', 'Kensington', 'Flemington'] },
+            { key: 'northWest', label: 'North West', suburbs: ['Keilor', 'Keilor Downs', 'Taylors Lakes', 'Sydenham', 'Airport West', 'Sunbury', 'Attwood', 'Greenvale', 'Strathmore Heights', 'Essendon', 'Essendon West', 'Moonee Ponds', 'Ascot Vale', 'Strathmore', 'Tullamarine'] }
+        ];
+        const regionSuburbSets = {};
+        REGIONS.forEach(r => {
+            regionSuburbSets[r.key] = new Set(r.suburbs);
+        });
 
-        function isInSector(bearing, sectorKey) {
-            const [lo, hi] = COMPASS_SECTORS[sectorKey];
-            if (lo <= hi) return bearing >= lo && bearing < hi;
-            return bearing >= lo || bearing < hi;
-        }
-
-        function updateCompassVisibility() {
+        function updateRegionVisibility() {
             Object.entries(suburbMarkers).forEach(([name, obj]) => {
                 if (map.hasLayer(obj.marker)) map.removeLayer(obj.marker);
             });
-            if (!selectedDirection) return;
+            if (!selectedRegionKey) return;
+            const allowed = regionSuburbSets[selectedRegionKey];
+            if (!allowed) return;
             Object.entries(suburbMarkers).forEach(([name, obj]) => {
-                if (isInSector(obj.bearing, selectedDirection)) obj.marker.addTo(map);
+                if (allowed.has(name)) obj.marker.addTo(map);
             });
         }
 
@@ -870,39 +868,26 @@
 
         window.addEventListener('resize', () => map.invalidateSize());
 
-        // Compass control (top right): 8 directions
-        const compassHtml = `
-            <div class="leaflet-compass-control" style="background:white;padding:8px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,0.4);font-size:11px;">
-                <div style="font-weight:600;margin-bottom:6px;">Show suburbs</div>
-                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">
-                    <button type="button" data-dir="NW" title="North West">NW</button>
-                    <button type="button" data-dir="N" title="North">N</button>
-                    <button type="button" data-dir="NE" title="North East">NE</button>
-                    <button type="button" data-dir="E" title="East">E</button>
-                    <button type="button" data-dir="SE" title="South East">SE</button>
-                    <button type="button" data-dir="S" title="South">S</button>
-                    <button type="button" data-dir="SW" title="South West">SW</button>
-                    <button type="button" data-dir="W" title="West">W</button>
-                </div>
-                <button type="button" data-dir="" style="margin-top:6px;width:100%;" title="Hide all">Hide all</button>
-            </div>`;
-        const CompassControl = L.Control.extend({
+        // Region dropdown (top right)
+        const RegionControl = L.Control.extend({
             onAdd: function() {
                 const div = L.DomUtil.create('div', '');
-                div.innerHTML = compassHtml;
-                div.querySelectorAll('button[data-dir]').forEach(btn => {
-                    btn.style.cssText = 'padding:6px 8px;border:1px solid #ccc;border-radius:4px;cursor:pointer;background:#f5f5f5;';
-                    btn.addEventListener('click', () => {
-                        selectedDirection = btn.getAttribute('data-dir') || null;
-                        div.querySelectorAll('button[data-dir]').forEach(b => { b.style.background = '#f5f5f5'; });
-                        if (selectedDirection) btn.style.background = '#e3f2fd';
-                        updateCompassVisibility();
-                    });
+                div.style.cssText = 'background:white;padding:8px;border-radius:8px;box-shadow:0 1px 5px rgba(0,0,0,0.4);font-size:12px;';
+                div.innerHTML = `
+                    <label for="region-select" style="font-weight:600;display:block;margin-bottom:6px;">Show suburbs</label>
+                    <select id="region-select" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:4px;font-size:12px;max-width:220px;">
+                        <option value="">— Select region —</option>
+                        ${REGIONS.map(r => `<option value="${r.key}">${r.label}</option>`).join('')}
+                    </select>
+                `;
+                div.querySelector('#region-select').addEventListener('change', (e) => {
+                    selectedRegionKey = (e.target.value || '').trim() || null;
+                    updateRegionVisibility();
                 });
                 return div;
             }
         });
-        map.addControl(new CompassControl({ position: 'topright' }));
+        map.addControl(new RegionControl({ position: 'topright' }));
 
         // Reference point icons
         const southernCrossIcon = L.divIcon({
@@ -934,7 +919,6 @@
             const withCoords = Object.entries(allSuburbsData).filter(([, s]) => s.coords && s.coords.length === 2);
             withCoords.forEach(([suburbName, suburb]) => {
                 const matchScore = calculateMatchScore(suburb);
-                const bearing = bearingDeg(MAP_CENTER[0], MAP_CENTER[1], suburb.coords[0], suburb.coords[1]);
                 const marker = L.circleMarker(suburb.coords, {
                     radius: 8,
                     fillColor: getColorByMatch(matchScore),
@@ -952,7 +936,7 @@
                     <div style="font-size:11px;color:#999;margin-top:3px;">Annual change: ${changeStr}</div>
                 `);
                 marker.on('click', () => displaySuburbInfo(suburbName, suburb, matchScore));
-                suburbMarkers[suburbName] = { marker, bearing };
+                suburbMarkers[suburbName] = { marker };
             });
 
             // Fit map to show all suburbs with coords
@@ -982,20 +966,7 @@
             const recommendation = getRecommendation(matchScore);
             const commute = commuteTimes[name] || { southernCross: 'N/A', collingwood: 'N/A' };
 
-            // Fetch live REIV prices when available (slug = name lowercase, spaces)
-            let reivPrices = null;
-            const reivSlug = (suburb.reivSlug || name.toLowerCase().replace(/\s+/g, ' ')).trim();
-            if (reivSlug) {
-                try {
-                    const res = await fetch(`${API_BASE}/reiv/suburb/${encodeURIComponent(reivSlug)}`);
-                    if (res.ok) reivPrices = await res.json();
-                } catch (e) { /* use static data */ }
-            }
-            const medianHouse = (reivPrices && reivPrices.medianPrice != null) ? reivPrices.medianPrice : suburb.medianPrice;
-            const medianUnit = (reivPrices && reivPrices.medianPriceUnit != null) ? reivPrices.medianPriceUnit : suburb.medianPriceUnit;
-            const priceSourceNote = reivPrices && (reivPrices.medianPrice != null || reivPrices.medianPriceUnit != null) ? ' <span style="font-size:11px;color:#888;">(REIV live)</span>' : '';
-            const changeVal = (reivPrices && reivPrices.quarterlyChange != null) ? reivPrices.quarterlyChange : suburb.annualChange;
-            
+            // Median prices from VPSR (suburbs.json merged from vpsr-june-2025 PDF)
             const schools = suburb.schools || [];
             const schoolsList = schools.map(s => 
                 `<div style="padding:5px 0;color:#555;">• ${s.name} <span style="color:#888;font-size:12px;">(${s.type}, ${s.rating})</span></div>`
@@ -1028,9 +999,9 @@
             
             const demo = suburb.demographics || {};
             const demographicsInfo = `Population: ${(demo.population != null ? demo.population : 0).toLocaleString()}, Median age: ${demo.medianAge != null ? demo.medianAge : '-'}, Family households: ${demo.familyHouseholds || '-'}, Owner-occupied: ${demo.ownerOccupied || '-'}, Born overseas: ${demo.bornOverseas || '-'}`;
-            const housePriceStr = medianHouse != null ? `$${(medianHouse / 1000).toFixed(0)}k` : 'N/A';
-            const unitPriceStr = medianUnit != null ? `$${(medianUnit / 1000).toFixed(0)}k` : 'N/A';
-            const changeStr = changeVal != null ? `${changeVal >= 0 ? '+' : ''}${changeVal}%` : 'N/A';
+            const housePriceStr = suburb.medianPrice != null ? `$${(suburb.medianPrice / 1000).toFixed(0)}k` : 'N/A';
+            const unitPriceStr = suburb.medianPriceUnit != null ? `$${(suburb.medianPriceUnit / 1000).toFixed(0)}k` : 'N/A';
+            const changeStr = suburb.annualChange != null ? `${suburb.annualChange >= 0 ? '+' : ''}${suburb.annualChange}%` : 'N/A';
             const salesStr = suburb.salesCount != null ? suburb.salesCount : 'N/A';
             const amenitiesStr = (suburb.amenities && suburb.amenities.length) ? suburb.amenities.join(' • ') : '—';
             
@@ -1050,11 +1021,11 @@
                     <div class="info-grid">
                         <div class="info-item">
                             <div class="info-label">Median House Price</div>
-                            <div class="info-value">${housePriceStr}${priceSourceNote}</div>
+                            <div class="info-value">${housePriceStr}</div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">Quarterly / Annual Change</div>
-                            <div class="info-value" style="color:${changeVal != null && changeVal >= 0 ? '#4caf50' : '#f44336'}">
+                            <div class="info-label">Annual Change</div>
+                            <div class="info-value" style="color:${suburb.annualChange != null && suburb.annualChange >= 0 ? '#4caf50' : '#f44336'}">
                                 ${changeStr}
                             </div>
                         </div>

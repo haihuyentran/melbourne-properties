@@ -442,7 +442,7 @@ async function fetchREIVSuburbPrices(slug) {
     const html = await res.text();
 
     const result = { medianPrice: null, medianPriceUnit: null, quarterlyChange: null, source: 'reiv' };
-    // Median sale price: e.g. "$1mil" or "$643k" in the page
+    // REIV default tab is Houses, so this parse gives median HOUSE price only. Unit requires clicking "Units" tab.
     const medianSaleMatch = html.match(/Median\s*sale\s*price[\s\S]*?\$[\s\S]*?(\d+(?:\.\d+)?\s*(?:mil|m|k|,\d{3}))/i)
         || html.match(/\$(\d(?:\.\d+)?)\s*mi?l/i)
         || html.match(/\$(\d+(?:\.\d+)?)\s*k/i)
@@ -454,12 +454,8 @@ async function fetchREIVSuburbPrices(slug) {
         else if (/k/i.test(raw)) result.medianPrice = Math.round(parseFloat(raw) * 1000);
         else result.medianPrice = parseInt(raw, 10);
     }
-    // Try to find Units median from table (e.g. "Units" tab or table row)
-    const unitsSection = html.match(/Units[\s\S]*?(?:median|price)[\s\S]*?\$[\s\S]*?(\d+(?:\.\d+)?\s*(?:mil|m|k)|[\d,]+)/i);
-    if (unitsSection) {
-        const unitPrice = parsePriceFromText(unitsSection[0]);
-        if (unitPrice) result.medianPriceUnit = unitPrice;
-    }
+    // Unit median is only shown when user clicks "Units" tab (client-side); not in initial HTML.
+    result.medianPriceUnit = null;
     // Quarterly price change: e.g. "9.7%"
     const qChangeMatch = html.match(/Quarterly\s*price\s*change[\s\S]*?([-]?\d+(?:\.\d+)?)\s*%/i);
     if (qChangeMatch) result.quarterlyChange = parseFloat(qChangeMatch[1]);
