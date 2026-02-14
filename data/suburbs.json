@@ -2,1003 +2,2980 @@
   "metadata": {
     "source": "Victorian Property Sales Report - Land Victoria",
     "sourceUrl": "https://www.land.vic.gov.au/valuations/resources-and-reports/property-sales-statistics",
-    "lastUpdated": "2025-03-01",
-    "dataQuarter": "Q1 2025",
-    "notes": "Median prices from official Victorian Government property sales data. Demographics from ABS Census."
+    "lastUpdated": "2025-12-01",
+    "dataQuarter": "Q2 2025 (Jun 2025)",
+    "notes": "Median prices from VPSR June 2025 quarter where available; otherwise prior data retained. Demographics from ABS Census."
   },
   "suburbs": {
     "Glen Waverley": {
       "postcode": "3150",
       "municipality": "Monash",
-      "coords": [-37.8770, 145.1630],
-      "medianPrice": 1485000,
-      "medianPriceUnit": 785000,
-      "annualChange": 3.2,
-      "salesCount": 287,
-      "priceHistory": {
-        "2015": 1020000, "2016": 1095000, "2017": 1180000, "2018": 1210000, "2019": 1175000,
-        "2020": 1225000, "2021": 1380000, "2022": 1520000, "2023": 1455000, "2024": 1485000
-      },
-      "demographics": { "population": 42000, "medianAge": 38, "familyHouseholds": "78%", "ownerOccupied": "72%", "bornOverseas": "52%" },
-      "schools": [
-        {"name": "Glen Waverley Secondary College", "type": "Government", "rating": "High Performing"},
-        {"name": "Glen Waverley Primary School", "type": "Government", "rating": "Excellent"},
-        {"name": "Wesley College Glen Waverley", "type": "Independent", "rating": "Excellent"}
+      "coords": [
+        -37.877,
+        145.163
       ],
-      "transport": { "trainStation": "Glen Waverley", "trainLine": "Glen Waverley Line", "busRoutes": ["703", "733", "737", "742"], "commuteToCity": "45 min" },
-      "amenities": ["The Glen Shopping Centre", "Kingsway", "Glen Waverley Library"]
+      "medianPrice": 1710000,
+      "medianPriceUnit": 835000,
+      "annualChange": 4.7,
+      "salesCount": 217,
+      "priceHistory": {
+        "2015": 1020000,
+        "2016": 1095000,
+        "2017": 1180000,
+        "2018": 1210000,
+        "2019": 1175000,
+        "2020": 1225000,
+        "2021": 1380000,
+        "2022": 1520000,
+        "2023": 1455000,
+        "2024": 1485000,
+        "2025": 1710000
+      },
+      "demographics": {
+        "population": 42000,
+        "medianAge": 38,
+        "familyHouseholds": "78%",
+        "ownerOccupied": "72%",
+        "bornOverseas": "52%"
+      },
+      "schools": [
+        {
+          "name": "Glen Waverley Secondary College",
+          "type": "Government",
+          "rating": "High Performing"
+        },
+        {
+          "name": "Glen Waverley Primary School",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Wesley College Glen Waverley",
+          "type": "Independent",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Glen Waverley",
+        "trainLine": "Glen Waverley Line",
+        "busRoutes": [
+          "703",
+          "733",
+          "737",
+          "742"
+        ],
+        "commuteToCity": "45 min"
+      },
+      "amenities": [
+        "The Glen Shopping Centre",
+        "Kingsway",
+        "Glen Waverley Library"
+      ]
     },
     "Box Hill": {
       "postcode": "3128",
       "municipality": "Whitehorse",
-      "coords": [-37.8186, 145.1236],
-      "medianPrice": 1380000,
-      "medianPriceUnit": 680000,
-      "annualChange": 2.8,
-      "salesCount": 312,
-      "priceHistory": {
-        "2015": 985000, "2016": 1045000, "2017": 1120000, "2018": 1150000, "2019": 1095000,
-        "2020": 1140000, "2021": 1285000, "2022": 1420000, "2023": 1345000, "2024": 1380000
-      },
-      "demographics": { "population": 52000, "medianAge": 35, "familyHouseholds": "65%", "ownerOccupied": "58%", "bornOverseas": "58%" },
-      "schools": [
-        {"name": "Box Hill High School", "type": "Government", "rating": "Good"},
-        {"name": "St Francis Xavier College", "type": "Catholic", "rating": "Good"},
-        {"name": "Kingswood College", "type": "Independent", "rating": "Good"}
+      "coords": [
+        -37.8186,
+        145.1236
       ],
-      "transport": { "trainStation": "Box Hill", "trainLine": "Belgrave/Lilydale Line", "busRoutes": ["270", "271", "279", "302", "303"], "commuteToCity": "35 min" },
-      "amenities": ["Box Hill Central", "Box Hill Hospital", "Box Hill Town Hall"]
+      "medianPrice": 1698000,
+      "medianPriceUnit": 499900,
+      "annualChange": -1.6,
+      "salesCount": 20,
+      "priceHistory": {
+        "2015": 985000,
+        "2016": 1045000,
+        "2017": 1120000,
+        "2018": 1150000,
+        "2019": 1095000,
+        "2020": 1140000,
+        "2021": 1285000,
+        "2022": 1420000,
+        "2023": 1345000,
+        "2024": 1380000,
+        "2025": 1698000
+      },
+      "demographics": {
+        "population": 52000,
+        "medianAge": 35,
+        "familyHouseholds": "65%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "58%"
+      },
+      "schools": [
+        {
+          "name": "Box Hill High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "St Francis Xavier College",
+          "type": "Catholic",
+          "rating": "Good"
+        },
+        {
+          "name": "Kingswood College",
+          "type": "Independent",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Box Hill",
+        "trainLine": "Belgrave/Lilydale Line",
+        "busRoutes": [
+          "270",
+          "271",
+          "279",
+          "302",
+          "303"
+        ],
+        "commuteToCity": "35 min"
+      },
+      "amenities": [
+        "Box Hill Central",
+        "Box Hill Hospital",
+        "Box Hill Town Hall"
+      ]
     },
     "Doncaster": {
       "postcode": "3108",
       "municipality": "Manningham",
-      "coords": [-37.7847, 145.1244],
-      "medianPrice": 1650000,
-      "medianPriceUnit": 920000,
-      "annualChange": 4.1,
-      "salesCount": 198,
-      "priceHistory": {
-        "2015": 1150000, "2016": 1220000, "2017": 1310000, "2018": 1340000, "2019": 1295000,
-        "2020": 1350000, "2021": 1520000, "2022": 1680000, "2023": 1590000, "2024": 1650000
-      },
-      "demographics": { "population": 28000, "medianAge": 42, "familyHouseholds": "82%", "ownerOccupied": "78%", "bornOverseas": "48%" },
-      "schools": [
-        {"name": "Doncaster Secondary College", "type": "Government", "rating": "Excellent"},
-        {"name": "Birralee Primary School", "type": "Government", "rating": "Good"},
-        {"name": "Doncaster Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7847,
+        145.1244
       ],
-      "transport": { "trainStation": null, "trainLine": null, "busRoutes": ["207", "280", "281", "284", "903"], "commuteToCity": "50 min" },
-      "amenities": ["Westfield Doncaster", "Doncaster Library", "Ruffey Lake Park"]
+      "medianPrice": 1554000,
+      "medianPriceUnit": 620000,
+      "annualChange": 2.2,
+      "salesCount": 117,
+      "priceHistory": {
+        "2015": 1150000,
+        "2016": 1220000,
+        "2017": 1310000,
+        "2018": 1340000,
+        "2019": 1295000,
+        "2020": 1350000,
+        "2021": 1520000,
+        "2022": 1680000,
+        "2023": 1590000,
+        "2024": 1650000,
+        "2025": 1554000
+      },
+      "demographics": {
+        "population": 28000,
+        "medianAge": 42,
+        "familyHouseholds": "82%",
+        "ownerOccupied": "78%",
+        "bornOverseas": "48%"
+      },
+      "schools": [
+        {
+          "name": "Doncaster Secondary College",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Birralee Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Doncaster Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": null,
+        "trainLine": null,
+        "busRoutes": [
+          "207",
+          "280",
+          "281",
+          "284",
+          "903"
+        ],
+        "commuteToCity": "50 min"
+      },
+      "amenities": [
+        "Westfield Doncaster",
+        "Doncaster Library",
+        "Ruffey Lake Park"
+      ]
     },
     "Ringwood": {
       "postcode": "3134",
       "municipality": "Maroondah",
-      "coords": [-37.8144, 145.2289],
-      "medianPrice": 1085000,
-      "medianPriceUnit": 720000,
-      "annualChange": 2.5,
-      "salesCount": 245,
-      "priceHistory": {
-        "2015": 720000, "2016": 775000, "2017": 845000, "2018": 875000, "2019": 840000,
-        "2020": 880000, "2021": 1010000, "2022": 1120000, "2023": 1060000, "2024": 1085000
-      },
-      "demographics": { "population": 19000, "medianAge": 36, "familyHouseholds": "70%", "ownerOccupied": "65%", "bornOverseas": "35%" },
-      "schools": [
-        {"name": "Ringwood Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Aquinas College", "type": "Catholic", "rating": "Good"},
-        {"name": "Yarra Valley Grammar", "type": "Independent", "rating": "Good"}
+      "coords": [
+        -37.8144,
+        145.2289
       ],
-      "transport": { "trainStation": "Ringwood", "trainLine": "Belgrave/Lilydale Line", "busRoutes": ["364", "365", "370", "671"], "commuteToCity": "45 min" },
-      "amenities": ["Eastland Shopping Centre", "Ringwood Lake", "Ringwood Library"]
+      "medianPrice": 1002500,
+      "medianPriceUnit": 625000,
+      "annualChange": -7.6,
+      "salesCount": 65,
+      "priceHistory": {
+        "2015": 720000,
+        "2016": 775000,
+        "2017": 845000,
+        "2018": 875000,
+        "2019": 840000,
+        "2020": 880000,
+        "2021": 1010000,
+        "2022": 1120000,
+        "2023": 1060000,
+        "2024": 1085000,
+        "2025": 1002500
+      },
+      "demographics": {
+        "population": 19000,
+        "medianAge": 36,
+        "familyHouseholds": "70%",
+        "ownerOccupied": "65%",
+        "bornOverseas": "35%"
+      },
+      "schools": [
+        {
+          "name": "Ringwood Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Aquinas College",
+          "type": "Catholic",
+          "rating": "Good"
+        },
+        {
+          "name": "Yarra Valley Grammar",
+          "type": "Independent",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Ringwood",
+        "trainLine": "Belgrave/Lilydale Line",
+        "busRoutes": [
+          "364",
+          "365",
+          "370",
+          "671"
+        ],
+        "commuteToCity": "45 min"
+      },
+      "amenities": [
+        "Eastland Shopping Centre",
+        "Ringwood Lake",
+        "Ringwood Library"
+      ]
     },
     "Camberwell": {
       "postcode": "3124",
       "municipality": "Boroondara",
-      "coords": [-37.8266, 145.0580],
-      "medianPrice": 2250000,
-      "medianPriceUnit": 1150000,
-      "annualChange": 3.8,
-      "salesCount": 165,
-      "priceHistory": {
-        "2015": 1620000, "2016": 1720000, "2017": 1850000, "2018": 1895000, "2019": 1820000,
-        "2020": 1900000, "2021": 2150000, "2022": 2380000, "2023": 2170000, "2024": 2250000
-      },
-      "demographics": { "population": 24000, "medianAge": 44, "familyHouseholds": "75%", "ownerOccupied": "70%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Camberwell High School", "type": "Government", "rating": "Excellent"},
-        {"name": "Canterbury Girls' Secondary", "type": "Government", "rating": "Excellent"},
-        {"name": "Camberwell Grammar School", "type": "Independent", "rating": "Excellent"}
+      "coords": [
+        -37.8266,
+        145.058
       ],
-      "transport": { "trainStation": "Camberwell", "trainLine": "Belgrave/Lilydale/Alamein Line", "busRoutes": ["70", "72", "75"], "commuteToCity": "25 min" },
-      "amenities": ["Camberwell Junction", "Burke Road Shopping", "Camberwell Market"]
+      "medianPrice": 2460000,
+      "medianPriceUnit": 900000,
+      "annualChange": -9.7,
+      "salesCount": 113,
+      "priceHistory": {
+        "2015": 1620000,
+        "2016": 1720000,
+        "2017": 1850000,
+        "2018": 1895000,
+        "2019": 1820000,
+        "2020": 1900000,
+        "2021": 2150000,
+        "2022": 2380000,
+        "2023": 2170000,
+        "2024": 2250000,
+        "2025": 2460000
+      },
+      "demographics": {
+        "population": 24000,
+        "medianAge": 44,
+        "familyHouseholds": "75%",
+        "ownerOccupied": "70%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Camberwell High School",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Canterbury Girls' Secondary",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Camberwell Grammar School",
+          "type": "Independent",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Camberwell",
+        "trainLine": "Belgrave/Lilydale/Alamein Line",
+        "busRoutes": [
+          "70",
+          "72",
+          "75"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Camberwell Junction",
+        "Burke Road Shopping",
+        "Camberwell Market"
+      ]
     },
     "Moorabbin": {
       "postcode": "3189",
       "municipality": "Kingston",
-      "coords": [-37.9357, 145.0437],
-      "medianPrice": 1280000,
-      "medianPriceUnit": 750000,
-      "annualChange": 2.9,
-      "salesCount": 178,
-      "priceHistory": {
-        "2015": 875000, "2016": 935000, "2017": 1010000, "2018": 1040000, "2019": 995000,
-        "2020": 1040000, "2021": 1180000, "2022": 1320000, "2023": 1245000, "2024": 1280000
-      },
-      "demographics": { "population": 8500, "medianAge": 35, "familyHouseholds": "68%", "ownerOccupied": "62%", "bornOverseas": "38%" },
-      "schools": [
-        {"name": "Moorabbin Primary School", "type": "Government", "rating": "Good"},
-        {"name": "Mentone Girls' Grammar", "type": "Independent", "rating": "Good"},
-        {"name": "Bentleigh Secondary College", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9357,
+        145.0437
       ],
-      "transport": { "trainStation": "Moorabbin", "trainLine": "Frankston Line", "busRoutes": ["703", "811", "812"], "commuteToCity": "35 min" },
-      "amenities": ["Southland Shopping Centre", "Moorabbin Airport", "Kingston Heath Golf"]
+      "medianPrice": 1210500,
+      "medianPriceUnit": 765000,
+      "annualChange": -2.4,
+      "salesCount": 31,
+      "priceHistory": {
+        "2015": 875000,
+        "2016": 935000,
+        "2017": 1010000,
+        "2018": 1040000,
+        "2019": 995000,
+        "2020": 1040000,
+        "2021": 1180000,
+        "2022": 1320000,
+        "2023": 1245000,
+        "2024": 1280000,
+        "2025": 1210500
+      },
+      "demographics": {
+        "population": 8500,
+        "medianAge": 35,
+        "familyHouseholds": "68%",
+        "ownerOccupied": "62%",
+        "bornOverseas": "38%"
+      },
+      "schools": [
+        {
+          "name": "Moorabbin Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Mentone Girls' Grammar",
+          "type": "Independent",
+          "rating": "Good"
+        },
+        {
+          "name": "Bentleigh Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Moorabbin",
+        "trainLine": "Frankston Line",
+        "busRoutes": [
+          "703",
+          "811",
+          "812"
+        ],
+        "commuteToCity": "35 min"
+      },
+      "amenities": [
+        "Southland Shopping Centre",
+        "Moorabbin Airport",
+        "Kingston Heath Golf"
+      ]
     },
     "Preston": {
       "postcode": "3072",
       "municipality": "Darebin",
-      "coords": [-37.7416, 145.0031],
-      "medianPrice": 1150000,
-      "medianPriceUnit": 680000,
-      "annualChange": 3.5,
-      "salesCount": 298,
-      "priceHistory": {
-        "2015": 735000, "2016": 795000, "2017": 870000, "2018": 905000, "2019": 865000,
-        "2020": 910000, "2021": 1050000, "2022": 1180000, "2023": 1115000, "2024": 1150000
-      },
-      "demographics": { "population": 33000, "medianAge": 33, "familyHouseholds": "58%", "ownerOccupied": "55%", "bornOverseas": "45%" },
-      "schools": [
-        {"name": "Preston High School", "type": "Government", "rating": "Good"},
-        {"name": "Charles La Trobe College", "type": "Government", "rating": "Good"},
-        {"name": "St Joseph's Primary", "type": "Catholic", "rating": "Good"}
+      "coords": [
+        -37.7416,
+        145.0031
       ],
-      "transport": { "trainStation": "Preston", "trainLine": "South Morang Line", "busRoutes": ["11", "86", "112", "527"], "commuteToCity": "25 min" },
-      "amenities": ["Preston Market", "High Street Shopping", "Preston Library"]
+      "medianPrice": 1230000,
+      "medianPriceUnit": 523800,
+      "annualChange": 11.8,
+      "salesCount": 153,
+      "priceHistory": {
+        "2015": 735000,
+        "2016": 795000,
+        "2017": 870000,
+        "2018": 905000,
+        "2019": 865000,
+        "2020": 910000,
+        "2021": 1050000,
+        "2022": 1180000,
+        "2023": 1115000,
+        "2024": 1150000,
+        "2025": 1230000
+      },
+      "demographics": {
+        "population": 33000,
+        "medianAge": 33,
+        "familyHouseholds": "58%",
+        "ownerOccupied": "55%",
+        "bornOverseas": "45%"
+      },
+      "schools": [
+        {
+          "name": "Preston High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Charles La Trobe College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "St Joseph's Primary",
+          "type": "Catholic",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Preston",
+        "trainLine": "South Morang Line",
+        "busRoutes": [
+          "11",
+          "86",
+          "112",
+          "527"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Preston Market",
+        "High Street Shopping",
+        "Preston Library"
+      ]
     },
     "Blackburn": {
       "postcode": "3130",
       "municipality": "Whitehorse",
-      "coords": [-37.8166, 145.1478],
-      "medianPrice": 1420000,
-      "medianPriceUnit": 810000,
-      "annualChange": 3.0,
-      "salesCount": 189,
-      "priceHistory": {
-        "2015": 985000, "2016": 1050000, "2017": 1130000, "2018": 1160000, "2019": 1110000,
-        "2020": 1160000, "2021": 1310000, "2022": 1465000, "2023": 1380000, "2024": 1420000
-      },
-      "demographics": { "population": 14000, "medianAge": 39, "familyHouseholds": "75%", "ownerOccupied": "70%", "bornOverseas": "42%" },
-      "schools": [
-        {"name": "Blackburn High School", "type": "Government", "rating": "Good"},
-        {"name": "Blackburn Lake Primary", "type": "Government", "rating": "Good"},
-        {"name": "St Thomas the Apostle", "type": "Catholic", "rating": "Good"}
+      "coords": [
+        -37.8166,
+        145.1478
       ],
-      "transport": { "trainStation": "Blackburn", "trainLine": "Belgrave/Lilydale Line", "busRoutes": ["279", "765", "766"], "commuteToCity": "40 min" },
-      "amenities": ["Blackburn Lake Sanctuary", "Blackburn Square", "Blackburn Library"]
+      "medianPrice": 1673800,
+      "medianPriceUnit": 1050000,
+      "annualChange": 2.2,
+      "salesCount": 66,
+      "priceHistory": {
+        "2015": 985000,
+        "2016": 1050000,
+        "2017": 1130000,
+        "2018": 1160000,
+        "2019": 1110000,
+        "2020": 1160000,
+        "2021": 1310000,
+        "2022": 1465000,
+        "2023": 1380000,
+        "2024": 1420000,
+        "2025": 1673800
+      },
+      "demographics": {
+        "population": 14000,
+        "medianAge": 39,
+        "familyHouseholds": "75%",
+        "ownerOccupied": "70%",
+        "bornOverseas": "42%"
+      },
+      "schools": [
+        {
+          "name": "Blackburn High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Blackburn Lake Primary",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "St Thomas the Apostle",
+          "type": "Catholic",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Blackburn",
+        "trainLine": "Belgrave/Lilydale Line",
+        "busRoutes": [
+          "279",
+          "765",
+          "766"
+        ],
+        "commuteToCity": "40 min"
+      },
+      "amenities": [
+        "Blackburn Lake Sanctuary",
+        "Blackburn Square",
+        "Blackburn Library"
+      ]
     },
     "Reservoir": {
       "postcode": "3073",
       "municipality": "Darebin",
-      "coords": [-37.7167, 145.0167],
-      "medianPrice": 920000,
-      "medianPriceUnit": 580000,
-      "annualChange": 2.8,
-      "salesCount": 412,
-      "priceHistory": {
-        "2015": 580000, "2016": 635000, "2017": 710000, "2018": 745000, "2019": 715000,
-        "2020": 750000, "2021": 865000, "2022": 960000, "2023": 895000, "2024": 920000
-      },
-      "demographics": { "population": 47000, "medianAge": 35, "familyHouseholds": "62%", "ownerOccupied": "58%", "bornOverseas": "42%" },
-      "schools": [
-        {"name": "Reservoir High School", "type": "Government", "rating": "Good"},
-        {"name": "Reservoir Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7167,
+        145.0167
       ],
-      "transport": { "trainStation": "Reservoir", "trainLine": "South Morang Line", "busRoutes": ["551", "552", "553"], "commuteToCity": "30 min" },
-      "amenities": ["Reservoir Village", "Edwardes Lake", "Reservoir Library"]
+      "medianPrice": 920000,
+      "medianPriceUnit": 650000,
+      "annualChange": -0.5,
+      "salesCount": 228,
+      "priceHistory": {
+        "2015": 580000,
+        "2016": 635000,
+        "2017": 710000,
+        "2018": 745000,
+        "2019": 715000,
+        "2020": 750000,
+        "2021": 865000,
+        "2022": 960000,
+        "2023": 895000,
+        "2024": 920000,
+        "2025": 920000
+      },
+      "demographics": {
+        "population": 47000,
+        "medianAge": 35,
+        "familyHouseholds": "62%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "42%"
+      },
+      "schools": [
+        {
+          "name": "Reservoir High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Reservoir Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Reservoir",
+        "trainLine": "South Morang Line",
+        "busRoutes": [
+          "551",
+          "552",
+          "553"
+        ],
+        "commuteToCity": "30 min"
+      },
+      "amenities": [
+        "Reservoir Village",
+        "Edwardes Lake",
+        "Reservoir Library"
+      ]
     },
     "Coburg": {
       "postcode": "3058",
       "municipality": "Moreland",
-      "coords": [-37.7436, 144.9661],
-      "medianPrice": 1180000,
-      "medianPriceUnit": 620000,
-      "annualChange": 3.2,
-      "salesCount": 285,
-      "priceHistory": {
-        "2015": 765000, "2016": 825000, "2017": 905000, "2018": 940000, "2019": 900000,
-        "2020": 945000, "2021": 1085000, "2022": 1220000, "2023": 1145000, "2024": 1180000
-      },
-      "demographics": { "population": 26000, "medianAge": 34, "familyHouseholds": "55%", "ownerOccupied": "52%", "bornOverseas": "48%" },
-      "schools": [
-        {"name": "Coburg High School", "type": "Government", "rating": "Good"},
-        {"name": "Coburg Primary School", "type": "Government", "rating": "Good"},
-        {"name": "St Paul's Primary", "type": "Catholic", "rating": "Good"}
+      "coords": [
+        -37.7436,
+        144.9661
       ],
-      "transport": { "trainStation": "Coburg", "trainLine": "Upfield Line", "busRoutes": ["19", "527", "530"], "commuteToCity": "25 min" },
-      "amenities": ["Coburg Lake Reserve", "Sydney Road Shopping", "Coburg Farmers Market"]
+      "medianPrice": 1210000,
+      "medianPriceUnit": 619800,
+      "annualChange": -3.2,
+      "salesCount": 137,
+      "priceHistory": {
+        "2015": 765000,
+        "2016": 825000,
+        "2017": 905000,
+        "2018": 940000,
+        "2019": 900000,
+        "2020": 945000,
+        "2021": 1085000,
+        "2022": 1220000,
+        "2023": 1145000,
+        "2024": 1180000,
+        "2025": 1210000
+      },
+      "demographics": {
+        "population": 26000,
+        "medianAge": 34,
+        "familyHouseholds": "55%",
+        "ownerOccupied": "52%",
+        "bornOverseas": "48%"
+      },
+      "schools": [
+        {
+          "name": "Coburg High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Coburg Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "St Paul's Primary",
+          "type": "Catholic",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Coburg",
+        "trainLine": "Upfield Line",
+        "busRoutes": [
+          "19",
+          "527",
+          "530"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Coburg Lake Reserve",
+        "Sydney Road Shopping",
+        "Coburg Farmers Market"
+      ]
     },
     "Brunswick": {
       "postcode": "3056",
       "municipality": "Moreland",
-      "coords": [-37.7667, 144.9600],
-      "medianPrice": 1320000,
-      "medianPriceUnit": 680000,
-      "annualChange": 3.5,
-      "salesCount": 245,
-      "priceHistory": {
-        "2015": 870000, "2016": 940000, "2017": 1025000, "2018": 1065000, "2019": 1020000,
-        "2020": 1070000, "2021": 1220000, "2022": 1370000, "2023": 1285000, "2024": 1320000
-      },
-      "demographics": { "population": 24000, "medianAge": 32, "familyHouseholds": "48%", "ownerOccupied": "45%", "bornOverseas": "38%" },
-      "schools": [
-        {"name": "Brunswick Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Brunswick Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7667,
+        144.96
       ],
-      "transport": { "trainStation": "Brunswick", "trainLine": "Upfield Line", "busRoutes": ["19", "506", "508"], "commuteToCity": "20 min" },
-      "amenities": ["Sydney Road Shopping", "CERES Environment Park", "Brunswick Baths"]
+      "medianPrice": 1280000,
+      "medianPriceUnit": 604000,
+      "annualChange": -3,
+      "salesCount": 122,
+      "priceHistory": {
+        "2015": 870000,
+        "2016": 940000,
+        "2017": 1025000,
+        "2018": 1065000,
+        "2019": 1020000,
+        "2020": 1070000,
+        "2021": 1220000,
+        "2022": 1370000,
+        "2023": 1285000,
+        "2024": 1320000,
+        "2025": 1280000
+      },
+      "demographics": {
+        "population": 24000,
+        "medianAge": 32,
+        "familyHouseholds": "48%",
+        "ownerOccupied": "45%",
+        "bornOverseas": "38%"
+      },
+      "schools": [
+        {
+          "name": "Brunswick Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Brunswick Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Brunswick",
+        "trainLine": "Upfield Line",
+        "busRoutes": [
+          "19",
+          "506",
+          "508"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "Sydney Road Shopping",
+        "CERES Environment Park",
+        "Brunswick Baths"
+      ]
     },
     "Footscray": {
       "postcode": "3011",
       "municipality": "Maribyrnong",
-      "coords": [-37.8000, 144.9000],
-      "medianPrice": 1050000,
-      "medianPriceUnit": 520000,
-      "annualChange": 2.5,
-      "salesCount": 198,
-      "priceHistory": {
-        "2015": 685000, "2016": 745000, "2017": 820000, "2018": 855000, "2019": 820000,
-        "2020": 860000, "2021": 980000, "2022": 1090000, "2023": 1025000, "2024": 1050000
-      },
-      "demographics": { "population": 17000, "medianAge": 31, "familyHouseholds": "45%", "ownerOccupied": "42%", "bornOverseas": "52%" },
-      "schools": [
-        {"name": "Footscray High School", "type": "Government", "rating": "Good"},
-        {"name": "Footscray City Primary", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.8,
+        144.9
       ],
-      "transport": { "trainStation": "Footscray", "trainLine": "Multiple Lines", "busRoutes": ["406", "408", "409", "411"], "commuteToCity": "15 min" },
-      "amenities": ["Footscray Market", "Victoria University", "Footscray Park"]
+      "medianPrice": 880000,
+      "medianPriceUnit": 455000,
+      "annualChange": -7.9,
+      "salesCount": 79,
+      "priceHistory": {
+        "2015": 685000,
+        "2016": 745000,
+        "2017": 820000,
+        "2018": 855000,
+        "2019": 820000,
+        "2020": 860000,
+        "2021": 980000,
+        "2022": 1090000,
+        "2023": 1025000,
+        "2024": 1050000,
+        "2025": 880000
+      },
+      "demographics": {
+        "population": 17000,
+        "medianAge": 31,
+        "familyHouseholds": "45%",
+        "ownerOccupied": "42%",
+        "bornOverseas": "52%"
+      },
+      "schools": [
+        {
+          "name": "Footscray High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Footscray City Primary",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Footscray",
+        "trainLine": "Multiple Lines",
+        "busRoutes": [
+          "406",
+          "408",
+          "409",
+          "411"
+        ],
+        "commuteToCity": "15 min"
+      },
+      "amenities": [
+        "Footscray Market",
+        "Victoria University",
+        "Footscray Park"
+      ]
     },
     "Sunshine": {
       "postcode": "3020",
       "municipality": "Brimbank",
-      "coords": [-37.7833, 144.8333],
-      "medianPrice": 780000,
-      "medianPriceUnit": 480000,
-      "annualChange": 2.2,
-      "salesCount": 265,
-      "priceHistory": {
-        "2015": 495000, "2016": 545000, "2017": 610000, "2018": 645000, "2019": 620000,
-        "2020": 650000, "2021": 740000, "2022": 820000, "2023": 760000, "2024": 780000
-      },
-      "demographics": { "population": 22000, "medianAge": 33, "familyHouseholds": "58%", "ownerOccupied": "52%", "bornOverseas": "55%" },
-      "schools": [
-        {"name": "Sunshine College", "type": "Government", "rating": "Good"},
-        {"name": "Sunshine Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7833,
+        144.8333
       ],
-      "transport": { "trainStation": "Sunshine", "trainLine": "Sunbury/Bendigo Line", "busRoutes": ["400", "408", "420", "422"], "commuteToCity": "25 min" },
-      "amenities": ["Sunshine Plaza", "Harvester Shopping Centre", "Sunshine Library"]
+      "medianPrice": 823000,
+      "medianPriceUnit": 480000,
+      "annualChange": 9.7,
+      "salesCount": 65,
+      "priceHistory": {
+        "2015": 495000,
+        "2016": 545000,
+        "2017": 610000,
+        "2018": 645000,
+        "2019": 620000,
+        "2020": 650000,
+        "2021": 740000,
+        "2022": 820000,
+        "2023": 760000,
+        "2024": 780000,
+        "2025": 823000
+      },
+      "demographics": {
+        "population": 22000,
+        "medianAge": 33,
+        "familyHouseholds": "58%",
+        "ownerOccupied": "52%",
+        "bornOverseas": "55%"
+      },
+      "schools": [
+        {
+          "name": "Sunshine College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Sunshine Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Sunshine",
+        "trainLine": "Sunbury/Bendigo Line",
+        "busRoutes": [
+          "400",
+          "408",
+          "420",
+          "422"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Sunshine Plaza",
+        "Harvester Shopping Centre",
+        "Sunshine Library"
+      ]
     },
     "St Albans": {
       "postcode": "3021",
       "municipality": "Brimbank",
-      "coords": [-37.7333, 144.8000],
+      "coords": [
+        -37.7333,
+        144.8
+      ],
       "medianPrice": 680000,
       "medianPriceUnit": 420000,
-      "annualChange": 2.0,
-      "salesCount": 312,
+      "annualChange": 4.6,
+      "salesCount": 192,
       "priceHistory": {
-        "2015": 420000, "2016": 465000, "2017": 525000, "2018": 555000, "2019": 535000,
-        "2020": 560000, "2021": 640000, "2022": 710000, "2023": 665000, "2024": 680000
+        "2015": 420000,
+        "2016": 465000,
+        "2017": 525000,
+        "2018": 555000,
+        "2019": 535000,
+        "2020": 560000,
+        "2021": 640000,
+        "2022": 710000,
+        "2023": 665000,
+        "2024": 680000,
+        "2025": 680000
       },
-      "demographics": { "population": 35000, "medianAge": 34, "familyHouseholds": "65%", "ownerOccupied": "58%", "bornOverseas": "62%" },
+      "demographics": {
+        "population": 35000,
+        "medianAge": 34,
+        "familyHouseholds": "65%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "62%"
+      },
       "schools": [
-        {"name": "St Albans Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "St Albans Primary School", "type": "Government", "rating": "Good"}
+        {
+          "name": "St Albans Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "St Albans Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
       ],
-      "transport": { "trainStation": "St Albans", "trainLine": "Sunbury Line", "busRoutes": ["418", "419", "420"], "commuteToCity": "35 min" },
-      "amenities": ["St Albans Market", "Alfrieda Street Shopping", "Errington Reserve"]
+      "transport": {
+        "trainStation": "St Albans",
+        "trainLine": "Sunbury Line",
+        "busRoutes": [
+          "418",
+          "419",
+          "420"
+        ],
+        "commuteToCity": "35 min"
+      },
+      "amenities": [
+        "St Albans Market",
+        "Alfrieda Street Shopping",
+        "Errington Reserve"
+      ]
     },
     "Werribee": {
       "postcode": "3030",
       "municipality": "Wyndham",
-      "coords": [-37.9000, 144.6667],
-      "medianPrice": 620000,
-      "medianPriceUnit": 450000,
-      "annualChange": 3.5,
-      "salesCount": 485,
-      "priceHistory": {
-        "2015": 365000, "2016": 405000, "2017": 465000, "2018": 495000, "2019": 480000,
-        "2020": 510000, "2021": 580000, "2022": 645000, "2023": 600000, "2024": 620000
-      },
-      "demographics": { "population": 52000, "medianAge": 32, "familyHouseholds": "72%", "ownerOccupied": "65%", "bornOverseas": "45%" },
-      "schools": [
-        {"name": "Werribee Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Werribee Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9,
+        144.6667
       ],
-      "transport": { "trainStation": "Werribee", "trainLine": "Werribee Line", "busRoutes": ["150", "151", "439", "495"], "commuteToCity": "45 min" },
-      "amenities": ["Pacific Werribee", "Werribee Open Range Zoo", "Werribee Park"]
+      "medianPrice": 641000,
+      "medianPriceUnit": 450000,
+      "annualChange": 6.3,
+      "salesCount": 527,
+      "priceHistory": {
+        "2015": 365000,
+        "2016": 405000,
+        "2017": 465000,
+        "2018": 495000,
+        "2019": 480000,
+        "2020": 510000,
+        "2021": 580000,
+        "2022": 645000,
+        "2023": 600000,
+        "2024": 620000,
+        "2025": 641000
+      },
+      "demographics": {
+        "population": 52000,
+        "medianAge": 32,
+        "familyHouseholds": "72%",
+        "ownerOccupied": "65%",
+        "bornOverseas": "45%"
+      },
+      "schools": [
+        {
+          "name": "Werribee Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Werribee Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Werribee",
+        "trainLine": "Werribee Line",
+        "busRoutes": [
+          "150",
+          "151",
+          "439",
+          "495"
+        ],
+        "commuteToCity": "45 min"
+      },
+      "amenities": [
+        "Pacific Werribee",
+        "Werribee Open Range Zoo",
+        "Werribee Park"
+      ]
     },
     "Point Cook": {
       "postcode": "3030",
       "municipality": "Wyndham",
-      "coords": [-37.9167, 144.7500],
-      "medianPrice": 720000,
-      "medianPriceUnit": 520000,
-      "annualChange": 2.8,
-      "salesCount": 398,
-      "priceHistory": {
-        "2015": 445000, "2016": 490000, "2017": 555000, "2018": 590000, "2019": 570000,
-        "2020": 600000, "2021": 680000, "2022": 755000, "2023": 700000, "2024": 720000
-      },
-      "demographics": { "population": 65000, "medianAge": 31, "familyHouseholds": "78%", "ownerOccupied": "72%", "bornOverseas": "55%" },
-      "schools": [
-        {"name": "Point Cook Senior Secondary", "type": "Government", "rating": "Good"},
-        {"name": "Saltwater P-9 College", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9167,
+        144.75
       ],
-      "transport": { "trainStation": null, "trainLine": null, "busRoutes": ["150", "151", "495", "496"], "commuteToCity": "50 min" },
-      "amenities": ["Point Cook Town Centre", "Point Cook Coastal Park", "Saltwater Coast"]
+      "medianPrice": 800000,
+      "medianPriceUnit": 581300,
+      "annualChange": -2.1,
+      "salesCount": 358,
+      "priceHistory": {
+        "2015": 445000,
+        "2016": 490000,
+        "2017": 555000,
+        "2018": 590000,
+        "2019": 570000,
+        "2020": 600000,
+        "2021": 680000,
+        "2022": 755000,
+        "2023": 700000,
+        "2024": 720000,
+        "2025": 800000
+      },
+      "demographics": {
+        "population": 65000,
+        "medianAge": 31,
+        "familyHouseholds": "78%",
+        "ownerOccupied": "72%",
+        "bornOverseas": "55%"
+      },
+      "schools": [
+        {
+          "name": "Point Cook Senior Secondary",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Saltwater P-9 College",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": null,
+        "trainLine": null,
+        "busRoutes": [
+          "150",
+          "151",
+          "495",
+          "496"
+        ],
+        "commuteToCity": "50 min"
+      },
+      "amenities": [
+        "Point Cook Town Centre",
+        "Point Cook Coastal Park",
+        "Saltwater Coast"
+      ]
     },
     "Craigieburn": {
       "postcode": "3064",
       "municipality": "Hume",
-      "coords": [-37.6000, 144.9500],
-      "medianPrice": 650000,
-      "medianPriceUnit": 480000,
-      "annualChange": 2.5,
-      "salesCount": 425,
-      "priceHistory": {
-        "2015": 385000, "2016": 425000, "2017": 490000, "2018": 520000, "2019": 505000,
-        "2020": 535000, "2021": 610000, "2022": 680000, "2023": 635000, "2024": 650000
-      },
-      "demographics": { "population": 58000, "medianAge": 30, "familyHouseholds": "75%", "ownerOccupied": "68%", "bornOverseas": "48%" },
-      "schools": [
-        {"name": "Craigieburn Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Craigieburn Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.6,
+        144.95
       ],
-      "transport": { "trainStation": "Craigieburn", "trainLine": "Craigieburn Line", "busRoutes": ["528", "529", "532", "533"], "commuteToCity": "45 min" },
-      "amenities": ["Craigieburn Central", "Craigieburn Leisure Centre", "Aitken Creek"]
+      "medianPrice": 700000,
+      "medianPriceUnit": 482500,
+      "annualChange": 3.2,
+      "salesCount": 494,
+      "priceHistory": {
+        "2015": 385000,
+        "2016": 425000,
+        "2017": 490000,
+        "2018": 520000,
+        "2019": 505000,
+        "2020": 535000,
+        "2021": 610000,
+        "2022": 680000,
+        "2023": 635000,
+        "2024": 650000,
+        "2025": 700000
+      },
+      "demographics": {
+        "population": 58000,
+        "medianAge": 30,
+        "familyHouseholds": "75%",
+        "ownerOccupied": "68%",
+        "bornOverseas": "48%"
+      },
+      "schools": [
+        {
+          "name": "Craigieburn Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Craigieburn Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Craigieburn",
+        "trainLine": "Craigieburn Line",
+        "busRoutes": [
+          "528",
+          "529",
+          "532",
+          "533"
+        ],
+        "commuteToCity": "45 min"
+      },
+      "amenities": [
+        "Craigieburn Central",
+        "Craigieburn Leisure Centre",
+        "Aitken Creek"
+      ]
     },
     "South Morang": {
       "postcode": "3752",
       "municipality": "Whittlesea",
-      "coords": [-37.6500, 145.1000],
-      "medianPrice": 750000,
-      "medianPriceUnit": 520000,
-      "annualChange": 2.8,
-      "salesCount": 312,
-      "priceHistory": {
-        "2015": 465000, "2016": 510000, "2017": 580000, "2018": 615000, "2019": 595000,
-        "2020": 625000, "2021": 710000, "2022": 785000, "2023": 730000, "2024": 750000
-      },
-      "demographics": { "population": 35000, "medianAge": 32, "familyHouseholds": "76%", "ownerOccupied": "70%", "bornOverseas": "45%" },
-      "schools": [
-        {"name": "South Morang College", "type": "Government", "rating": "Good"},
-        {"name": "Marymede Catholic College", "type": "Catholic", "rating": "Good"}
+      "coords": [
+        -37.65,
+        145.1
       ],
-      "transport": { "trainStation": "South Morang", "trainLine": "South Morang Line", "busRoutes": ["381", "382", "386"], "commuteToCity": "50 min" },
-      "amenities": ["Westfield Plenty Valley", "South Morang Library", "Quarry Hills Park"]
+      "medianPrice": 805000,
+      "medianPriceUnit": 520000,
+      "annualChange": 8.2,
+      "salesCount": 163,
+      "priceHistory": {
+        "2015": 465000,
+        "2016": 510000,
+        "2017": 580000,
+        "2018": 615000,
+        "2019": 595000,
+        "2020": 625000,
+        "2021": 710000,
+        "2022": 785000,
+        "2023": 730000,
+        "2024": 750000,
+        "2025": 805000
+      },
+      "demographics": {
+        "population": 35000,
+        "medianAge": 32,
+        "familyHouseholds": "76%",
+        "ownerOccupied": "70%",
+        "bornOverseas": "45%"
+      },
+      "schools": [
+        {
+          "name": "South Morang College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Marymede Catholic College",
+          "type": "Catholic",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "South Morang",
+        "trainLine": "South Morang Line",
+        "busRoutes": [
+          "381",
+          "382",
+          "386"
+        ],
+        "commuteToCity": "50 min"
+      },
+      "amenities": [
+        "Westfield Plenty Valley",
+        "South Morang Library",
+        "Quarry Hills Park"
+      ]
     },
     "Epping": {
       "postcode": "3076",
       "municipality": "Whittlesea",
-      "coords": [-37.6500, 145.0333],
-      "medianPrice": 720000,
-      "medianPriceUnit": 490000,
-      "annualChange": 2.5,
-      "salesCount": 287,
-      "priceHistory": {
-        "2015": 445000, "2016": 490000, "2017": 560000, "2018": 595000, "2019": 575000,
-        "2020": 600000, "2021": 680000, "2022": 755000, "2023": 700000, "2024": 720000
-      },
-      "demographics": { "population": 28000, "medianAge": 33, "familyHouseholds": "70%", "ownerOccupied": "65%", "bornOverseas": "48%" },
-      "schools": [
-        {"name": "Epping Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Epping Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.65,
+        145.0333
       ],
-      "transport": { "trainStation": "Epping", "trainLine": "South Morang Line", "busRoutes": ["513", "517", "520"], "commuteToCity": "45 min" },
-      "amenities": ["Pacific Epping", "Epping Plaza", "Northern Hospital"]
+      "medianPrice": 723000,
+      "medianPriceUnit": 560000,
+      "annualChange": 10.9,
+      "salesCount": 209,
+      "priceHistory": {
+        "2015": 445000,
+        "2016": 490000,
+        "2017": 560000,
+        "2018": 595000,
+        "2019": 575000,
+        "2020": 600000,
+        "2021": 680000,
+        "2022": 755000,
+        "2023": 700000,
+        "2024": 720000,
+        "2025": 723000
+      },
+      "demographics": {
+        "population": 28000,
+        "medianAge": 33,
+        "familyHouseholds": "70%",
+        "ownerOccupied": "65%",
+        "bornOverseas": "48%"
+      },
+      "schools": [
+        {
+          "name": "Epping Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Epping Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Epping",
+        "trainLine": "South Morang Line",
+        "busRoutes": [
+          "513",
+          "517",
+          "520"
+        ],
+        "commuteToCity": "45 min"
+      },
+      "amenities": [
+        "Pacific Epping",
+        "Epping Plaza",
+        "Northern Hospital"
+      ]
     },
     "Bundoora": {
       "postcode": "3083",
       "municipality": "Banyule",
-      "coords": [-37.6833, 145.0667],
-      "medianPrice": 950000,
-      "medianPriceUnit": 580000,
-      "annualChange": 3.0,
-      "salesCount": 198,
-      "priceHistory": {
-        "2015": 610000, "2016": 665000, "2017": 745000, "2018": 780000, "2019": 750000,
-        "2020": 785000, "2021": 895000, "2022": 990000, "2023": 925000, "2024": 950000
-      },
-      "demographics": { "population": 22000, "medianAge": 35, "familyHouseholds": "68%", "ownerOccupied": "62%", "bornOverseas": "42%" },
-      "schools": [
-        {"name": "Bundoora Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "La Trobe University", "type": "University", "rating": "Excellent"}
+      "coords": [
+        -37.6833,
+        145.0667
       ],
-      "transport": { "trainStation": null, "trainLine": null, "busRoutes": ["513", "517", "520", "561"], "commuteToCity": "40 min" },
-      "amenities": ["La Trobe University", "RMIT Bundoora", "Bundoora Park"]
+      "medianPrice": 866400,
+      "medianPriceUnit": 443800,
+      "annualChange": -1.8,
+      "salesCount": 147,
+      "priceHistory": {
+        "2015": 610000,
+        "2016": 665000,
+        "2017": 745000,
+        "2018": 780000,
+        "2019": 750000,
+        "2020": 785000,
+        "2021": 895000,
+        "2022": 990000,
+        "2023": 925000,
+        "2024": 950000,
+        "2025": 866400
+      },
+      "demographics": {
+        "population": 22000,
+        "medianAge": 35,
+        "familyHouseholds": "68%",
+        "ownerOccupied": "62%",
+        "bornOverseas": "42%"
+      },
+      "schools": [
+        {
+          "name": "Bundoora Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "La Trobe University",
+          "type": "University",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": null,
+        "trainLine": null,
+        "busRoutes": [
+          "513",
+          "517",
+          "520",
+          "561"
+        ],
+        "commuteToCity": "40 min"
+      },
+      "amenities": [
+        "La Trobe University",
+        "RMIT Bundoora",
+        "Bundoora Park"
+      ]
     },
     "Heidelberg": {
       "postcode": "3084",
       "municipality": "Banyule",
-      "coords": [-37.7500, 145.0667],
-      "medianPrice": 1450000,
-      "medianPriceUnit": 780000,
-      "annualChange": 3.5,
-      "salesCount": 165,
-      "priceHistory": {
-        "2015": 985000, "2016": 1055000, "2017": 1145000, "2018": 1185000, "2019": 1140000,
-        "2020": 1190000, "2021": 1350000, "2022": 1510000, "2023": 1415000, "2024": 1450000
-      },
-      "demographics": { "population": 12000, "medianAge": 40, "familyHouseholds": "72%", "ownerOccupied": "68%", "bornOverseas": "35%" },
-      "schools": [
-        {"name": "Heidelberg Primary School", "type": "Government", "rating": "Good"},
-        {"name": "Banyule Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.75,
+        145.0667
       ],
-      "transport": { "trainStation": "Heidelberg", "trainLine": "Hurstbridge Line", "busRoutes": ["513", "517", "548"], "commuteToCity": "30 min" },
-      "amenities": ["Austin Hospital", "Heidelberg Shopping", "Heidelberg Park"]
+      "medianPrice": 1440000,
+      "medianPriceUnit": 620000,
+      "annualChange": 0.2,
+      "salesCount": 30,
+      "priceHistory": {
+        "2015": 985000,
+        "2016": 1055000,
+        "2017": 1145000,
+        "2018": 1185000,
+        "2019": 1140000,
+        "2020": 1190000,
+        "2021": 1350000,
+        "2022": 1510000,
+        "2023": 1415000,
+        "2024": 1450000,
+        "2025": 1440000
+      },
+      "demographics": {
+        "population": 12000,
+        "medianAge": 40,
+        "familyHouseholds": "72%",
+        "ownerOccupied": "68%",
+        "bornOverseas": "35%"
+      },
+      "schools": [
+        {
+          "name": "Heidelberg Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Banyule Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Heidelberg",
+        "trainLine": "Hurstbridge Line",
+        "busRoutes": [
+          "513",
+          "517",
+          "548"
+        ],
+        "commuteToCity": "30 min"
+      },
+      "amenities": [
+        "Austin Hospital",
+        "Heidelberg Shopping",
+        "Heidelberg Park"
+      ]
     },
     "Ivanhoe": {
       "postcode": "3079",
       "municipality": "Banyule",
-      "coords": [-37.7667, 145.0500],
-      "medianPrice": 1680000,
-      "medianPriceUnit": 850000,
-      "annualChange": 3.8,
-      "salesCount": 142,
-      "priceHistory": {
-        "2015": 1145000, "2016": 1225000, "2017": 1325000, "2018": 1370000, "2019": 1320000,
-        "2020": 1380000, "2021": 1560000, "2022": 1745000, "2023": 1635000, "2024": 1680000
-      },
-      "demographics": { "population": 11000, "medianAge": 42, "familyHouseholds": "75%", "ownerOccupied": "72%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Ivanhoe Grammar School", "type": "Independent", "rating": "Excellent"},
-        {"name": "Ivanhoe Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7667,
+        145.05
       ],
-      "transport": { "trainStation": "Ivanhoe", "trainLine": "Hurstbridge Line", "busRoutes": ["517", "548", "549"], "commuteToCity": "25 min" },
-      "amenities": ["Ivanhoe Shopping Village", "Darebin Creek Trail", "Ivanhoe Library"]
+      "medianPrice": 2025000,
+      "medianPriceUnit": 850000,
+      "annualChange": -6.4,
+      "salesCount": 47,
+      "priceHistory": {
+        "2015": 1145000,
+        "2016": 1225000,
+        "2017": 1325000,
+        "2018": 1370000,
+        "2019": 1320000,
+        "2020": 1380000,
+        "2021": 1560000,
+        "2022": 1745000,
+        "2023": 1635000,
+        "2024": 1680000,
+        "2025": 2025000
+      },
+      "demographics": {
+        "population": 11000,
+        "medianAge": 42,
+        "familyHouseholds": "75%",
+        "ownerOccupied": "72%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Ivanhoe Grammar School",
+          "type": "Independent",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Ivanhoe Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Ivanhoe",
+        "trainLine": "Hurstbridge Line",
+        "busRoutes": [
+          "517",
+          "548",
+          "549"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Ivanhoe Shopping Village",
+        "Darebin Creek Trail",
+        "Ivanhoe Library"
+      ]
     },
     "Kew": {
       "postcode": "3101",
       "municipality": "Boroondara",
-      "coords": [-37.8000, 145.0333],
-      "medianPrice": 2450000,
-      "medianPriceUnit": 1050000,
-      "annualChange": 4.0,
-      "salesCount": 178,
-      "priceHistory": {
-        "2015": 1720000, "2016": 1840000, "2017": 1985000, "2018": 2050000, "2019": 1975000,
-        "2020": 2065000, "2021": 2320000, "2022": 2570000, "2023": 2380000, "2024": 2450000
-      },
-      "demographics": { "population": 26000, "medianAge": 43, "familyHouseholds": "70%", "ownerOccupied": "65%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Kew High School", "type": "Government", "rating": "Excellent"},
-        {"name": "Xavier College", "type": "Catholic", "rating": "Excellent"},
-        {"name": "Carey Baptist Grammar", "type": "Independent", "rating": "Excellent"}
+      "coords": [
+        -37.8,
+        145.0333
       ],
-      "transport": { "trainStation": null, "trainLine": null, "busRoutes": ["200", "201", "207", "609"], "commuteToCity": "20 min" },
-      "amenities": ["Kew Junction", "Studley Park", "Yarra Bend Park"]
+      "medianPrice": 2810500,
+      "medianPriceUnit": 1050000,
+      "annualChange": -4.7,
+      "salesCount": 124,
+      "priceHistory": {
+        "2015": 1720000,
+        "2016": 1840000,
+        "2017": 1985000,
+        "2018": 2050000,
+        "2019": 1975000,
+        "2020": 2065000,
+        "2021": 2320000,
+        "2022": 2570000,
+        "2023": 2380000,
+        "2024": 2450000,
+        "2025": 2810500
+      },
+      "demographics": {
+        "population": 26000,
+        "medianAge": 43,
+        "familyHouseholds": "70%",
+        "ownerOccupied": "65%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Kew High School",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Xavier College",
+          "type": "Catholic",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Carey Baptist Grammar",
+          "type": "Independent",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": null,
+        "trainLine": null,
+        "busRoutes": [
+          "200",
+          "201",
+          "207",
+          "609"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "Kew Junction",
+        "Studley Park",
+        "Yarra Bend Park"
+      ]
     },
     "Hawthorn": {
       "postcode": "3122",
       "municipality": "Boroondara",
-      "coords": [-37.8167, 145.0333],
-      "medianPrice": 2180000,
-      "medianPriceUnit": 920000,
-      "annualChange": 3.6,
-      "salesCount": 165,
-      "priceHistory": {
-        "2015": 1520000, "2016": 1625000, "2017": 1755000, "2018": 1815000, "2019": 1750000,
-        "2020": 1830000, "2021": 2065000, "2022": 2290000, "2023": 2105000, "2024": 2180000
-      },
-      "demographics": { "population": 23000, "medianAge": 36, "familyHouseholds": "58%", "ownerOccupied": "52%", "bornOverseas": "35%" },
-      "schools": [
-        {"name": "Hawthorn Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Scotch College", "type": "Independent", "rating": "Excellent"},
-        {"name": "Swinburne University", "type": "University", "rating": "Excellent"}
+      "coords": [
+        -37.8167,
+        145.0333
       ],
-      "transport": { "trainStation": "Hawthorn", "trainLine": "Belgrave/Lilydale Line", "busRoutes": ["72", "75", "109"], "commuteToCity": "15 min" },
-      "amenities": ["Glenferrie Road Shopping", "Swinburne University", "Central Gardens"]
+      "medianPrice": 2692500,
+      "medianPriceUnit": 536000,
+      "annualChange": -14.2,
+      "salesCount": 66,
+      "priceHistory": {
+        "2015": 1520000,
+        "2016": 1625000,
+        "2017": 1755000,
+        "2018": 1815000,
+        "2019": 1750000,
+        "2020": 1830000,
+        "2021": 2065000,
+        "2022": 2290000,
+        "2023": 2105000,
+        "2024": 2180000,
+        "2025": 2692500
+      },
+      "demographics": {
+        "population": 23000,
+        "medianAge": 36,
+        "familyHouseholds": "58%",
+        "ownerOccupied": "52%",
+        "bornOverseas": "35%"
+      },
+      "schools": [
+        {
+          "name": "Hawthorn Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Scotch College",
+          "type": "Independent",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Swinburne University",
+          "type": "University",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Hawthorn",
+        "trainLine": "Belgrave/Lilydale Line",
+        "busRoutes": [
+          "72",
+          "75",
+          "109"
+        ],
+        "commuteToCity": "15 min"
+      },
+      "amenities": [
+        "Glenferrie Road Shopping",
+        "Swinburne University",
+        "Central Gardens"
+      ]
     },
     "Malvern": {
       "postcode": "3144",
       "municipality": "Stonnington",
-      "coords": [-37.8667, 145.0333],
-      "medianPrice": 2650000,
-      "medianPriceUnit": 1150000,
-      "annualChange": 4.2,
-      "salesCount": 145,
-      "priceHistory": {
-        "2015": 1865000, "2016": 1995000, "2017": 2155000, "2018": 2230000, "2019": 2150000,
-        "2020": 2250000, "2021": 2520000, "2022": 2785000, "2023": 2550000, "2024": 2650000
-      },
-      "demographics": { "population": 12000, "medianAge": 42, "familyHouseholds": "68%", "ownerOccupied": "62%", "bornOverseas": "30%" },
-      "schools": [
-        {"name": "Malvern Primary School", "type": "Government", "rating": "Excellent"},
-        {"name": "Lauriston Girls' School", "type": "Independent", "rating": "Excellent"}
+      "coords": [
+        -37.8667,
+        145.0333
       ],
-      "transport": { "trainStation": "Malvern", "trainLine": "Glen Waverley Line", "busRoutes": ["72", "75", "605"], "commuteToCity": "20 min" },
-      "amenities": ["Glenferrie Road Shopping", "Central Park", "Malvern Gardens"]
+      "medianPrice": 2500000,
+      "medianPriceUnit": 1150000,
+      "annualChange": -23,
+      "salesCount": 47,
+      "priceHistory": {
+        "2015": 1865000,
+        "2016": 1995000,
+        "2017": 2155000,
+        "2018": 2230000,
+        "2019": 2150000,
+        "2020": 2250000,
+        "2021": 2520000,
+        "2022": 2785000,
+        "2023": 2550000,
+        "2024": 2650000,
+        "2025": 2500000
+      },
+      "demographics": {
+        "population": 12000,
+        "medianAge": 42,
+        "familyHouseholds": "68%",
+        "ownerOccupied": "62%",
+        "bornOverseas": "30%"
+      },
+      "schools": [
+        {
+          "name": "Malvern Primary School",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Lauriston Girls' School",
+          "type": "Independent",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Malvern",
+        "trainLine": "Glen Waverley Line",
+        "busRoutes": [
+          "72",
+          "75",
+          "605"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "Glenferrie Road Shopping",
+        "Central Park",
+        "Malvern Gardens"
+      ]
     },
     "Caulfield": {
       "postcode": "3162",
       "municipality": "Glen Eira",
-      "coords": [-37.8833, 145.0333],
-      "medianPrice": 1850000,
-      "medianPriceUnit": 780000,
-      "annualChange": 3.5,
-      "salesCount": 185,
-      "priceHistory": {
-        "2015": 1285000, "2016": 1375000, "2017": 1485000, "2018": 1535000, "2019": 1480000,
-        "2020": 1545000, "2021": 1745000, "2022": 1935000, "2023": 1790000, "2024": 1850000
-      },
-      "demographics": { "population": 18000, "medianAge": 38, "familyHouseholds": "62%", "ownerOccupied": "58%", "bornOverseas": "40%" },
-      "schools": [
-        {"name": "Caulfield Grammar School", "type": "Independent", "rating": "Excellent"},
-        {"name": "Monash University Caulfield", "type": "University", "rating": "Excellent"}
+      "coords": [
+        -37.8833,
+        145.0333
       ],
-      "transport": { "trainStation": "Caulfield", "trainLine": "Multiple Lines", "busRoutes": ["623", "624", "625"], "commuteToCity": "20 min" },
-      "amenities": ["Caulfield Racecourse", "Monash University Caulfield", "Caulfield Park"]
+      "medianPrice": 2685000,
+      "medianPriceUnit": 751500,
+      "annualChange": 29.1,
+      "salesCount": 7,
+      "priceHistory": {
+        "2015": 1285000,
+        "2016": 1375000,
+        "2017": 1485000,
+        "2018": 1535000,
+        "2019": 1480000,
+        "2020": 1545000,
+        "2021": 1745000,
+        "2022": 1935000,
+        "2023": 1790000,
+        "2024": 1850000,
+        "2025": 2685000
+      },
+      "demographics": {
+        "population": 18000,
+        "medianAge": 38,
+        "familyHouseholds": "62%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "40%"
+      },
+      "schools": [
+        {
+          "name": "Caulfield Grammar School",
+          "type": "Independent",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Monash University Caulfield",
+          "type": "University",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Caulfield",
+        "trainLine": "Multiple Lines",
+        "busRoutes": [
+          "623",
+          "624",
+          "625"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "Caulfield Racecourse",
+        "Monash University Caulfield",
+        "Caulfield Park"
+      ]
     },
     "Bentleigh": {
       "postcode": "3204",
       "municipality": "Glen Eira",
-      "coords": [-37.9167, 145.0333],
-      "medianPrice": 1520000,
-      "medianPriceUnit": 720000,
-      "annualChange": 3.2,
-      "salesCount": 212,
-      "priceHistory": {
-        "2015": 1045000, "2016": 1120000, "2017": 1210000, "2018": 1255000, "2019": 1210000,
-        "2020": 1265000, "2021": 1430000, "2022": 1590000, "2023": 1480000, "2024": 1520000
-      },
-      "demographics": { "population": 18000, "medianAge": 37, "familyHouseholds": "68%", "ownerOccupied": "65%", "bornOverseas": "38%" },
-      "schools": [
-        {"name": "Bentleigh Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Bentleigh Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9167,
+        145.0333
       ],
-      "transport": { "trainStation": "Bentleigh", "trainLine": "Frankston Line", "busRoutes": ["703", "822", "824"], "commuteToCity": "30 min" },
-      "amenities": ["Bentleigh Shopping Centre", "Bentleigh Reserve", "Victory Park"]
+      "medianPrice": 1750000,
+      "medianPriceUnit": 790000,
+      "annualChange": 3.6,
+      "salesCount": 86,
+      "priceHistory": {
+        "2015": 1045000,
+        "2016": 1120000,
+        "2017": 1210000,
+        "2018": 1255000,
+        "2019": 1210000,
+        "2020": 1265000,
+        "2021": 1430000,
+        "2022": 1590000,
+        "2023": 1480000,
+        "2024": 1520000,
+        "2025": 1750000
+      },
+      "demographics": {
+        "population": 18000,
+        "medianAge": 37,
+        "familyHouseholds": "68%",
+        "ownerOccupied": "65%",
+        "bornOverseas": "38%"
+      },
+      "schools": [
+        {
+          "name": "Bentleigh Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Bentleigh Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Bentleigh",
+        "trainLine": "Frankston Line",
+        "busRoutes": [
+          "703",
+          "822",
+          "824"
+        ],
+        "commuteToCity": "30 min"
+      },
+      "amenities": [
+        "Bentleigh Shopping Centre",
+        "Bentleigh Reserve",
+        "Victory Park"
+      ]
     },
     "Cheltenham": {
       "postcode": "3192",
       "municipality": "Kingston",
-      "coords": [-37.9500, 145.0500],
-      "medianPrice": 1380000,
-      "medianPriceUnit": 680000,
-      "annualChange": 3.0,
-      "salesCount": 225,
-      "priceHistory": {
-        "2015": 945000, "2016": 1015000, "2017": 1095000, "2018": 1135000, "2019": 1095000,
-        "2020": 1145000, "2021": 1295000, "2022": 1440000, "2023": 1345000, "2024": 1380000
-      },
-      "demographics": { "population": 22000, "medianAge": 38, "familyHouseholds": "70%", "ownerOccupied": "68%", "bornOverseas": "35%" },
-      "schools": [
-        {"name": "Cheltenham Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Cheltenham Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.95,
+        145.05
       ],
-      "transport": { "trainStation": "Cheltenham", "trainLine": "Frankston Line", "busRoutes": ["703", "811", "812"], "commuteToCity": "35 min" },
-      "amenities": ["Southland Shopping Centre", "Cheltenham Park", "Le Page Park"]
+      "medianPrice": 1302500,
+      "medianPriceUnit": 675000,
+      "annualChange": 3.3,
+      "salesCount": 84,
+      "priceHistory": {
+        "2015": 945000,
+        "2016": 1015000,
+        "2017": 1095000,
+        "2018": 1135000,
+        "2019": 1095000,
+        "2020": 1145000,
+        "2021": 1295000,
+        "2022": 1440000,
+        "2023": 1345000,
+        "2024": 1380000,
+        "2025": 1302500
+      },
+      "demographics": {
+        "population": 22000,
+        "medianAge": 38,
+        "familyHouseholds": "70%",
+        "ownerOccupied": "68%",
+        "bornOverseas": "35%"
+      },
+      "schools": [
+        {
+          "name": "Cheltenham Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Cheltenham Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Cheltenham",
+        "trainLine": "Frankston Line",
+        "busRoutes": [
+          "703",
+          "811",
+          "812"
+        ],
+        "commuteToCity": "35 min"
+      },
+      "amenities": [
+        "Southland Shopping Centre",
+        "Cheltenham Park",
+        "Le Page Park"
+      ]
     },
     "Mentone": {
       "postcode": "3194",
       "municipality": "Kingston",
-      "coords": [-37.9833, 145.0667],
-      "medianPrice": 1420000,
-      "medianPriceUnit": 720000,
-      "annualChange": 3.2,
-      "salesCount": 185,
-      "priceHistory": {
-        "2015": 975000, "2016": 1045000, "2017": 1130000, "2018": 1170000, "2019": 1130000,
-        "2020": 1180000, "2021": 1335000, "2022": 1485000, "2023": 1385000, "2024": 1420000
-      },
-      "demographics": { "population": 12000, "medianAge": 39, "familyHouseholds": "72%", "ownerOccupied": "70%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Mentone Girls' Grammar", "type": "Independent", "rating": "Excellent"},
-        {"name": "Mentone Grammar", "type": "Independent", "rating": "Excellent"},
-        {"name": "Mentone Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9833,
+        145.0667
       ],
-      "transport": { "trainStation": "Mentone", "trainLine": "Frankston Line", "busRoutes": ["703", "824"], "commuteToCity": "40 min" },
-      "amenities": ["Mentone Beach", "Mentone Shopping Village", "Keith Styles Park"]
+      "medianPrice": 1487000,
+      "medianPriceUnit": 720000,
+      "annualChange": 14.8,
+      "salesCount": 59,
+      "priceHistory": {
+        "2015": 975000,
+        "2016": 1045000,
+        "2017": 1130000,
+        "2018": 1170000,
+        "2019": 1130000,
+        "2020": 1180000,
+        "2021": 1335000,
+        "2022": 1485000,
+        "2023": 1385000,
+        "2024": 1420000,
+        "2025": 1487000
+      },
+      "demographics": {
+        "population": 12000,
+        "medianAge": 39,
+        "familyHouseholds": "72%",
+        "ownerOccupied": "70%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Mentone Girls' Grammar",
+          "type": "Independent",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Mentone Grammar",
+          "type": "Independent",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Mentone Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Mentone",
+        "trainLine": "Frankston Line",
+        "busRoutes": [
+          "703",
+          "824"
+        ],
+        "commuteToCity": "40 min"
+      },
+      "amenities": [
+        "Mentone Beach",
+        "Mentone Shopping Village",
+        "Keith Styles Park"
+      ]
     },
     "Frankston": {
       "postcode": "3199",
       "municipality": "Frankston",
-      "coords": [-38.1500, 145.1333],
-      "medianPrice": 820000,
-      "medianPriceUnit": 520000,
-      "annualChange": 2.5,
-      "salesCount": 385,
-      "priceHistory": {
-        "2015": 510000, "2016": 560000, "2017": 630000, "2018": 665000, "2019": 645000,
-        "2020": 680000, "2021": 775000, "2022": 860000, "2023": 800000, "2024": 820000
-      },
-      "demographics": { "population": 38000, "medianAge": 37, "familyHouseholds": "62%", "ownerOccupied": "58%", "bornOverseas": "28%" },
-      "schools": [
-        {"name": "Frankston High School", "type": "Government", "rating": "Good"},
-        {"name": "Frankston Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -38.15,
+        145.1333
       ],
-      "transport": { "trainStation": "Frankston", "trainLine": "Frankston Line", "busRoutes": ["770", "771", "772", "773"], "commuteToCity": "55 min" },
-      "amenities": ["Bayside Shopping Centre", "Frankston Beach", "Frankston Arts Centre"]
+      "medianPrice": 810000,
+      "medianPriceUnit": 557500,
+      "annualChange": 8,
+      "salesCount": 319,
+      "priceHistory": {
+        "2015": 510000,
+        "2016": 560000,
+        "2017": 630000,
+        "2018": 665000,
+        "2019": 645000,
+        "2020": 680000,
+        "2021": 775000,
+        "2022": 860000,
+        "2023": 800000,
+        "2024": 820000,
+        "2025": 810000
+      },
+      "demographics": {
+        "population": 38000,
+        "medianAge": 37,
+        "familyHouseholds": "62%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "28%"
+      },
+      "schools": [
+        {
+          "name": "Frankston High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Frankston Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Frankston",
+        "trainLine": "Frankston Line",
+        "busRoutes": [
+          "770",
+          "771",
+          "772",
+          "773"
+        ],
+        "commuteToCity": "55 min"
+      },
+      "amenities": [
+        "Bayside Shopping Centre",
+        "Frankston Beach",
+        "Frankston Arts Centre"
+      ]
     },
     "Clayton": {
       "postcode": "3168",
       "municipality": "Monash",
-      "coords": [-37.9167, 145.1167],
-      "medianPrice": 1150000,
-      "medianPriceUnit": 620000,
-      "annualChange": 2.8,
-      "salesCount": 198,
-      "priceHistory": {
-        "2015": 755000, "2016": 815000, "2017": 895000, "2018": 930000, "2019": 895000,
-        "2020": 940000, "2021": 1070000, "2022": 1195000, "2023": 1120000, "2024": 1150000
-      },
-      "demographics": { "population": 21000, "medianAge": 32, "familyHouseholds": "58%", "ownerOccupied": "52%", "bornOverseas": "55%" },
-      "schools": [
-        {"name": "Clayton South Primary", "type": "Government", "rating": "Good"},
-        {"name": "Monash University Clayton", "type": "University", "rating": "Excellent"}
+      "coords": [
+        -37.9167,
+        145.1167
       ],
-      "transport": { "trainStation": "Clayton", "trainLine": "Cranbourne/Pakenham Line", "busRoutes": ["630", "631", "733"], "commuteToCity": "35 min" },
-      "amenities": ["Monash University", "Clayton Shopping Centre", "Monash Medical Centre"]
+      "medianPrice": 1290000,
+      "medianPriceUnit": 695000,
+      "annualChange": 5.3,
+      "salesCount": 35,
+      "priceHistory": {
+        "2015": 755000,
+        "2016": 815000,
+        "2017": 895000,
+        "2018": 930000,
+        "2019": 895000,
+        "2020": 940000,
+        "2021": 1070000,
+        "2022": 1195000,
+        "2023": 1120000,
+        "2024": 1150000,
+        "2025": 1290000
+      },
+      "demographics": {
+        "population": 21000,
+        "medianAge": 32,
+        "familyHouseholds": "58%",
+        "ownerOccupied": "52%",
+        "bornOverseas": "55%"
+      },
+      "schools": [
+        {
+          "name": "Clayton South Primary",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Monash University Clayton",
+          "type": "University",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Clayton",
+        "trainLine": "Cranbourne/Pakenham Line",
+        "busRoutes": [
+          "630",
+          "631",
+          "733"
+        ],
+        "commuteToCity": "35 min"
+      },
+      "amenities": [
+        "Monash University",
+        "Clayton Shopping Centre",
+        "Monash Medical Centre"
+      ]
     },
     "Dandenong": {
       "postcode": "3175",
       "municipality": "Greater Dandenong",
-      "coords": [-37.9833, 145.2167],
-      "medianPrice": 680000,
-      "medianPriceUnit": 450000,
-      "annualChange": 2.2,
-      "salesCount": 312,
-      "priceHistory": {
-        "2015": 420000, "2016": 465000, "2017": 525000, "2018": 555000, "2019": 535000,
-        "2020": 565000, "2021": 645000, "2022": 715000, "2023": 665000, "2024": 680000
-      },
-      "demographics": { "population": 32000, "medianAge": 34, "familyHouseholds": "62%", "ownerOccupied": "48%", "bornOverseas": "65%" },
-      "schools": [
-        {"name": "Dandenong High School", "type": "Government", "rating": "Good"},
-        {"name": "Dandenong Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9833,
+        145.2167
       ],
-      "transport": { "trainStation": "Dandenong", "trainLine": "Cranbourne/Pakenham Line", "busRoutes": ["800", "802", "811", "850"], "commuteToCity": "45 min" },
-      "amenities": ["Dandenong Market", "Dandenong Plaza", "Dandenong Showgrounds"]
+      "medianPrice": 755000,
+      "medianPriceUnit": 440000,
+      "annualChange": 4.1,
+      "salesCount": 95,
+      "priceHistory": {
+        "2015": 420000,
+        "2016": 465000,
+        "2017": 525000,
+        "2018": 555000,
+        "2019": 535000,
+        "2020": 565000,
+        "2021": 645000,
+        "2022": 715000,
+        "2023": 665000,
+        "2024": 680000,
+        "2025": 755000
+      },
+      "demographics": {
+        "population": 32000,
+        "medianAge": 34,
+        "familyHouseholds": "62%",
+        "ownerOccupied": "48%",
+        "bornOverseas": "65%"
+      },
+      "schools": [
+        {
+          "name": "Dandenong High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Dandenong Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Dandenong",
+        "trainLine": "Cranbourne/Pakenham Line",
+        "busRoutes": [
+          "800",
+          "802",
+          "811",
+          "850"
+        ],
+        "commuteToCity": "45 min"
+      },
+      "amenities": [
+        "Dandenong Market",
+        "Dandenong Plaza",
+        "Dandenong Showgrounds"
+      ]
     },
     "Berwick": {
       "postcode": "3806",
       "municipality": "Casey",
-      "coords": [-38.0333, 145.3500],
-      "medianPrice": 850000,
-      "medianPriceUnit": 580000,
-      "annualChange": 3.0,
-      "salesCount": 425,
-      "priceHistory": {
-        "2015": 535000, "2016": 585000, "2017": 660000, "2018": 695000, "2019": 670000,
-        "2020": 705000, "2021": 805000, "2022": 890000, "2023": 825000, "2024": 850000
-      },
-      "demographics": { "population": 52000, "medianAge": 35, "familyHouseholds": "75%", "ownerOccupied": "70%", "bornOverseas": "42%" },
-      "schools": [
-        {"name": "Berwick Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Nossal High School", "type": "Government", "rating": "Excellent"},
-        {"name": "Beaconhills College", "type": "Independent", "rating": "Good"}
+      "coords": [
+        -38.0333,
+        145.35
       ],
-      "transport": { "trainStation": "Berwick", "trainLine": "Pakenham Line", "busRoutes": ["835", "837", "839"], "commuteToCity": "50 min" },
-      "amenities": ["Eden Rise Shopping", "Wilson Botanic Park", "Casey Stadium"]
+      "medianPrice": 870000,
+      "medianPriceUnit": 680000,
+      "annualChange": -3.3,
+      "salesCount": 408,
+      "priceHistory": {
+        "2015": 535000,
+        "2016": 585000,
+        "2017": 660000,
+        "2018": 695000,
+        "2019": 670000,
+        "2020": 705000,
+        "2021": 805000,
+        "2022": 890000,
+        "2023": 825000,
+        "2024": 850000,
+        "2025": 870000
+      },
+      "demographics": {
+        "population": 52000,
+        "medianAge": 35,
+        "familyHouseholds": "75%",
+        "ownerOccupied": "70%",
+        "bornOverseas": "42%"
+      },
+      "schools": [
+        {
+          "name": "Berwick Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Nossal High School",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Beaconhills College",
+          "type": "Independent",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Berwick",
+        "trainLine": "Pakenham Line",
+        "busRoutes": [
+          "835",
+          "837",
+          "839"
+        ],
+        "commuteToCity": "50 min"
+      },
+      "amenities": [
+        "Eden Rise Shopping",
+        "Wilson Botanic Park",
+        "Casey Stadium"
+      ]
     },
     "Croydon": {
       "postcode": "3136",
       "municipality": "Maroondah",
-      "coords": [-37.7833, 145.2833],
-      "medianPrice": 980000,
-      "medianPriceUnit": 620000,
-      "annualChange": 2.5,
-      "salesCount": 265,
-      "priceHistory": {
-        "2015": 625000, "2016": 680000, "2017": 760000, "2018": 795000, "2019": 765000,
-        "2020": 805000, "2021": 920000, "2022": 1025000, "2023": 955000, "2024": 980000
-      },
-      "demographics": { "population": 29000, "medianAge": 38, "familyHouseholds": "72%", "ownerOccupied": "68%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Yarra Hills Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Croydon Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7833,
+        145.2833
       ],
-      "transport": { "trainStation": "Croydon", "trainLine": "Lilydale Line", "busRoutes": ["664", "670", "672"], "commuteToCity": "55 min" },
-      "amenities": ["Croydon Central", "Croydon Main Street", "Dorset Gardens"]
+      "medianPrice": 882500,
+      "medianPriceUnit": 688500,
+      "annualChange": -1.9,
+      "salesCount": 134,
+      "priceHistory": {
+        "2015": 625000,
+        "2016": 680000,
+        "2017": 760000,
+        "2018": 795000,
+        "2019": 765000,
+        "2020": 805000,
+        "2021": 920000,
+        "2022": 1025000,
+        "2023": 955000,
+        "2024": 980000,
+        "2025": 882500
+      },
+      "demographics": {
+        "population": 29000,
+        "medianAge": 38,
+        "familyHouseholds": "72%",
+        "ownerOccupied": "68%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Yarra Hills Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Croydon Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Croydon",
+        "trainLine": "Lilydale Line",
+        "busRoutes": [
+          "664",
+          "670",
+          "672"
+        ],
+        "commuteToCity": "55 min"
+      },
+      "amenities": [
+        "Croydon Central",
+        "Croydon Main Street",
+        "Dorset Gardens"
+      ]
     },
     "Lilydale": {
       "postcode": "3140",
       "municipality": "Yarra Ranges",
-      "coords": [-37.7500, 145.3500],
-      "medianPrice": 920000,
-      "medianPriceUnit": 580000,
-      "annualChange": 3.0,
-      "salesCount": 225,
-      "priceHistory": {
-        "2015": 585000, "2016": 640000, "2017": 715000, "2018": 750000, "2019": 720000,
-        "2020": 760000, "2021": 865000, "2022": 960000, "2023": 895000, "2024": 920000
-      },
-      "demographics": { "population": 18000, "medianAge": 37, "familyHouseholds": "70%", "ownerOccupied": "68%", "bornOverseas": "28%" },
-      "schools": [
-        {"name": "Lilydale High School", "type": "Government", "rating": "Good"},
-        {"name": "Lilydale Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.75,
+        145.35
       ],
-      "transport": { "trainStation": "Lilydale", "trainLine": "Lilydale Line", "busRoutes": ["664", "670", "672"], "commuteToCity": "60 min" },
-      "amenities": ["Lilydale Marketplace", "Lillydale Lake", "Yarra Valley Gateway"]
+      "medianPrice": 957500,
+      "medianPriceUnit": 580000,
+      "annualChange": 10,
+      "salesCount": 123,
+      "priceHistory": {
+        "2015": 585000,
+        "2016": 640000,
+        "2017": 715000,
+        "2018": 750000,
+        "2019": 720000,
+        "2020": 760000,
+        "2021": 865000,
+        "2022": 960000,
+        "2023": 895000,
+        "2024": 920000,
+        "2025": 957500
+      },
+      "demographics": {
+        "population": 18000,
+        "medianAge": 37,
+        "familyHouseholds": "70%",
+        "ownerOccupied": "68%",
+        "bornOverseas": "28%"
+      },
+      "schools": [
+        {
+          "name": "Lilydale High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Lilydale Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Lilydale",
+        "trainLine": "Lilydale Line",
+        "busRoutes": [
+          "664",
+          "670",
+          "672"
+        ],
+        "commuteToCity": "60 min"
+      },
+      "amenities": [
+        "Lilydale Marketplace",
+        "Lillydale Lake",
+        "Yarra Valley Gateway"
+      ]
     },
     "Belgrave": {
       "postcode": "3160",
       "municipality": "Yarra Ranges",
-      "coords": [-37.9167, 145.3500],
-      "medianPrice": 880000,
-      "medianPriceUnit": 620000,
-      "annualChange": 2.8,
-      "salesCount": 145,
-      "priceHistory": {
-        "2015": 555000, "2016": 605000, "2017": 680000, "2018": 715000, "2019": 690000,
-        "2020": 725000, "2021": 825000, "2022": 920000, "2023": 855000, "2024": 880000
-      },
-      "demographics": { "population": 4500, "medianAge": 42, "familyHouseholds": "68%", "ownerOccupied": "72%", "bornOverseas": "22%" },
-      "schools": [
-        {"name": "Belgrave Heights Christian School", "type": "Independent", "rating": "Good"},
-        {"name": "Belgrave Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9167,
+        145.35
       ],
-      "transport": { "trainStation": "Belgrave", "trainLine": "Belgrave Line", "busRoutes": ["693", "694", "696"], "commuteToCity": "65 min" },
-      "amenities": ["Puffing Billy Railway", "Dandenong Ranges", "Belgrave Village"]
+      "medianPrice": 760000,
+      "medianPriceUnit": 620000,
+      "annualChange": -11.6,
+      "salesCount": 28,
+      "priceHistory": {
+        "2015": 555000,
+        "2016": 605000,
+        "2017": 680000,
+        "2018": 715000,
+        "2019": 690000,
+        "2020": 725000,
+        "2021": 825000,
+        "2022": 920000,
+        "2023": 855000,
+        "2024": 880000,
+        "2025": 760000
+      },
+      "demographics": {
+        "population": 4500,
+        "medianAge": 42,
+        "familyHouseholds": "68%",
+        "ownerOccupied": "72%",
+        "bornOverseas": "22%"
+      },
+      "schools": [
+        {
+          "name": "Belgrave Heights Christian School",
+          "type": "Independent",
+          "rating": "Good"
+        },
+        {
+          "name": "Belgrave Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Belgrave",
+        "trainLine": "Belgrave Line",
+        "busRoutes": [
+          "693",
+          "694",
+          "696"
+        ],
+        "commuteToCity": "65 min"
+      },
+      "amenities": [
+        "Puffing Billy Railway",
+        "Dandenong Ranges",
+        "Belgrave Village"
+      ]
     },
     "Williamstown": {
       "postcode": "3016",
       "municipality": "Hobsons Bay",
-      "coords": [-37.8667, 144.9000],
-      "medianPrice": 1520000,
-      "medianPriceUnit": 780000,
-      "annualChange": 3.5,
-      "salesCount": 178,
-      "priceHistory": {
-        "2015": 1045000, "2016": 1120000, "2017": 1210000, "2018": 1255000, "2019": 1210000,
-        "2020": 1265000, "2021": 1435000, "2022": 1590000, "2023": 1480000, "2024": 1520000
-      },
-      "demographics": { "population": 14000, "medianAge": 40, "familyHouseholds": "58%", "ownerOccupied": "55%", "bornOverseas": "28%" },
-      "schools": [
-        {"name": "Williamstown High School", "type": "Government", "rating": "Good"},
-        {"name": "Williamstown Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.8667,
+        144.9
       ],
-      "transport": { "trainStation": "Williamstown", "trainLine": "Williamstown Line", "busRoutes": ["415", "471", "472"], "commuteToCity": "25 min" },
-      "amenities": ["Williamstown Beach", "Nelson Place", "Williamstown Botanic Gardens"]
+      "medianPrice": 1600000,
+      "medianPriceUnit": 780000,
+      "annualChange": 10.2,
+      "salesCount": 67,
+      "priceHistory": {
+        "2015": 1045000,
+        "2016": 1120000,
+        "2017": 1210000,
+        "2018": 1255000,
+        "2019": 1210000,
+        "2020": 1265000,
+        "2021": 1435000,
+        "2022": 1590000,
+        "2023": 1480000,
+        "2024": 1520000,
+        "2025": 1600000
+      },
+      "demographics": {
+        "population": 14000,
+        "medianAge": 40,
+        "familyHouseholds": "58%",
+        "ownerOccupied": "55%",
+        "bornOverseas": "28%"
+      },
+      "schools": [
+        {
+          "name": "Williamstown High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Williamstown Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Williamstown",
+        "trainLine": "Williamstown Line",
+        "busRoutes": [
+          "415",
+          "471",
+          "472"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Williamstown Beach",
+        "Nelson Place",
+        "Williamstown Botanic Gardens"
+      ]
     },
     "Altona": {
       "postcode": "3018",
       "municipality": "Hobsons Bay",
-      "coords": [-37.8667, 144.8333],
-      "medianPrice": 1080000,
-      "medianPriceUnit": 620000,
-      "annualChange": 3.0,
-      "salesCount": 165,
-      "priceHistory": {
-        "2015": 705000, "2016": 765000, "2017": 845000, "2018": 880000, "2019": 850000,
-        "2020": 890000, "2021": 1015000, "2022": 1125000, "2023": 1050000, "2024": 1080000
-      },
-      "demographics": { "population": 12000, "medianAge": 38, "familyHouseholds": "65%", "ownerOccupied": "62%", "bornOverseas": "35%" },
-      "schools": [
-        {"name": "Altona Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Altona Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.8667,
+        144.8333
       ],
-      "transport": { "trainStation": "Altona", "trainLine": "Werribee Line", "busRoutes": ["411", "415"], "commuteToCity": "35 min" },
-      "amenities": ["Altona Beach", "Cherry Lake", "Altona Pier"]
+      "medianPrice": 1168000,
+      "medianPriceUnit": 690000,
+      "annualChange": -4.3,
+      "salesCount": 75,
+      "priceHistory": {
+        "2015": 705000,
+        "2016": 765000,
+        "2017": 845000,
+        "2018": 880000,
+        "2019": 850000,
+        "2020": 890000,
+        "2021": 1015000,
+        "2022": 1125000,
+        "2023": 1050000,
+        "2024": 1080000,
+        "2025": 1168000
+      },
+      "demographics": {
+        "population": 12000,
+        "medianAge": 38,
+        "familyHouseholds": "65%",
+        "ownerOccupied": "62%",
+        "bornOverseas": "35%"
+      },
+      "schools": [
+        {
+          "name": "Altona Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Altona Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Altona",
+        "trainLine": "Werribee Line",
+        "busRoutes": [
+          "411",
+          "415"
+        ],
+        "commuteToCity": "35 min"
+      },
+      "amenities": [
+        "Altona Beach",
+        "Cherry Lake",
+        "Altona Pier"
+      ]
     },
     "Newport": {
       "postcode": "3015",
       "municipality": "Hobsons Bay",
-      "coords": [-37.8500, 144.8833],
-      "medianPrice": 1250000,
-      "medianPriceUnit": 680000,
-      "annualChange": 3.2,
-      "salesCount": 178,
-      "priceHistory": {
-        "2015": 855000, "2016": 920000, "2017": 1000000, "2018": 1040000, "2019": 1000000,
-        "2020": 1045000, "2021": 1185000, "2022": 1315000, "2023": 1220000, "2024": 1250000
-      },
-      "demographics": { "population": 14000, "medianAge": 37, "familyHouseholds": "60%", "ownerOccupied": "58%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Bayside P-12 College Newport", "type": "Government", "rating": "Good"},
-        {"name": "Newport Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.85,
+        144.8833
       ],
-      "transport": { "trainStation": "Newport", "trainLine": "Werribee Line", "busRoutes": ["411", "432", "472"], "commuteToCity": "20 min" },
-      "amenities": ["Newport Lakes", "Mason Street Shops", "Newport Park"]
+      "medianPrice": 1270000,
+      "medianPriceUnit": 690000,
+      "annualChange": -8.1,
+      "salesCount": 103,
+      "priceHistory": {
+        "2015": 855000,
+        "2016": 920000,
+        "2017": 1000000,
+        "2018": 1040000,
+        "2019": 1000000,
+        "2020": 1045000,
+        "2021": 1185000,
+        "2022": 1315000,
+        "2023": 1220000,
+        "2024": 1250000,
+        "2025": 1270000
+      },
+      "demographics": {
+        "population": 14000,
+        "medianAge": 37,
+        "familyHouseholds": "60%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Bayside P-12 College Newport",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Newport Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Newport",
+        "trainLine": "Werribee Line",
+        "busRoutes": [
+          "411",
+          "432",
+          "472"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "Newport Lakes",
+        "Mason Street Shops",
+        "Newport Park"
+      ]
     },
     "Essendon": {
       "postcode": "3040",
       "municipality": "Moonee Valley",
-      "coords": [-37.7500, 144.9167],
-      "medianPrice": 1480000,
-      "medianPriceUnit": 680000,
-      "annualChange": 3.5,
-      "salesCount": 198,
-      "priceHistory": {
-        "2015": 1015000, "2016": 1090000, "2017": 1180000, "2018": 1220000, "2019": 1175000,
-        "2020": 1230000, "2021": 1395000, "2022": 1550000, "2023": 1440000, "2024": 1480000
-      },
-      "demographics": { "population": 22000, "medianAge": 38, "familyHouseholds": "62%", "ownerOccupied": "58%", "bornOverseas": "35%" },
-      "schools": [
-        {"name": "Essendon Primary School", "type": "Government", "rating": "Good"},
-        {"name": "Penleigh and Essendon Grammar", "type": "Independent", "rating": "Excellent"}
+      "coords": [
+        -37.75,
+        144.9167
       ],
-      "transport": { "trainStation": "Essendon", "trainLine": "Craigieburn Line", "busRoutes": ["382", "466", "467"], "commuteToCity": "20 min" },
-      "amenities": ["Essendon DFO", "Moonee Valley Racecourse", "Essendon Fields"]
+      "medianPrice": 1655000,
+      "medianPriceUnit": 530000,
+      "annualChange": 6.1,
+      "salesCount": 111,
+      "priceHistory": {
+        "2015": 1015000,
+        "2016": 1090000,
+        "2017": 1180000,
+        "2018": 1220000,
+        "2019": 1175000,
+        "2020": 1230000,
+        "2021": 1395000,
+        "2022": 1550000,
+        "2023": 1440000,
+        "2024": 1480000,
+        "2025": 1655000
+      },
+      "demographics": {
+        "population": 22000,
+        "medianAge": 38,
+        "familyHouseholds": "62%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "35%"
+      },
+      "schools": [
+        {
+          "name": "Essendon Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Penleigh and Essendon Grammar",
+          "type": "Independent",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Essendon",
+        "trainLine": "Craigieburn Line",
+        "busRoutes": [
+          "382",
+          "466",
+          "467"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "Essendon DFO",
+        "Moonee Valley Racecourse",
+        "Essendon Fields"
+      ]
     },
     "Moonee Ponds": {
       "postcode": "3039",
       "municipality": "Moonee Valley",
-      "coords": [-37.7667, 144.9167],
-      "medianPrice": 1550000,
-      "medianPriceUnit": 720000,
-      "annualChange": 3.8,
-      "salesCount": 185,
-      "priceHistory": {
-        "2015": 1070000, "2016": 1150000, "2017": 1245000, "2018": 1290000, "2019": 1240000,
-        "2020": 1295000, "2021": 1465000, "2022": 1625000, "2023": 1510000, "2024": 1550000
-      },
-      "demographics": { "population": 14000, "medianAge": 36, "familyHouseholds": "55%", "ownerOccupied": "52%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Moonee Ponds Primary School", "type": "Government", "rating": "Good"},
-        {"name": "Lowther Hall Anglican Grammar", "type": "Independent", "rating": "Excellent"}
+      "coords": [
+        -37.7667,
+        144.9167
       ],
-      "transport": { "trainStation": "Moonee Ponds", "trainLine": "Craigieburn Line", "busRoutes": ["59", "82", "505"], "commuteToCity": "15 min" },
-      "amenities": ["Moonee Ponds Central", "Queens Park", "Clocktower Centre"]
+      "medianPrice": 1500000,
+      "medianPriceUnit": 545000,
+      "annualChange": 7.5,
+      "salesCount": 81,
+      "priceHistory": {
+        "2015": 1070000,
+        "2016": 1150000,
+        "2017": 1245000,
+        "2018": 1290000,
+        "2019": 1240000,
+        "2020": 1295000,
+        "2021": 1465000,
+        "2022": 1625000,
+        "2023": 1510000,
+        "2024": 1550000,
+        "2025": 1500000
+      },
+      "demographics": {
+        "population": 14000,
+        "medianAge": 36,
+        "familyHouseholds": "55%",
+        "ownerOccupied": "52%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Moonee Ponds Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Lowther Hall Anglican Grammar",
+          "type": "Independent",
+          "rating": "Excellent"
+        }
+      ],
+      "transport": {
+        "trainStation": "Moonee Ponds",
+        "trainLine": "Craigieburn Line",
+        "busRoutes": [
+          "59",
+          "82",
+          "505"
+        ],
+        "commuteToCity": "15 min"
+      },
+      "amenities": [
+        "Moonee Ponds Central",
+        "Queens Park",
+        "Clocktower Centre"
+      ]
     },
     "Pascoe Vale": {
       "postcode": "3044",
       "municipality": "Moreland",
-      "coords": [-37.7333, 144.9333],
-      "medianPrice": 1120000,
-      "medianPriceUnit": 620000,
-      "annualChange": 3.0,
-      "salesCount": 225,
-      "priceHistory": {
-        "2015": 735000, "2016": 795000, "2017": 870000, "2018": 905000, "2019": 870000,
-        "2020": 915000, "2021": 1045000, "2022": 1165000, "2023": 1085000, "2024": 1120000
-      },
-      "demographics": { "population": 18000, "medianAge": 35, "familyHouseholds": "62%", "ownerOccupied": "58%", "bornOverseas": "42%" },
-      "schools": [
-        {"name": "Pascoe Vale Girls College", "type": "Government", "rating": "Good"},
-        {"name": "Pascoe Vale Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7333,
+        144.9333
       ],
-      "transport": { "trainStation": "Pascoe Vale", "trainLine": "Craigieburn Line", "busRoutes": ["527", "528", "534"], "commuteToCity": "25 min" },
-      "amenities": ["Pascoe Vale Road Shops", "Coburg Lake Reserve", "Cole Reserve"]
+      "medianPrice": 1207000,
+      "medianPriceUnit": 660000,
+      "annualChange": 3.2,
+      "salesCount": 62,
+      "priceHistory": {
+        "2015": 735000,
+        "2016": 795000,
+        "2017": 870000,
+        "2018": 905000,
+        "2019": 870000,
+        "2020": 915000,
+        "2021": 1045000,
+        "2022": 1165000,
+        "2023": 1085000,
+        "2024": 1120000,
+        "2025": 1207000
+      },
+      "demographics": {
+        "population": 18000,
+        "medianAge": 35,
+        "familyHouseholds": "62%",
+        "ownerOccupied": "58%",
+        "bornOverseas": "42%"
+      },
+      "schools": [
+        {
+          "name": "Pascoe Vale Girls College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Pascoe Vale Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Pascoe Vale",
+        "trainLine": "Craigieburn Line",
+        "busRoutes": [
+          "527",
+          "528",
+          "534"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Pascoe Vale Road Shops",
+        "Coburg Lake Reserve",
+        "Cole Reserve"
+      ]
     },
     "Niddrie": {
       "postcode": "3042",
       "municipality": "Moonee Valley",
-      "coords": [-37.7333, 144.8833],
-      "medianPrice": 1180000,
-      "medianPriceUnit": 620000,
-      "annualChange": 3.2,
-      "salesCount": 145,
-      "priceHistory": {
-        "2015": 775000, "2016": 835000, "2017": 915000, "2018": 950000, "2019": 915000,
-        "2020": 960000, "2021": 1095000, "2022": 1220000, "2023": 1145000, "2024": 1180000
-      },
-      "demographics": { "population": 8500, "medianAge": 39, "familyHouseholds": "68%", "ownerOccupied": "65%", "bornOverseas": "38%" },
-      "schools": [
-        {"name": "Niddrie Primary School", "type": "Government", "rating": "Good"},
-        {"name": "Buckley Park College", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7333,
+        144.8833
       ],
-      "transport": { "trainStation": null, "trainLine": null, "busRoutes": ["467", "468", "469"], "commuteToCity": "25 min" },
-      "amenities": ["Keilor Road Shops", "Niddrie Shopping Centre", "Cross Keys Reserve"]
+      "medianPrice": 1375000,
+      "medianPriceUnit": 855000,
+      "annualChange": 8.1,
+      "salesCount": 53,
+      "priceHistory": {
+        "2015": 775000,
+        "2016": 835000,
+        "2017": 915000,
+        "2018": 950000,
+        "2019": 915000,
+        "2020": 960000,
+        "2021": 1095000,
+        "2022": 1220000,
+        "2023": 1145000,
+        "2024": 1180000,
+        "2025": 1375000
+      },
+      "demographics": {
+        "population": 8500,
+        "medianAge": 39,
+        "familyHouseholds": "68%",
+        "ownerOccupied": "65%",
+        "bornOverseas": "38%"
+      },
+      "schools": [
+        {
+          "name": "Niddrie Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Buckley Park College",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": null,
+        "trainLine": null,
+        "busRoutes": [
+          "467",
+          "468",
+          "469"
+        ],
+        "commuteToCity": "25 min"
+      },
+      "amenities": [
+        "Keilor Road Shops",
+        "Niddrie Shopping Centre",
+        "Cross Keys Reserve"
+      ]
     },
     "Northcote": {
       "postcode": "3070",
       "municipality": "Darebin",
-      "coords": [-37.7667, 145.0000],
-      "medianPrice": 1420000,
-      "medianPriceUnit": 720000,
-      "annualChange": 3.5,
-      "salesCount": 212,
-      "priceHistory": {
-        "2015": 975000, "2016": 1050000, "2017": 1135000, "2018": 1175000, "2019": 1130000,
-        "2020": 1185000, "2021": 1345000, "2022": 1490000, "2023": 1385000, "2024": 1420000
-      },
-      "demographics": { "population": 26000, "medianAge": 34, "familyHouseholds": "48%", "ownerOccupied": "48%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Northcote High School", "type": "Government", "rating": "Good"},
-        {"name": "Northcote Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.7667,
+        145
       ],
-      "transport": { "trainStation": "Northcote", "trainLine": "South Morang Line", "busRoutes": ["86", "508", "556"], "commuteToCity": "20 min" },
-      "amenities": ["High Street Shopping", "All Nations Park", "Northcote Town Hall"]
+      "medianPrice": 1724500,
+      "medianPriceUnit": 600000,
+      "annualChange": 0.3,
+      "salesCount": 103,
+      "priceHistory": {
+        "2015": 975000,
+        "2016": 1050000,
+        "2017": 1135000,
+        "2018": 1175000,
+        "2019": 1130000,
+        "2020": 1185000,
+        "2021": 1345000,
+        "2022": 1490000,
+        "2023": 1385000,
+        "2024": 1420000,
+        "2025": 1724500
+      },
+      "demographics": {
+        "population": 26000,
+        "medianAge": 34,
+        "familyHouseholds": "48%",
+        "ownerOccupied": "48%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Northcote High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Northcote Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Northcote",
+        "trainLine": "South Morang Line",
+        "busRoutes": [
+          "86",
+          "508",
+          "556"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "High Street Shopping",
+        "All Nations Park",
+        "Northcote Town Hall"
+      ]
     },
     "Thornbury": {
       "postcode": "3071",
       "municipality": "Darebin",
-      "coords": [-37.7500, 145.0000],
-      "medianPrice": 1280000,
-      "medianPriceUnit": 680000,
-      "annualChange": 3.2,
-      "salesCount": 198,
-      "priceHistory": {
-        "2015": 865000, "2016": 935000, "2017": 1015000, "2018": 1055000, "2019": 1015000,
-        "2020": 1065000, "2021": 1210000, "2022": 1340000, "2023": 1250000, "2024": 1280000
-      },
-      "demographics": { "population": 19000, "medianAge": 33, "familyHouseholds": "52%", "ownerOccupied": "50%", "bornOverseas": "35%" },
-      "schools": [
-        {"name": "Thornbury High School", "type": "Government", "rating": "Good"},
-        {"name": "Thornbury Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.75,
+        145
       ],
-      "transport": { "trainStation": "Thornbury", "trainLine": "South Morang Line", "busRoutes": ["11", "86", "556"], "commuteToCity": "22 min" },
-      "amenities": ["High Street Shopping", "Northland Shopping Centre", "Penders Park"]
+      "medianPrice": 1390000,
+      "medianPriceUnit": 680000,
+      "annualChange": -0.7,
+      "salesCount": 76,
+      "priceHistory": {
+        "2015": 865000,
+        "2016": 935000,
+        "2017": 1015000,
+        "2018": 1055000,
+        "2019": 1015000,
+        "2020": 1065000,
+        "2021": 1210000,
+        "2022": 1340000,
+        "2023": 1250000,
+        "2024": 1280000,
+        "2025": 1390000
+      },
+      "demographics": {
+        "population": 19000,
+        "medianAge": 33,
+        "familyHouseholds": "52%",
+        "ownerOccupied": "50%",
+        "bornOverseas": "35%"
+      },
+      "schools": [
+        {
+          "name": "Thornbury High School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Thornbury Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Thornbury",
+        "trainLine": "South Morang Line",
+        "busRoutes": [
+          "11",
+          "86",
+          "556"
+        ],
+        "commuteToCity": "22 min"
+      },
+      "amenities": [
+        "High Street Shopping",
+        "Northland Shopping Centre",
+        "Penders Park"
+      ]
     },
     "Fairfield": {
       "postcode": "3078",
       "municipality": "Darebin",
-      "coords": [-37.7833, 145.0167],
-      "medianPrice": 1380000,
-      "medianPriceUnit": 720000,
-      "annualChange": 3.5,
-      "salesCount": 145,
-      "priceHistory": {
-        "2015": 945000, "2016": 1015000, "2017": 1100000, "2018": 1140000, "2019": 1100000,
-        "2020": 1150000, "2021": 1305000, "2022": 1445000, "2023": 1345000, "2024": 1380000
-      },
-      "demographics": { "population": 9000, "medianAge": 38, "familyHouseholds": "55%", "ownerOccupied": "52%", "bornOverseas": "32%" },
-      "schools": [
-        {"name": "Alphington Primary School", "type": "Government", "rating": "Good"},
-        {"name": "Alphington Grammar School", "type": "Independent", "rating": "Good"}
+      "coords": [
+        -37.7833,
+        145.0167
       ],
-      "transport": { "trainStation": "Fairfield", "trainLine": "South Morang Line", "busRoutes": ["246", "251", "506"], "commuteToCity": "20 min" },
-      "amenities": ["Fairfield Village", "Fairfield Park Boathouse", "Yarra River Trail"]
+      "medianPrice": 2050000,
+      "medianPriceUnit": 594000,
+      "annualChange": 24.5,
+      "salesCount": 34,
+      "priceHistory": {
+        "2015": 945000,
+        "2016": 1015000,
+        "2017": 1100000,
+        "2018": 1140000,
+        "2019": 1100000,
+        "2020": 1150000,
+        "2021": 1305000,
+        "2022": 1445000,
+        "2023": 1345000,
+        "2024": 1380000,
+        "2025": 2050000
+      },
+      "demographics": {
+        "population": 9000,
+        "medianAge": 38,
+        "familyHouseholds": "55%",
+        "ownerOccupied": "52%",
+        "bornOverseas": "32%"
+      },
+      "schools": [
+        {
+          "name": "Alphington Primary School",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Alphington Grammar School",
+          "type": "Independent",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Fairfield",
+        "trainLine": "South Morang Line",
+        "busRoutes": [
+          "246",
+          "251",
+          "506"
+        ],
+        "commuteToCity": "20 min"
+      },
+      "amenities": [
+        "Fairfield Village",
+        "Fairfield Park Boathouse",
+        "Yarra River Trail"
+      ]
     },
     "Mount Waverley": {
       "postcode": "3149",
       "municipality": "Monash",
-      "coords": [-37.8833, 145.1333],
-      "medianPrice": 1380000,
-      "medianPriceUnit": 780000,
-      "annualChange": 3.2,
-      "salesCount": 245,
-      "priceHistory": {
-        "2015": 945000, "2016": 1015000, "2017": 1100000, "2018": 1140000, "2019": 1100000,
-        "2020": 1150000, "2021": 1305000, "2022": 1445000, "2023": 1345000, "2024": 1380000
-      },
-      "demographics": { "population": 35000, "medianAge": 40, "familyHouseholds": "75%", "ownerOccupied": "72%", "bornOverseas": "48%" },
-      "schools": [
-        {"name": "Mount Waverley Secondary College", "type": "Government", "rating": "Excellent"},
-        {"name": "Mount Waverley Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.8833,
+        145.1333
       ],
-      "transport": { "trainStation": "Mount Waverley", "trainLine": "Glen Waverley Line", "busRoutes": ["623", "733", "742"], "commuteToCity": "40 min" },
-      "amenities": ["Pinewood Shopping Centre", "Damper Creek Reserve", "Mount Waverley Village"]
+      "medianPrice": 1640000,
+      "medianPriceUnit": 1112000,
+      "annualChange": 2.7,
+      "salesCount": 225,
+      "priceHistory": {
+        "2015": 945000,
+        "2016": 1015000,
+        "2017": 1100000,
+        "2018": 1140000,
+        "2019": 1100000,
+        "2020": 1150000,
+        "2021": 1305000,
+        "2022": 1445000,
+        "2023": 1345000,
+        "2024": 1380000,
+        "2025": 1640000
+      },
+      "demographics": {
+        "population": 35000,
+        "medianAge": 40,
+        "familyHouseholds": "75%",
+        "ownerOccupied": "72%",
+        "bornOverseas": "48%"
+      },
+      "schools": [
+        {
+          "name": "Mount Waverley Secondary College",
+          "type": "Government",
+          "rating": "Excellent"
+        },
+        {
+          "name": "Mount Waverley Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": "Mount Waverley",
+        "trainLine": "Glen Waverley Line",
+        "busRoutes": [
+          "623",
+          "733",
+          "742"
+        ],
+        "commuteToCity": "40 min"
+      },
+      "amenities": [
+        "Pinewood Shopping Centre",
+        "Damper Creek Reserve",
+        "Mount Waverley Village"
+      ]
     },
     "Mulgrave": {
       "postcode": "3170",
       "municipality": "Monash",
-      "coords": [-37.9333, 145.1667],
-      "medianPrice": 1120000,
-      "medianPriceUnit": 680000,
-      "annualChange": 2.8,
-      "salesCount": 198,
-      "priceHistory": {
-        "2015": 735000, "2016": 795000, "2017": 870000, "2018": 905000, "2019": 870000,
-        "2020": 915000, "2021": 1045000, "2022": 1165000, "2023": 1090000, "2024": 1120000
-      },
-      "demographics": { "population": 20000, "medianAge": 38, "familyHouseholds": "72%", "ownerOccupied": "68%", "bornOverseas": "52%" },
-      "schools": [
-        {"name": "Wellington Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Mulgrave Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9333,
+        145.1667
       ],
-      "transport": { "trainStation": null, "trainLine": null, "busRoutes": ["802", "804", "862"], "commuteToCity": "45 min" },
-      "amenities": ["Waverley Gardens Shopping Centre", "Mulgrave Reserve", "Jells Park"]
+      "medianPrice": 1098500,
+      "medianPriceUnit": 690000,
+      "annualChange": -4.5,
+      "salesCount": 135,
+      "priceHistory": {
+        "2015": 735000,
+        "2016": 795000,
+        "2017": 870000,
+        "2018": 905000,
+        "2019": 870000,
+        "2020": 915000,
+        "2021": 1045000,
+        "2022": 1165000,
+        "2023": 1090000,
+        "2024": 1120000,
+        "2025": 1098500
+      },
+      "demographics": {
+        "population": 20000,
+        "medianAge": 38,
+        "familyHouseholds": "72%",
+        "ownerOccupied": "68%",
+        "bornOverseas": "52%"
+      },
+      "schools": [
+        {
+          "name": "Wellington Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Mulgrave Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": null,
+        "trainLine": null,
+        "busRoutes": [
+          "802",
+          "804",
+          "862"
+        ],
+        "commuteToCity": "45 min"
+      },
+      "amenities": [
+        "Waverley Gardens Shopping Centre",
+        "Mulgrave Reserve",
+        "Jells Park"
+      ]
     },
     "Wheelers Hill": {
       "postcode": "3150",
       "municipality": "Monash",
-      "coords": [-37.9000, 145.1833],
-      "medianPrice": 1350000,
-      "medianPriceUnit": 780000,
-      "annualChange": 3.0,
-      "salesCount": 178,
-      "priceHistory": {
-        "2015": 915000, "2016": 985000, "2017": 1070000, "2018": 1110000, "2019": 1070000,
-        "2020": 1120000, "2021": 1275000, "2022": 1415000, "2023": 1315000, "2024": 1350000
-      },
-      "demographics": { "population": 15000, "medianAge": 42, "familyHouseholds": "78%", "ownerOccupied": "75%", "bornOverseas": "45%" },
-      "schools": [
-        {"name": "Wheelers Hill Secondary College", "type": "Government", "rating": "Good"},
-        {"name": "Wheelers Hill Primary School", "type": "Government", "rating": "Good"}
+      "coords": [
+        -37.9,
+        145.1833
       ],
-      "transport": { "trainStation": null, "trainLine": null, "busRoutes": ["742", "753", "800"], "commuteToCity": "50 min" },
-      "amenities": ["Brandon Park Shopping Centre", "Jells Park", "Wheelers Hill Library"]
+      "medianPrice": 1430000,
+      "medianPriceUnit": 780000,
+      "annualChange": -5.5,
+      "salesCount": 121,
+      "priceHistory": {
+        "2015": 915000,
+        "2016": 985000,
+        "2017": 1070000,
+        "2018": 1110000,
+        "2019": 1070000,
+        "2020": 1120000,
+        "2021": 1275000,
+        "2022": 1415000,
+        "2023": 1315000,
+        "2024": 1350000,
+        "2025": 1430000
+      },
+      "demographics": {
+        "population": 15000,
+        "medianAge": 42,
+        "familyHouseholds": "78%",
+        "ownerOccupied": "75%",
+        "bornOverseas": "45%"
+      },
+      "schools": [
+        {
+          "name": "Wheelers Hill Secondary College",
+          "type": "Government",
+          "rating": "Good"
+        },
+        {
+          "name": "Wheelers Hill Primary School",
+          "type": "Government",
+          "rating": "Good"
+        }
+      ],
+      "transport": {
+        "trainStation": null,
+        "trainLine": null,
+        "busRoutes": [
+          "742",
+          "753",
+          "800"
+        ],
+        "commuteToCity": "50 min"
+      },
+      "amenities": [
+        "Brandon Park Shopping Centre",
+        "Jells Park",
+        "Wheelers Hill Library"
+      ]
     }
   }
 }
