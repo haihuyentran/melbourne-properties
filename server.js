@@ -354,6 +354,22 @@ async function getDrivingRouteOSRM(lat1, lon1, lat2, lon2) {
     }
 }
 
+// Safe parse: OSM/Overpass sometimes return XML or HTML error pages instead of JSON (e.g. rate limit, 503).
+function parseJsonResponse(res, bodyText) {
+    const text = (bodyText || '').trim();
+    if (!res.ok) {
+        throw new Error(`OpenStreetMap API error (HTTP ${res.status}). Try again later.`);
+    }
+    if (text.startsWith('<')) {
+        throw new Error('OpenStreetMap API returned an error page (rate limit or temporary failure). Try again later.');
+    }
+    try {
+        return JSON.parse(text);
+    } catch (e) {
+        throw new Error('Invalid JSON from external API.');
+    }
+}
+
 // Fetch nearest train, tram, bus stops from OpenStreetMap (Overpass). Used for suburb analysis.
 async function fetchNearbyStopsFromOSM(lat, lon, radiusM = 2500) {
     const overpassUrl = 'https://overpass-api.de/api/interpreter';
@@ -363,7 +379,8 @@ async function fetchNearbyStopsFromOSM(lat, lon, radiusM = 2500) {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: 'data=' + encodeURIComponent(overpassQuery)
     });
-    const data = await res.json();
+    const bodyText = await res.text();
+    const data = parseJsonResponse(res, bodyText);
     const elements = data.elements || [];
     const stops = elements.map(el => {
         const name = el.tags?.name || el.tags?.station || 'Stop';
@@ -482,7 +499,8 @@ app.get('/api/transit-to-southern-cross', async (req, res) => {
         const geoRes = await fetch(nomUrl, {
             headers: { 'User-Agent': 'MelbournePropertyFinder/1.0' }
         });
-        const geoList = await geoRes.json();
+        const geoBody = await geoRes.text();
+        const geoList = parseJsonResponse(geoRes, geoBody);
         if (!geoList || geoList.length === 0) {
             return res.json({
                 address: query,
@@ -516,7 +534,8 @@ app.get('/api/transit-to-southern-cross', async (req, res) => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: 'data=' + encodeURIComponent(overpassQuery)
         });
-        const overData = await overRes.json();
+        const overBody = await overRes.text();
+        const overData = parseJsonResponse(overRes, overBody);
         const elements = overData.elements || [];
         const stops = elements.map(el => {
             const name = el.tags?.name || el.tags?.station || 'Stop';
