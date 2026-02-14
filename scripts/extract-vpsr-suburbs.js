@@ -62,27 +62,36 @@ async function main() {
   await parser.destroy();
   const lines = text.split(/\r?\n/);
 
+  // PDF has house price table first (p.15), then unit price table (p.38). Use FIRST occurrence
+  // for house median so we don't overwrite with unit median (e.g. Ivanhoe 2025000 vs 650000).
   const byName = new Map();
   for (const line of lines) {
     const parsed = parseLine(line);
     if (!parsed) continue;
     const existing = byName.get(parsed.name);
-    if (!existing || parsed.salesCount != null) {
+    if (!existing) {
       byName.set(parsed.name, {
         medianPrice: parsed.medianPrice,
-        annualChange: parsed.annualChange ?? existing?.annualChange ?? null,
-        salesCount: parsed.salesCount ?? existing?.salesCount ?? null
+        annualChange: parsed.annualChange,
+        salesCount: parsed.salesCount,
+        medianPriceUnit: null
       });
+    } else {
+      // Second occurrence = unit table: store as unit median if we don't have one
+      if (existing.medianPriceUnit == null && parsed.medianPrice != null) {
+        existing.medianPriceUnit = parsed.medianPrice;
+      }
     }
   }
 
   const vpsr = {
-    _comment: 'VPSR June 2025 quarter (Apr-Jun 2025). Keys match suburbs.json suburb names. Extracted from PDF.',
+    _comment: 'VPSR June 2025 quarter (Apr-Jun 2025). House median from first table; unit from second. Keys match suburbs.json.',
     ...Object.fromEntries(
       [...byName.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([k, v]) => [
         k,
         {
           medianPrice: v.medianPrice,
+          ...(v.medianPriceUnit != null && { medianPriceUnit: v.medianPriceUnit }),
           ...(v.annualChange != null && { annualChange: v.annualChange }),
           ...(v.salesCount != null && { salesCount: v.salesCount })
         }

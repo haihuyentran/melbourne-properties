@@ -22,16 +22,21 @@ const vpsrData = Object.keys(vpsr).reduce((acc, k) => {
 }, {});
 
 let updated = 0;
-let kept = 0;
+let cleared = 0;
 
 for (const name of Object.keys(suburbs.suburbs)) {
+  const sub = suburbs.suburbs[name];
   const row = vpsrData[name];
   if (!row) {
-    kept++;
+    // Suburb not in VPSR PDF: show N/A by clearing price fields
+    sub.medianPrice = null;
+    sub.medianPriceUnit = null;
+    sub.annualChange = null;
+    sub.salesCount = null;
+    if (sub.priceHistory) sub.priceHistory['2025'] = undefined;
+    cleared++;
     continue;
   }
-
-  const sub = suburbs.suburbs[name];
   if (row.medianPrice != null) {
     sub.medianPrice = row.medianPrice;
     if (sub.priceHistory) sub.priceHistory['2025'] = row.medianPrice;
@@ -49,5 +54,5 @@ suburbs.metadata.sourceUrl = 'https://www.land.vic.gov.au/valuations/resources-a
 suburbs.metadata.notes = 'Median prices from VPSR June 2025 quarter where available; otherwise prior data retained. Demographics from ABS Census.';
 
 fs.writeFileSync(suburbsPath, JSON.stringify(suburbs, null, 2) + '\n', 'utf8');
-console.log('Updated', updated, 'suburbs from VPSR Jun 2025; kept existing data for', kept, 'suburbs.');
+console.log('Updated', updated, 'suburbs from VPSR Jun 2025; set N/A for', cleared, 'suburbs not in PDF.');
 console.log('Metadata set to Q2 2025 (Jun 2025), lastUpdated 2025-12-01.');

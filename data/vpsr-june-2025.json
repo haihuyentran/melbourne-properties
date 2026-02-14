@@ -1,19 +1,22 @@
 {
-  "_comment": "VPSR June 2025 quarter (Apr-Jun 2025). Keys match suburbs.json suburb names. Extracted from PDF.",
+  "_comment": "VPSR June 2025 quarter (Apr-Jun 2025). House median from first table; unit from second. Keys match suburbs.json.",
   "Abbotsford": {
-    "medianPrice": 603500,
-    "annualChange": 17.8,
-    "salesCount": 80
+    "medianPrice": 1295000,
+    "medianPriceUnit": 603500,
+    "annualChange": 1.6,
+    "salesCount": 21
   },
   "Aberfeldie": {
-    "medianPrice": 582000,
-    "annualChange": -31.2,
-    "salesCount": 13
+    "medianPrice": 1900000,
+    "medianPriceUnit": 582000,
+    "annualChange": 10.1,
+    "salesCount": 14
   },
   "Aintree": {
-    "medianPrice": 413500,
-    "annualChange": -8.4,
-    "salesCount": 52
+    "medianPrice": 750500,
+    "medianPriceUnit": 413500,
+    "annualChange": 3.9,
+    "salesCount": 40
   },
   "Aireys Inlet": {
     "medianPrice": 1247500,
@@ -21,9 +24,10 @@
     "salesCount": 4
   },
   "Airport West": {
-    "medianPrice": 675000,
-    "annualChange": -0.4,
-    "salesCount": 38
+    "medianPrice": 915000,
+    "medianPriceUnit": 675000,
+    "annualChange": -7,
+    "salesCount": 35
   },
   "Albanvale": {
     "medianPrice": 650500,
@@ -31,14 +35,16 @@
     "salesCount": 22
   },
   "Albert Park": {
-    "medianPrice": 810000,
-    "annualChange": -58.9,
-    "salesCount": 5
+    "medianPrice": 2085000,
+    "medianPriceUnit": 810000,
+    "annualChange": 9.7,
+    "salesCount": 27
   },
   "Albion": {
-    "medianPrice": 282000,
-    "annualChange": -4.6,
-    "salesCount": 21
+    "medianPrice": 750000,
+    "medianPriceUnit": 282000,
+    "annualChange": 1.7,
+    "salesCount": 17
   },
   "Alexandra": {
     "medianPrice": 535500,
@@ -46,9 +52,10 @@
     "salesCount": 8
   },
   "Alfredton": {
-    "medianPrice": 220000,
-    "annualChange": -22.1,
-    "salesCount": 17
+    "medianPrice": 605000,
+    "medianPriceUnit": 390000,
+    "annualChange": -4,
+    "salesCount": 86
   },
   "Allansford": {
     "medianPrice": 515000,
@@ -56,29 +63,34 @@
     "salesCount": 3
   },
   "Alphington": {
-    "medianPrice": 921300,
-    "annualChange": 17.4,
-    "salesCount": 26
+    "medianPrice": 2025000,
+    "medianPriceUnit": 921300,
+    "annualChange": 2.9,
+    "salesCount": 14
   },
   "Altona": {
-    "medianPrice": 690000,
-    "annualChange": 8.7,
-    "salesCount": 38
+    "medianPrice": 1168000,
+    "medianPriceUnit": 690000,
+    "annualChange": -1.1,
+    "salesCount": 46
   },
   "Altona East": {
-    "medianPrice": 782500,
-    "annualChange": -4.6,
-    "salesCount": 2
+    "medianPrice": 1076000,
+    "medianPriceUnit": 782500,
+    "annualChange": -1.7,
+    "salesCount": 7
   },
   "Altona Meadows": {
-    "medianPrice": 610000,
-    "annualChange": 2.9,
-    "salesCount": 8
+    "medianPrice": 730000,
+    "medianPriceUnit": 610000,
+    "annualChange": 3,
+    "salesCount": 37
   },
   "Altona North": {
-    "medianPrice": 812800,
-    "annualChange": 7.7,
-    "salesCount": 15
+    "medianPrice": 895000,
+    "medianPriceUnit": 812800,
+    "annualChange": 1.7,
+    "salesCount": 65
   },
   "Anglesea": {
     "medianPrice": 1512500,
@@ -86,29 +98,34 @@
     "salesCount": 20
   },
   "Apollo Bay": {
-    "medianPrice": 380000,
-    "annualChange": 11.8,
-    "salesCount": 5
+    "medianPrice": 777500,
+    "medianPriceUnit": 380000,
+    "annualChange": -25.4,
+    "salesCount": 6
   },
   "Ararat": {
-    "medianPrice": 153500,
-    "annualChange": -41,
-    "salesCount": 9
+    "medianPrice": 341000,
+    "medianPriceUnit": 270000,
+    "annualChange": -9.1,
+    "salesCount": 41
   },
   "Ardeer": {
-    "medianPrice": 600000,
-    "annualChange": 2.1,
-    "salesCount": 8
+    "medianPrice": 741500,
+    "medianPriceUnit": 600000,
+    "annualChange": 9.8,
+    "salesCount": 12
   },
   "Armadale": {
-    "medianPrice": 690000,
-    "annualChange": -5.5,
-    "salesCount": 78
+    "medianPrice": 2055000,
+    "medianPriceUnit": 690000,
+    "annualChange": -3.3,
+    "salesCount": 15
   },
   "Armstrong Creek": {
-    "medianPrice": 317000,
-    "annualChange": -16.4,
-    "salesCount": 199
+    "medianPrice": 670000,
+    "medianPriceUnit": 317000,
+    "annualChange": 2.3,
+    "salesCount": 121
   },
   "Ascot (Greater Bendigo)": {
     "medianPrice": 630000,
@@ -116,24 +133,28 @@
     "salesCount": 11
   },
   "Ascot Vale": {
-    "medianPrice": 540000,
-    "annualChange": 0.4,
-    "salesCount": 39
+    "medianPrice": 1275000,
+    "medianPriceUnit": 540000,
+    "annualChange": 0.8,
+    "salesCount": 37
   },
   "Ashburton": {
-    "medianPrice": 1740000,
-    "annualChange": 38.1,
-    "salesCount": 6
+    "medianPrice": 1905000,
+    "medianPriceUnit": 1740000,
+    "annualChange": -10.4,
+    "salesCount": 26
   },
   "Ashwood": {
-    "medianPrice": 1030000,
-    "annualChange": -16.9,
-    "salesCount": 11
+    "medianPrice": 1570000,
+    "medianPriceUnit": 1030000,
+    "annualChange": 1,
+    "salesCount": 21
   },
   "Aspendale": {
-    "medianPrice": 948500,
-    "annualChange": -8.8,
-    "salesCount": 10
+    "medianPrice": 1342500,
+    "medianPriceUnit": 948500,
+    "annualChange": 1.3,
+    "salesCount": 20
   },
   "Aspendale Gardens": {
     "medianPrice": 1265000,
@@ -156,14 +177,16 @@
     "salesCount": 11
   },
   "Avondale Heights": {
-    "medianPrice": 773500,
-    "annualChange": 10,
-    "salesCount": 10
+    "medianPrice": 990000,
+    "medianPriceUnit": 773500,
+    "annualChange": 0.4,
+    "salesCount": 53
   },
   "Bacchus Marsh": {
-    "medianPrice": 307500,
-    "annualChange": -18,
-    "salesCount": 22
+    "medianPrice": 617000,
+    "medianPriceUnit": 427000,
+    "annualChange": -2.6,
+    "salesCount": 51
   },
   "Badger Creek": {
     "medianPrice": 673000,
@@ -171,39 +194,46 @@
     "salesCount": 2
   },
   "Bairnsdale": {
-    "medianPrice": 207000,
-    "annualChange": 27.6,
-    "salesCount": 10
+    "medianPrice": 430000,
+    "medianPriceUnit": 215000,
+    "annualChange": -6.5,
+    "salesCount": 59
   },
   "Balaclava": {
-    "medianPrice": 576300,
-    "annualChange": 14.1,
-    "salesCount": 40
+    "medianPrice": 1150000,
+    "medianPriceUnit": 576300,
+    "annualChange": -19.9,
+    "salesCount": 7
   },
   "Balcombe": {
-    "medianPrice": 1250000,
-    "annualChange": 32.3,
-    "salesCount": 6
+    "medianPrice": 1616500,
+    "medianPriceUnit": 1250000,
+    "annualChange": 9,
+    "salesCount": 18
   },
   "Ballan": {
-    "medianPrice": 428000,
-    "annualChange": -2.7,
-    "salesCount": 1
+    "medianPrice": 568500,
+    "medianPriceUnit": 428000,
+    "annualChange": -12.5,
+    "salesCount": 16
   },
   "Ballarat Central": {
-    "medianPrice": 415000,
-    "annualChange": 12.2,
-    "salesCount": 6
+    "medianPrice": 575000,
+    "medianPriceUnit": 415000,
+    "annualChange": 8.5,
+    "salesCount": 29
   },
   "Ballarat East": {
-    "medianPrice": 350000,
-    "annualChange": -12.5,
-    "salesCount": 6
+    "medianPrice": 510000,
+    "medianPriceUnit": 378500,
+    "annualChange": 6.3,
+    "salesCount": 52
   },
   "Ballarat North": {
-    "medianPrice": 685000,
-    "annualChange": 20.8,
-    "salesCount": 1
+    "medianPrice": 530000,
+    "medianPriceUnit": 685000,
+    "annualChange": 6.8,
+    "salesCount": 25
   },
   "Balnarring": {
     "medianPrice": 1515000,
@@ -216,14 +246,16 @@
     "salesCount": 1
   },
   "Balwyn": {
-    "medianPrice": 790000,
-    "annualChange": -6.5,
-    "salesCount": 33
+    "medianPrice": 3128000,
+    "medianPriceUnit": 790000,
+    "annualChange": 4.3,
+    "salesCount": 39
   },
   "Balwyn North": {
-    "medianPrice": 1042500,
-    "annualChange": -6.9,
-    "salesCount": 16
+    "medianPrice": 2100000,
+    "medianPriceUnit": 1042500,
+    "annualChange": -11.9,
+    "salesCount": 64
   },
   "Bandiana": {
     "medianPrice": 620000,
@@ -231,14 +263,16 @@
     "salesCount": 1
   },
   "Bannockburn": {
-    "medianPrice": 360000,
-    "annualChange": 1.7,
-    "salesCount": 12
+    "medianPrice": 707000,
+    "medianPriceUnit": 360000,
+    "annualChange": -1.6,
+    "salesCount": 26
   },
   "Baranduda": {
-    "medianPrice": 232500,
-    "annualChange": 16.3,
-    "salesCount": 15
+    "medianPrice": 625000,
+    "medianPriceUnit": 232500,
+    "annualChange": -3.7,
+    "salesCount": 23
   },
   "Barnawartha": {
     "medianPrice": 285000,
@@ -246,29 +280,34 @@
     "salesCount": 3
   },
   "Barwon Heads": {
-    "medianPrice": 889000,
-    "annualChange": -3.4,
-    "salesCount": 2
+    "medianPrice": 1455000,
+    "medianPriceUnit": 889000,
+    "annualChange": 13,
+    "salesCount": 18
   },
   "Baxter": {
-    "medianPrice": 684000,
-    "annualChange": 13.6,
-    "salesCount": 1
+    "medianPrice": 740000,
+    "medianPriceUnit": 684000,
+    "annualChange": 4.8,
+    "salesCount": 7
   },
   "Bayswater": {
-    "medianPrice": 692000,
-    "annualChange": 2.5,
-    "salesCount": 47
+    "medianPrice": 891700,
+    "medianPriceUnit": 692000,
+    "annualChange": 6.6,
+    "salesCount": 32
   },
   "Bayswater North": {
-    "medianPrice": 690000,
-    "annualChange": -4.4,
-    "salesCount": 33
+    "medianPrice": 920000,
+    "medianPriceUnit": 690000,
+    "annualChange": 3.4,
+    "salesCount": 20
   },
   "Beaconsfield": {
-    "medianPrice": 435000,
-    "annualChange": -11.7,
-    "salesCount": 7
+    "medianPrice": 960000,
+    "medianPriceUnit": 540000,
+    "annualChange": 1.1,
+    "salesCount": 27
   },
   "Beaconsfield Upper": {
     "medianPrice": 1215600,
@@ -281,9 +320,10 @@
     "salesCount": 5
   },
   "Beaumaris": {
-    "medianPrice": 1097500,
-    "annualChange": -21.5,
-    "salesCount": 20
+    "medianPrice": 2130000,
+    "medianPriceUnit": 1097500,
+    "annualChange": 7,
+    "salesCount": 38
   },
   "Beeac": {
     "medianPrice": 275000,
@@ -306,54 +346,64 @@
     "salesCount": 2
   },
   "Bell Park": {
-    "medianPrice": 530000,
-    "annualChange": 1,
-    "salesCount": 7
+    "medianPrice": 620000,
+    "medianPriceUnit": 530000,
+    "annualChange": 0,
+    "salesCount": 16
   },
   "Bell Post Hill": {
-    "medianPrice": 450000,
-    "annualChange": -0.6,
-    "salesCount": 2
+    "medianPrice": 661300,
+    "medianPriceUnit": 450000,
+    "annualChange": -1.3,
+    "salesCount": 32
   },
   "Bellfield (Banyule)": {
-    "medianPrice": 875000,
-    "annualChange": 27,
-    "salesCount": 3
+    "medianPrice": 991000,
+    "medianPriceUnit": 875000,
+    "annualChange": 2.2,
+    "salesCount": 11
   },
   "Belmont": {
-    "medianPrice": 520000,
-    "annualChange": -1.2,
-    "salesCount": 19
+    "medianPrice": 686000,
+    "medianPriceUnit": 520000,
+    "annualChange": 0.5,
+    "salesCount": 69
   },
   "Benalla": {
-    "medianPrice": 190000,
-    "annualChange": 1.3,
-    "salesCount": 38
+    "medianPrice": 457500,
+    "medianPriceUnit": 344500,
+    "annualChange": 0.8,
+    "salesCount": 61
   },
   "Bendigo": {
-    "medianPrice": 505000,
-    "annualChange": 13.2,
-    "salesCount": 8
+    "medianPrice": 640000,
+    "medianPriceUnit": 505000,
+    "annualChange": 6.7,
+    "salesCount": 29
   },
   "Bentleigh": {
-    "medianPrice": 790000,
-    "annualChange": -6.1,
-    "salesCount": 56
+    "medianPrice": 1750000,
+    "medianPriceUnit": 790000,
+    "annualChange": 8.7,
+    "salesCount": 47
   },
   "Bentleigh East": {
-    "medianPrice": 1105000,
-    "annualChange": 13.6,
-    "salesCount": 82
+    "medianPrice": 1550000,
+    "medianPriceUnit": 1105000,
+    "annualChange": 2.5,
+    "salesCount": 91
   },
   "Berwick": {
-    "medianPrice": 427500,
-    "annualChange": -7,
-    "salesCount": 117
+    "medianPrice": 870000,
+    "medianPriceUnit": 680000,
+    "annualChange": 3.3,
+    "salesCount": 222
   },
   "Beveridge": {
-    "medianPrice": 315300,
-    "annualChange": -1.5,
-    "salesCount": 92
+    "medianPrice": 650000,
+    "medianPriceUnit": 315300,
+    "annualChange": -4.4,
+    "salesCount": 75
   },
   "Birchip": {
     "medianPrice": 242500,
@@ -366,34 +416,40 @@
     "salesCount": 4
   },
   "Bittern": {
-    "medianPrice": 634500,
-    "annualChange": -3.9,
-    "salesCount": 1
+    "medianPrice": 840000,
+    "medianPriceUnit": 634500,
+    "annualChange": 1.2,
+    "salesCount": 6
   },
   "Black Hill": {
-    "medianPrice": 435000,
-    "annualChange": 15.7,
-    "salesCount": 4
+    "medianPrice": 495000,
+    "medianPriceUnit": 435000,
+    "annualChange": -25,
+    "salesCount": 6
   },
   "Black Rock": {
-    "medianPrice": 1200000,
-    "annualChange": -22.9,
-    "salesCount": 9
+    "medianPrice": 2280000,
+    "medianPriceUnit": 1200000,
+    "annualChange": -1.3,
+    "salesCount": 15
   },
   "Blackburn": {
-    "medianPrice": 1050000,
-    "annualChange": 52.5,
-    "salesCount": 49
+    "medianPrice": 1673800,
+    "medianPriceUnit": 1050000,
+    "annualChange": 15.4,
+    "salesCount": 36
   },
   "Blackburn North": {
-    "medianPrice": 788000,
-    "annualChange": -24.6,
-    "salesCount": 7
+    "medianPrice": 1350000,
+    "medianPriceUnit": 788000,
+    "annualChange": 1.4,
+    "salesCount": 25
   },
   "Blackburn South": {
-    "medianPrice": 712500,
-    "annualChange": -1.7,
-    "salesCount": 8
+    "medianPrice": 1373000,
+    "medianPriceUnit": 712500,
+    "annualChange": 3.5,
+    "salesCount": 35
   },
   "Blairgowrie": {
     "medianPrice": 1632500,
@@ -406,19 +462,22 @@
     "salesCount": 8
   },
   "Bonbeach": {
-    "medianPrice": 702500,
-    "annualChange": -2.6,
-    "salesCount": 26
+    "medianPrice": 1107500,
+    "medianPriceUnit": 702500,
+    "annualChange": 6.7,
+    "salesCount": 14
   },
   "Bonnie Brook": {
-    "medianPrice": 375000,
-    "annualChange": -14.2,
-    "salesCount": 16
+    "medianPrice": 655000,
+    "medianPriceUnit": 375000,
+    "annualChange": -6.9,
+    "salesCount": 27
   },
   "Bonshaw": {
-    "medianPrice": 273000,
-    "annualChange": 2.1,
-    "salesCount": 28
+    "medianPrice": 560000,
+    "medianPriceUnit": 273000,
+    "annualChange": 12,
+    "salesCount": 26
   },
   "Boort": {
     "medianPrice": 300000,
@@ -426,34 +485,40 @@
     "salesCount": 6
   },
   "Boronia": {
-    "medianPrice": 680000,
-    "annualChange": -0.7,
+    "medianPrice": 860900,
+    "medianPriceUnit": 680000,
+    "annualChange": 1.3,
     "salesCount": 78
   },
   "Botanic Ridge": {
-    "medianPrice": 509000,
-    "annualChange": 6.5,
-    "salesCount": 14
+    "medianPrice": 852500,
+    "medianPriceUnit": 509000,
+    "annualChange": -8.8,
+    "salesCount": 39
   },
   "Box Hill": {
-    "medianPrice": 499900,
-    "annualChange": -13.4,
-    "salesCount": 130
+    "medianPrice": 1698000,
+    "medianPriceUnit": 499900,
+    "annualChange": 1.1,
+    "salesCount": 13
   },
   "Box Hill North": {
-    "medianPrice": 1015000,
-    "annualChange": 14.3,
-    "salesCount": 25
+    "medianPrice": 1429000,
+    "medianPriceUnit": 1015000,
+    "annualChange": 6.6,
+    "salesCount": 42
   },
   "Box Hill South": {
-    "medianPrice": 985000,
-    "annualChange": 8.1,
-    "salesCount": 19
+    "medianPrice": 1493000,
+    "medianPriceUnit": 985000,
+    "annualChange": 0.9,
+    "salesCount": 37
   },
   "Braybrook": {
-    "medianPrice": 630000,
-    "annualChange": 9.6,
-    "salesCount": 15
+    "medianPrice": 743000,
+    "medianPriceUnit": 630000,
+    "annualChange": 10.9,
+    "salesCount": 39
   },
   "Breakwater": {
     "medianPrice": 602500,
@@ -461,74 +526,88 @@
     "salesCount": 6
   },
   "Briar Hill": {
-    "medianPrice": 831000,
-    "annualChange": 5.5,
-    "salesCount": 8
+    "medianPrice": 960000,
+    "medianPriceUnit": 831000,
+    "annualChange": -11.5,
+    "salesCount": 12
   },
   "Bright": {
-    "medianPrice": 670000,
-    "annualChange": 48.9,
-    "salesCount": 3
+    "medianPrice": 1065000,
+    "medianPriceUnit": 670000,
+    "annualChange": 18.2,
+    "salesCount": 10
   },
   "Brighton": {
-    "medianPrice": 1125000,
-    "annualChange": -19.2,
-    "salesCount": 65
+    "medianPrice": 3550000,
+    "medianPriceUnit": 1125000,
+    "annualChange": -6.5,
+    "salesCount": 67
   },
   "Brighton East": {
-    "medianPrice": 1252500,
-    "annualChange": -13.2,
-    "salesCount": 29
+    "medianPrice": 2050000,
+    "medianPriceUnit": 1252500,
+    "annualChange": -12.8,
+    "salesCount": 53
   },
   "Broadford": {
-    "medianPrice": 250000,
-    "annualChange": -9.1,
-    "salesCount": 9
+    "medianPrice": 590000,
+    "medianPriceUnit": 250000,
+    "annualChange": 12.4,
+    "salesCount": 22
   },
   "Broadmeadows": {
-    "medianPrice": 492500,
-    "annualChange": 12.6,
-    "salesCount": 42
+    "medianPrice": 620000,
+    "medianPriceUnit": 492500,
+    "annualChange": 3.3,
+    "salesCount": 47
   },
   "Brookfield": {
-    "medianPrice": 397000,
-    "annualChange": -22.6,
-    "salesCount": 9
+    "medianPrice": 590000,
+    "medianPriceUnit": 397000,
+    "annualChange": 6.3,
+    "salesCount": 57
   },
   "Brooklyn": {
-    "medianPrice": 604800,
-    "annualChange": -8.4,
-    "salesCount": 12
+    "medianPrice": 715000,
+    "medianPriceUnit": 604800,
+    "annualChange": -17.8,
+    "salesCount": 1
   },
   "Brown Hill": {
-    "medianPrice": 459000,
-    "annualChange": 13.3,
-    "salesCount": 4
+    "medianPrice": 656300,
+    "medianPriceUnit": 459000,
+    "annualChange": 25,
+    "salesCount": 18
   },
   "Brunswick": {
-    "medianPrice": 604000,
-    "annualChange": 6,
-    "salesCount": 111
+    "medianPrice": 1280000,
+    "medianPriceUnit": 604000,
+    "annualChange": -1.5,
+    "salesCount": 66
   },
   "Brunswick East": {
-    "medianPrice": 535000,
-    "annualChange": -2.7,
-    "salesCount": 99
+    "medianPrice": 1335000,
+    "medianPriceUnit": 535000,
+    "annualChange": -3,
+    "salesCount": 34
   },
   "Brunswick West": {
-    "medianPrice": 490000,
-    "annualChange": -1,
-    "salesCount": 68
+    "medianPrice": 1332500,
+    "medianPriceUnit": 490000,
+    "annualChange": -0.4,
+    "salesCount": 24
   },
   "Bulleen": {
-    "medianPrice": 848000,
-    "annualChange": 7.3,
-    "salesCount": 12
+    "medianPrice": 1380000,
+    "medianPriceUnit": 848000,
+    "annualChange": 6,
+    "salesCount": 40
   },
   "Bundoora": {
-    "medianPrice": 443800,
-    "annualChange": -6.7,
-    "salesCount": 52
+    "medianPrice": 866400,
+    "medianPriceUnit": 443800,
+    "annualChange": -3.7,
+    "salesCount": 78
   },
   "Buninyong": {
     "medianPrice": 730000,
@@ -541,9 +620,10 @@
     "salesCount": 9
   },
   "Burnside": {
-    "medianPrice": 568000,
-    "annualChange": -1.5,
-    "salesCount": 15
+    "medianPrice": 797500,
+    "medianPriceUnit": 568000,
+    "annualChange": 15.6,
+    "salesCount": 18
   },
   "Burnside Heights": {
     "medianPrice": 780000,
@@ -551,29 +631,34 @@
     "salesCount": 22
   },
   "Burwood": {
-    "medianPrice": 867500,
-    "annualChange": -5,
-    "salesCount": 46
+    "medianPrice": 1581000,
+    "medianPriceUnit": 867500,
+    "annualChange": 19.8,
+    "salesCount": 26
   },
   "Burwood East": {
-    "medianPrice": 720500,
-    "annualChange": 26.8,
-    "salesCount": 16
+    "medianPrice": 1335000,
+    "medianPriceUnit": 720500,
+    "annualChange": 1.8,
+    "salesCount": 31
   },
   "Cairnlea": {
-    "medianPrice": 427500,
-    "annualChange": 11,
-    "salesCount": 2
+    "medianPrice": 835900,
+    "medianPriceUnit": 427500,
+    "annualChange": -18.6,
+    "salesCount": 24
   },
   "California Gully": {
-    "medianPrice": 350000,
-    "annualChange": 14,
-    "salesCount": 7
+    "medianPrice": 515000,
+    "medianPriceUnit": 350000,
+    "annualChange": 11.7,
+    "salesCount": 24
   },
   "Camberwell": {
-    "medianPrice": 900000,
-    "annualChange": -0.3,
-    "salesCount": 45
+    "medianPrice": 2460000,
+    "medianPriceUnit": 900000,
+    "annualChange": -4.7,
+    "salesCount": 47
   },
   "Campbellfield": {
     "medianPrice": 678500,
@@ -591,14 +676,16 @@
     "salesCount": 18
   },
   "Canadian": {
-    "medianPrice": 385500,
-    "annualChange": -1.2,
-    "salesCount": 10
+    "medianPrice": 520000,
+    "medianPriceUnit": 385500,
+    "annualChange": 3,
+    "salesCount": 27
   },
   "Canterbury": {
-    "medianPrice": 1251100,
-    "annualChange": 1.7,
-    "salesCount": 11
+    "medianPrice": 3544000,
+    "medianPriceUnit": 1251100,
+    "annualChange": 1.5,
+    "salesCount": 18
   },
   "Cape Paterson": {
     "medianPrice": 745000,
@@ -611,9 +698,10 @@
     "salesCount": 8
   },
   "Capel Sound": {
-    "medianPrice": 742000,
-    "annualChange": 13.7,
-    "salesCount": 13
+    "medianPrice": 780000,
+    "medianPriceUnit": 742000,
+    "annualChange": 7.6,
+    "salesCount": 15
   },
   "Cardigan": {
     "medianPrice": 450000,
@@ -631,34 +719,40 @@
     "salesCount": 7
   },
   "Carlton": {
-    "medianPrice": 332500,
-    "annualChange": -19.9,
-    "salesCount": 116
+    "medianPrice": 1761500,
+    "medianPriceUnit": 332500,
+    "annualChange": 24,
+    "salesCount": 12
   },
   "Carlton North": {
-    "medianPrice": 781500,
-    "annualChange": -23.4,
-    "salesCount": 6
+    "medianPrice": 1826000,
+    "medianPriceUnit": 781500,
+    "annualChange": 14.8,
+    "salesCount": 30
   },
   "Carnegie": {
-    "medianPrice": 683000,
-    "annualChange": 13.9,
-    "salesCount": 118
+    "medianPrice": 1810000,
+    "medianPriceUnit": 683000,
+    "annualChange": 6,
+    "salesCount": 29
   },
   "Caroline Springs": {
-    "medianPrice": 500000,
-    "annualChange": -6.1,
-    "salesCount": 19
+    "medianPrice": 750000,
+    "medianPriceUnit": 500000,
+    "annualChange": -1.6,
+    "salesCount": 74
   },
   "Carrum": {
-    "medianPrice": 762500,
-    "annualChange": -7.6,
+    "medianPrice": 1100500,
+    "medianPriceUnit": 762500,
+    "annualChange": -10.5,
     "salesCount": 14
   },
   "Carrum Downs": {
-    "medianPrice": 600000,
-    "annualChange": 1.7,
-    "salesCount": 39
+    "medianPrice": 775000,
+    "medianPriceUnit": 600000,
+    "annualChange": 7.6,
+    "salesCount": 81
   },
   "Casterton": {
     "medianPrice": 269000,
@@ -666,38 +760,45 @@
     "salesCount": 6
   },
   "Castlemaine": {
-    "medianPrice": 536500,
-    "annualChange": -12.8,
-    "salesCount": 2
+    "medianPrice": 720000,
+    "medianPriceUnit": 536500,
+    "annualChange": -5,
+    "salesCount": 27
   },
   "Caulfield": {
-    "medianPrice": 751500,
-    "annualChange": -17.7,
-    "salesCount": 26
-  },
-  "Caulfield East": {
-    "medianPrice": 943200,
+    "medianPrice": 2685000,
+    "medianPriceUnit": 751500,
+    "annualChange": 12.6,
     "salesCount": 2
   },
+  "Caulfield East": {
+    "medianPrice": 1819000,
+    "medianPriceUnit": 943200,
+    "salesCount": 0
+  },
   "Caulfield North": {
-    "medianPrice": 607500,
-    "annualChange": -17.3,
-    "salesCount": 74
+    "medianPrice": 2296500,
+    "medianPriceUnit": 607500,
+    "annualChange": -16.5,
+    "salesCount": 26
   },
   "Caulfield South": {
-    "medianPrice": 1112500,
-    "annualChange": 1.1,
-    "salesCount": 42
+    "medianPrice": 2068500,
+    "medianPriceUnit": 1112500,
+    "annualChange": 12.4,
+    "salesCount": 30
   },
   "Chadstone": {
-    "medianPrice": 893000,
-    "annualChange": -2.1,
-    "salesCount": 36
+    "medianPrice": 1200000,
+    "medianPriceUnit": 893000,
+    "annualChange": -7,
+    "salesCount": 25
   },
   "Charlemont": {
-    "medianPrice": 326000,
-    "annualChange": -3.4,
-    "salesCount": 72
+    "medianPrice": 651000,
+    "medianPriceUnit": 326000,
+    "annualChange": 7,
+    "salesCount": 41
   },
   "Charlton": {
     "medianPrice": 250000,
@@ -705,29 +806,34 @@
     "salesCount": 4
   },
   "Chelsea": {
-    "medianPrice": 709000,
-    "annualChange": -8.8,
-    "salesCount": 47
+    "medianPrice": 1137500,
+    "medianPriceUnit": 709000,
+    "annualChange": -3.6,
+    "salesCount": 14
   },
   "Chelsea Heights": {
-    "medianPrice": 778000,
-    "annualChange": -9.4,
-    "salesCount": 4
+    "medianPrice": 1008500,
+    "medianPriceUnit": 778000,
+    "annualChange": 6.2,
+    "salesCount": 17
   },
   "Cheltenham": {
-    "medianPrice": 675000,
-    "annualChange": -7.5,
-    "salesCount": 59
+    "medianPrice": 1302500,
+    "medianPriceUnit": 675000,
+    "annualChange": -7.3,
+    "salesCount": 46
   },
   "Cheltenham East": {
-    "medianPrice": 737500,
-    "annualChange": 22.1,
-    "salesCount": 7
+    "medianPrice": 1130000,
+    "medianPriceUnit": 737500,
+    "annualChange": 1.6,
+    "salesCount": 15
   },
   "Cheltenham North": {
-    "medianPrice": 597500,
-    "annualChange": -30.3,
-    "salesCount": 12
+    "medianPrice": 1042500,
+    "medianPriceUnit": 597500,
+    "annualChange": 1.2,
+    "salesCount": 14
   },
   "Chewton": {
     "medianPrice": 1075000,
@@ -740,9 +846,10 @@
     "salesCount": 1
   },
   "Chirnside Park": {
-    "medianPrice": 595000,
-    "annualChange": -18.8,
-    "salesCount": 13
+    "medianPrice": 940000,
+    "medianPriceUnit": 595000,
+    "annualChange": 5.9,
+    "salesCount": 52
   },
   "Chum Creek": {
     "medianPrice": 712500,
@@ -755,24 +862,28 @@
     "salesCount": 30
   },
   "Clarinda": {
-    "medianPrice": 835500,
-    "annualChange": 12.9,
-    "salesCount": 6
+    "medianPrice": 1050000,
+    "medianPriceUnit": 835500,
+    "annualChange": 9.9,
+    "salesCount": 11
   },
   "Clayton": {
-    "medianPrice": 695000,
-    "annualChange": -11.3,
-    "salesCount": 71
+    "medianPrice": 1290000,
+    "medianPriceUnit": 695000,
+    "annualChange": 10.4,
+    "salesCount": 19
   },
   "Clayton North": {
-    "medianPrice": 478000,
-    "annualChange": -5.3,
-    "salesCount": 13
+    "medianPrice": 1331000,
+    "medianPriceUnit": 478000,
+    "annualChange": -12.9,
+    "salesCount": 1
   },
   "Clayton South": {
-    "medianPrice": 720000,
-    "annualChange": 37.4,
-    "salesCount": 19
+    "medianPrice": 994900,
+    "medianPriceUnit": 720000,
+    "annualChange": 6.4,
+    "salesCount": 18
   },
   "Clematis": {
     "medianPrice": 873500,
@@ -780,34 +891,40 @@
     "salesCount": 3
   },
   "Clifton Hill": {
-    "medianPrice": 719500,
-    "annualChange": 33.1,
-    "salesCount": 25
+    "medianPrice": 1735000,
+    "medianPriceUnit": 719500,
+    "annualChange": -0.9,
+    "salesCount": 14
   },
   "Clifton Springs": {
-    "medianPrice": 441000,
-    "annualChange": -2,
-    "salesCount": 3
+    "medianPrice": 667500,
+    "medianPriceUnit": 441000,
+    "annualChange": 1.9,
+    "salesCount": 46
   },
   "Clunes": {
-    "medianPrice": 110000,
-    "annualChange": -54.4,
-    "salesCount": 8
+    "medianPrice": 415000,
+    "medianPriceUnit": 110000,
+    "annualChange": -19.4,
+    "salesCount": 5
   },
   "Clyde": {
-    "medianPrice": 380000,
-    "annualChange": 8,
-    "salesCount": 207
+    "medianPrice": 700000,
+    "medianPriceUnit": 380000,
+    "annualChange": 2.6,
+    "salesCount": 131
   },
   "Clyde North": {
-    "medianPrice": 421000,
-    "annualChange": 0.2,
-    "salesCount": 525
+    "medianPrice": 735500,
+    "medianPriceUnit": 612500,
+    "annualChange": 0.8,
+    "salesCount": 292
   },
   "Cobblebank": {
-    "medianPrice": 428000,
-    "annualChange": 36.8,
-    "salesCount": 16
+    "medianPrice": 602500,
+    "medianPriceUnit": 428000,
+    "annualChange": -9.7,
+    "salesCount": 24
   },
   "Cobden": {
     "medianPrice": 410000,
@@ -815,24 +932,28 @@
     "salesCount": 5
   },
   "Cobram": {
-    "medianPrice": 209000,
-    "annualChange": 4.5,
-    "salesCount": 18
+    "medianPrice": 445000,
+    "medianPriceUnit": 385000,
+    "annualChange": -2.1,
+    "salesCount": 21
   },
   "Coburg": {
-    "medianPrice": 619800,
-    "annualChange": 5,
-    "salesCount": 62
+    "medianPrice": 1210000,
+    "medianPriceUnit": 619800,
+    "annualChange": 5.2,
+    "salesCount": 81
   },
   "Coburg East": {
-    "medianPrice": 787500,
-    "annualChange": 20.7,
-    "salesCount": 12
+    "medianPrice": 1145000,
+    "medianPriceUnit": 787500,
+    "annualChange": 1.3,
+    "salesCount": 18
   },
   "Coburg North": {
-    "medianPrice": 690000,
-    "annualChange": -11.4,
-    "salesCount": 7
+    "medianPrice": 1212000,
+    "medianPriceUnit": 690000,
+    "annualChange": 9.2,
+    "salesCount": 21
   },
   "Cockatoo": {
     "medianPrice": 685000,
@@ -845,14 +966,16 @@
     "salesCount": 11
   },
   "Colac": {
-    "medianPrice": 275000,
-    "annualChange": -6.6,
-    "salesCount": 30
+    "medianPrice": 480000,
+    "medianPriceUnit": 504000,
+    "annualChange": -0.2,
+    "salesCount": 39
   },
   "Coldstream": {
-    "medianPrice": 450000,
-    "annualChange": -6.7,
-    "salesCount": 2
+    "medianPrice": 840000,
+    "medianPriceUnit": 450000,
+    "annualChange": 5.9,
+    "salesCount": 7
   },
   "Coleraine": {
     "medianPrice": 245000,
@@ -860,14 +983,16 @@
     "salesCount": 9
   },
   "Collingwood": {
-    "medianPrice": 660000,
-    "annualChange": -0.5,
-    "salesCount": 60
+    "medianPrice": 1403500,
+    "medianPriceUnit": 660000,
+    "annualChange": 6.3,
+    "salesCount": 10
   },
   "Connewarre": {
-    "medianPrice": 1125000,
+    "medianPrice": 2200000,
+    "medianPriceUnit": 1125000,
     "annualChange": -12,
-    "salesCount": 3
+    "salesCount": 1
   },
   "Coolaroo": {
     "medianPrice": 601300,
@@ -880,14 +1005,16 @@
     "salesCount": 10
   },
   "Corinella": {
-    "medianPrice": 275000,
-    "annualChange": 1.9,
-    "salesCount": 7
+    "medianPrice": 670000,
+    "medianPriceUnit": 275000,
+    "annualChange": -6.3,
+    "salesCount": 18
   },
   "Corio": {
-    "medianPrice": 325000,
-    "annualChange": -5.2,
-    "salesCount": 3
+    "medianPrice": 513500,
+    "medianPriceUnit": 325000,
+    "annualChange": 3.7,
+    "salesCount": 104
   },
   "Coronet Bay": {
     "medianPrice": 505000,
@@ -900,64 +1027,76 @@
     "salesCount": 6
   },
   "Cowes": {
-    "medianPrice": 425000,
-    "annualChange": -39.3,
-    "salesCount": 6
+    "medianPrice": 820000,
+    "medianPriceUnit": 425000,
+    "annualChange": -6.3,
+    "salesCount": 8
   },
   "Cowes West": {
-    "medianPrice": 325000,
-    "annualChange": -24.9,
-    "salesCount": 6
+    "medianPrice": 692500,
+    "medianPriceUnit": 661000,
+    "annualChange": -3.8,
+    "salesCount": 46
   },
   "Craigieburn": {
-    "medianPrice": 442500,
-    "annualChange": -14.1,
-    "salesCount": 21
+    "medianPrice": 700000,
+    "medianPriceUnit": 482500,
+    "annualChange": 6.4,
+    "salesCount": 299
   },
   "Cranbourne": {
-    "medianPrice": 254000,
-    "annualChange": -52.5,
-    "salesCount": 4
+    "medianPrice": 713500,
+    "medianPriceUnit": 492500,
+    "annualChange": 6.7,
+    "salesCount": 103
   },
   "Cranbourne East": {
-    "medianPrice": 380000,
-    "annualChange": -5.5,
-    "salesCount": 32
+    "medianPrice": 730000,
+    "medianPriceUnit": 525000,
+    "annualChange": 2.1,
+    "salesCount": 102
   },
   "Cranbourne North": {
-    "medianPrice": 560200,
-    "annualChange": 14.3,
-    "salesCount": 5
+    "medianPrice": 770500,
+    "medianPriceUnit": 560200,
+    "annualChange": 7,
+    "salesCount": 91
   },
   "Cranbourne South": {
-    "medianPrice": 185500,
-    "annualChange": -25.9,
-    "salesCount": 13
+    "medianPrice": 700000,
+    "medianPriceUnit": 185500,
+    "annualChange": -14.9,
+    "salesCount": 27
   },
   "Cranbourne West": {
-    "medianPrice": 355000,
-    "annualChange": -14.1,
-    "salesCount": 17
+    "medianPrice": 700000,
+    "medianPriceUnit": 492500,
+    "annualChange": 5.3,
+    "salesCount": 96
   },
   "Cremorne": {
-    "medianPrice": 670000,
-    "annualChange": 2.7,
-    "salesCount": 11
+    "medianPrice": 1187500,
+    "medianPriceUnit": 670000,
+    "annualChange": -23.4,
+    "salesCount": 6
   },
   "Creswick": {
-    "medianPrice": 205000,
-    "annualChange": 10.8,
-    "salesCount": 9
+    "medianPrice": 550000,
+    "medianPriceUnit": 205000,
+    "annualChange": 6.3,
+    "salesCount": 25
   },
   "Crib Point": {
-    "medianPrice": 455000,
-    "annualChange": 0,
+    "medianPrice": 835000,
+    "medianPriceUnit": 590000,
+    "annualChange": 22.8,
     "salesCount": 11
   },
   "Croydon": {
-    "medianPrice": 688500,
-    "annualChange": -0.9,
-    "salesCount": 108
+    "medianPrice": 882500,
+    "medianPriceUnit": 688500,
+    "annualChange": -1.9,
+    "salesCount": 70
   },
   "Croydon Hills": {
     "medianPrice": 1152000,
@@ -965,14 +1104,16 @@
     "salesCount": 17
   },
   "Croydon North": {
-    "medianPrice": 662500,
-    "annualChange": -11.7,
-    "salesCount": 10
+    "medianPrice": 1110500,
+    "medianPriceUnit": 662500,
+    "annualChange": -0.4,
+    "salesCount": 18
   },
   "Croydon South": {
-    "medianPrice": 835000,
-    "annualChange": -4,
-    "salesCount": 2
+    "medianPrice": 967500,
+    "medianPriceUnit": 835000,
+    "annualChange": 7.5,
+    "salesCount": 14
   },
   "Curlewis": {
     "medianPrice": 630000,
@@ -980,9 +1121,10 @@
     "salesCount": 23
   },
   "Dallas": {
-    "medianPrice": 427500,
-    "annualChange": 9.6,
-    "salesCount": 6
+    "medianPrice": 561000,
+    "medianPriceUnit": 427500,
+    "annualChange": 2.9,
+    "salesCount": 22
   },
   "Dalyston": {
     "medianPrice": 500000,
@@ -990,29 +1132,34 @@
     "salesCount": 11
   },
   "Dandenong": {
-    "medianPrice": 440000,
-    "annualChange": 4,
-    "salesCount": 125
+    "medianPrice": 755000,
+    "medianPriceUnit": 440000,
+    "annualChange": 6.8,
+    "salesCount": 45
   },
   "Dandenong North": {
-    "medianPrice": 597700,
-    "annualChange": 0,
-    "salesCount": 14
+    "medianPrice": 790000,
+    "medianPriceUnit": 597700,
+    "annualChange": 5.3,
+    "salesCount": 57
   },
   "Darley": {
-    "medianPrice": 268000,
-    "annualChange": -6.8,
-    "salesCount": 6
+    "medianPrice": 580000,
+    "medianPriceUnit": 470000,
+    "annualChange": -5.7,
+    "salesCount": 52
   },
   "Daylesford": {
-    "medianPrice": 297500,
-    "annualChange": -16.3,
-    "salesCount": 15
+    "medianPrice": 700000,
+    "medianPriceUnit": 297500,
+    "annualChange": -23.1,
+    "salesCount": 11
   },
   "Deanside": {
-    "medianPrice": 360000,
-    "annualChange": -5.4,
-    "salesCount": 183
+    "medianPrice": 675000,
+    "medianPriceUnit": 360000,
+    "annualChange": 3.9,
+    "salesCount": 69
   },
   "Deepdene": {
     "medianPrice": 3450000,
@@ -1020,34 +1167,40 @@
     "salesCount": 5
   },
   "Deer Park": {
-    "medianPrice": 551500,
-    "annualChange": 6.1,
-    "salesCount": 20
+    "medianPrice": 680000,
+    "medianPriceUnit": 551500,
+    "annualChange": 0.7,
+    "salesCount": 51
   },
   "Delacombe": {
-    "medianPrice": 250000,
-    "annualChange": -25.9,
-    "salesCount": 2
+    "medianPrice": 545000,
+    "medianPriceUnit": 250000,
+    "annualChange": -0.9,
+    "salesCount": 16
   },
   "Delahey": {
-    "medianPrice": 560000,
-    "annualChange": 15.5,
-    "salesCount": 2
+    "medianPrice": 689000,
+    "medianPriceUnit": 560000,
+    "annualChange": 8.2,
+    "salesCount": 18
   },
   "Dennington": {
-    "medianPrice": 161000,
-    "annualChange": -8,
-    "salesCount": 14
+    "medianPrice": 610000,
+    "medianPriceUnit": 161000,
+    "annualChange": -2.4,
+    "salesCount": 13
   },
   "Diamond Creek": {
-    "medianPrice": 570000,
-    "annualChange": -1.7,
-    "salesCount": 9
+    "medianPrice": 1020000,
+    "medianPriceUnit": 750000,
+    "annualChange": -3.8,
+    "salesCount": 42
   },
   "Diggers Rest": {
-    "medianPrice": 299000,
-    "annualChange": -12.1,
-    "salesCount": 36
+    "medianPrice": 675000,
+    "medianPriceUnit": 299000,
+    "annualChange": 0.7,
+    "salesCount": 55
   },
   "Dimboola": {
     "medianPrice": 252500,
@@ -1055,9 +1208,10 @@
     "salesCount": 10
   },
   "Dingley Village": {
-    "medianPrice": 820000,
-    "annualChange": 9.7,
-    "salesCount": 10
+    "medianPrice": 1194000,
+    "medianPriceUnit": 820000,
+    "annualChange": 11.6,
+    "salesCount": 28
   },
   "Docklands": {
     "medianPrice": 585000,
@@ -1070,49 +1224,58 @@
     "salesCount": 7
   },
   "Doncaster": {
-    "medianPrice": 1526300,
-    "annualChange": -10.1,
-    "salesCount": 7
+    "medianPrice": 1554000,
+    "medianPriceUnit": 620000,
+    "annualChange": 0.3,
+    "salesCount": 58
   },
   "Doncaster East": {
-    "medianPrice": 710000,
-    "annualChange": -9,
-    "salesCount": 69
+    "medianPrice": 1552500,
+    "medianPriceUnit": 710000,
+    "annualChange": -6.5,
+    "salesCount": 92
   },
   "Donnybrook": {
-    "medianPrice": 325000,
-    "annualChange": 1.6,
-    "salesCount": 151
+    "medianPrice": 645000,
+    "medianPriceUnit": 325000,
+    "annualChange": -0.8,
+    "salesCount": 125
   },
   "Donvale": {
-    "medianPrice": 870000,
-    "annualChange": 2.4,
-    "salesCount": 13
+    "medianPrice": 1525000,
+    "medianPriceUnit": 870000,
+    "annualChange": -7.1,
+    "salesCount": 23
   },
   "Doreen": {
-    "medianPrice": 417500,
-    "annualChange": 12.8,
-    "salesCount": 17
+    "medianPrice": 753000,
+    "medianPriceUnit": 525400,
+    "annualChange": 0.4,
+    "salesCount": 127
   },
   "Doveton": {
-    "medianPrice": 565000,
-    "annualChange": 2.7,
-    "salesCount": 25
+    "medianPrice": 630000,
+    "medianPriceUnit": 565000,
+    "annualChange": 5,
+    "salesCount": 33
   },
   "Dromana": {
-    "medianPrice": 600000,
-    "annualChange": -4.6,
-    "salesCount": 8
+    "medianPrice": 1000000,
+    "medianPriceUnit": 869500,
+    "annualChange": -4.8,
+    "salesCount": 37
   },
   "Drouin": {
-    "medianPrice": 339000,
-    "annualChange": -5.2,
-    "salesCount": 63
+    "medianPrice": 638300,
+    "medianPriceUnit": 445000,
+    "annualChange": 6.4,
+    "salesCount": 92
   },
   "Drysdale": {
-    "medianPrice": 550000,
-    "annualChange": 0.9,
-    "salesCount": 6
+    "medianPrice": 745000,
+    "medianPriceUnit": 550000,
+    "annualChange": -2.6,
+    "salesCount": 13
   },
   "Dunkeld": {
     "medianPrice": 417500,
@@ -1120,39 +1283,46 @@
     "salesCount": 5
   },
   "Eagle Point": {
-    "medianPrice": 225000,
-    "annualChange": 31.6,
-    "salesCount": 6
+    "medianPrice": 557500,
+    "medianPriceUnit": 225000,
+    "annualChange": -9.3,
+    "salesCount": 4
   },
   "Eaglehawk": {
-    "medianPrice": 423000,
-    "annualChange": 12.8,
-    "salesCount": 4
+    "medianPrice": 580000,
+    "medianPriceUnit": 423000,
+    "annualChange": 22.3,
+    "salesCount": 23
   },
   "Eaglemont": {
-    "medianPrice": 607500,
-    "annualChange": -40.1,
-    "salesCount": 6
+    "medianPrice": 2120500,
+    "medianPriceUnit": 607500,
+    "annualChange": -28.8,
+    "salesCount": 12
   },
   "East Bairnsdale": {
-    "medianPrice": 159000,
-    "annualChange": 0.6,
-    "salesCount": 4
+    "medianPrice": 362500,
+    "medianPriceUnit": 159000,
+    "annualChange": 1.4,
+    "salesCount": 12
   },
   "East Bendigo": {
-    "medianPrice": 537500,
-    "annualChange": 20.5,
-    "salesCount": 2
+    "medianPrice": 510000,
+    "medianPriceUnit": 537500,
+    "annualChange": -11.8,
+    "salesCount": 12
   },
   "East Geelong": {
-    "medianPrice": 474500,
-    "annualChange": -12.9,
-    "salesCount": 4
+    "medianPrice": 790000,
+    "medianPriceUnit": 474500,
+    "annualChange": -5.4,
+    "salesCount": 15
   },
   "East Melbourne": {
-    "medianPrice": 610000,
-    "annualChange": -20.3,
-    "salesCount": 23
+    "medianPrice": 2400000,
+    "medianPriceUnit": 610000,
+    "annualChange": -36,
+    "salesCount": 6
   },
   "East Warburton": {
     "medianPrice": 695000,
@@ -1165,9 +1335,10 @@
     "salesCount": 13
   },
   "Echuca": {
-    "medianPrice": 270000,
-    "annualChange": 5.1,
-    "salesCount": 17
+    "medianPrice": 631300,
+    "medianPriceUnit": 395000,
+    "annualChange": 8.1,
+    "salesCount": 58
   },
   "Edenhope": {
     "medianPrice": 240000,
@@ -1175,9 +1346,10 @@
     "salesCount": 6
   },
   "Edithvale": {
-    "medianPrice": 870000,
-    "annualChange": 11.5,
-    "salesCount": 14
+    "medianPrice": 1217500,
+    "medianPriceUnit": 870000,
+    "annualChange": -10.6,
+    "salesCount": 12
   },
   "Eildon": {
     "medianPrice": 322500,
@@ -1185,9 +1357,10 @@
     "salesCount": 5
   },
   "Elliminyt": {
-    "medianPrice": 321000,
-    "annualChange": -0.5,
-    "salesCount": 16
+    "medianPrice": 735000,
+    "medianPriceUnit": 321000,
+    "annualChange": 13.1,
+    "salesCount": 11
   },
   "Elmore": {
     "medianPrice": 435000,
@@ -1195,14 +1368,16 @@
     "salesCount": 3
   },
   "Elsternwick": {
-    "medianPrice": 683500,
-    "annualChange": -6.4,
-    "salesCount": 51
+    "medianPrice": 1902000,
+    "medianPriceUnit": 683500,
+    "annualChange": -12.4,
+    "salesCount": 12
   },
   "Eltham": {
-    "medianPrice": 530000,
-    "annualChange": -18.5,
-    "salesCount": 3
+    "medianPrice": 1263500,
+    "medianPriceUnit": 840000,
+    "annualChange": 7,
+    "salesCount": 52
   },
   "Eltham North": {
     "medianPrice": 1331000,
@@ -1210,9 +1385,10 @@
     "salesCount": 18
   },
   "Elwood": {
-    "medianPrice": 620000,
-    "annualChange": -10.5,
-    "salesCount": 115
+    "medianPrice": 2305000,
+    "medianPriceUnit": 620000,
+    "annualChange": 12.2,
+    "salesCount": 37
   },
   "Emerald": {
     "medianPrice": 922500,
@@ -1220,39 +1396,46 @@
     "salesCount": 22
   },
   "Endeavour Hills": {
-    "medianPrice": 731000,
-    "annualChange": 5.9,
-    "salesCount": 8
+    "medianPrice": 795000,
+    "medianPriceUnit": 731000,
+    "annualChange": -3.2,
+    "salesCount": 81
   },
   "Epping": {
-    "medianPrice": 396000,
-    "annualChange": -1.1,
-    "salesCount": 15
+    "medianPrice": 723000,
+    "medianPriceUnit": 560000,
+    "annualChange": 4.6,
+    "salesCount": 122
   },
   "Epsom": {
-    "medianPrice": 305000,
-    "annualChange": 3.4,
-    "salesCount": 4
+    "medianPrice": 632500,
+    "medianPriceUnit": 305000,
+    "annualChange": 7.5,
+    "salesCount": 36
   },
   "Essendon": {
-    "medianPrice": 530000,
-    "annualChange": -13.8,
-    "salesCount": 92
+    "medianPrice": 1655000,
+    "medianPriceUnit": 530000,
+    "annualChange": -12.9,
+    "salesCount": 56
   },
   "Essendon North": {
-    "medianPrice": 430000,
-    "annualChange": 11.7,
-    "salesCount": 33
+    "medianPrice": 981000,
+    "medianPriceUnit": 430000,
+    "annualChange": -16.9,
+    "salesCount": 6
   },
   "Essendon West": {
-    "medianPrice": 982500,
-    "annualChange": 29.7,
-    "salesCount": 4
+    "medianPrice": 1581300,
+    "medianPriceUnit": 982500,
+    "annualChange": -12.6,
+    "salesCount": 6
   },
   "Eumemmerring": {
-    "medianPrice": 607500,
-    "annualChange": 4.7,
-    "salesCount": 10
+    "medianPrice": 720000,
+    "medianPriceUnit": 607500,
+    "annualChange": 15.2,
+    "salesCount": 7
   },
   "Eureka": {
     "medianPrice": 337000,
@@ -1265,14 +1448,16 @@
     "salesCount": 21
   },
   "Eynesbury": {
-    "medianPrice": 342000,
-    "annualChange": -37.9,
-    "salesCount": 22
+    "medianPrice": 704500,
+    "medianPriceUnit": 342000,
+    "annualChange": 0.4,
+    "salesCount": 26
   },
   "Fairfield": {
-    "medianPrice": 594000,
-    "annualChange": 26.2,
-    "salesCount": 23
+    "medianPrice": 2050000,
+    "medianPriceUnit": 594000,
+    "annualChange": 24.6,
+    "salesCount": 17
   },
   "Fairhaven": {
     "medianPrice": 1725000,
@@ -1280,14 +1465,16 @@
     "salesCount": 1
   },
   "Fawkner": {
-    "medianPrice": 602500,
-    "annualChange": 12.6,
-    "salesCount": 31
+    "medianPrice": 801000,
+    "medianPriceUnit": 602500,
+    "annualChange": 2.6,
+    "salesCount": 63
   },
   "Ferntree Gully": {
-    "medianPrice": 689300,
-    "annualChange": 0.6,
-    "salesCount": 48
+    "medianPrice": 897100,
+    "medianPriceUnit": 689300,
+    "annualChange": 3.1,
+    "salesCount": 88
   },
   "Ferny Creek": {
     "medianPrice": 1020000,
@@ -1305,14 +1492,16 @@
     "salesCount": 18
   },
   "Fitzroy": {
-    "medianPrice": 824000,
-    "annualChange": 4.3,
-    "salesCount": 35
+    "medianPrice": 1815000,
+    "medianPriceUnit": 824000,
+    "annualChange": 3,
+    "salesCount": 15
   },
   "Fitzroy North": {
-    "medianPrice": 626500,
-    "annualChange": -15.2,
-    "salesCount": 37
+    "medianPrice": 1790500,
+    "medianPriceUnit": 626500,
+    "annualChange": 12.3,
+    "salesCount": 36
   },
   "Fiveways": {
     "medianPrice": 680000,
@@ -1320,9 +1509,10 @@
     "salesCount": 3
   },
   "Flemington": {
-    "medianPrice": 470000,
-    "annualChange": 25.2,
-    "salesCount": 38
+    "medianPrice": 1165500,
+    "medianPriceUnit": 470000,
+    "annualChange": 18.3,
+    "salesCount": 12
   },
   "Flinders": {
     "medianPrice": 1610000,
@@ -1330,19 +1520,22 @@
     "salesCount": 7
   },
   "Flora Hill": {
-    "medianPrice": 460500,
-    "annualChange": 5.9,
-    "salesCount": 12
+    "medianPrice": 634000,
+    "medianPriceUnit": 460500,
+    "annualChange": 20.2,
+    "salesCount": 20
   },
   "Footscray": {
-    "medianPrice": 455000,
-    "annualChange": -20.9,
-    "salesCount": 130
+    "medianPrice": 880000,
+    "medianPriceUnit": 455000,
+    "annualChange": -8.3,
+    "salesCount": 51
   },
   "Forest Hill": {
-    "medianPrice": 760000,
-    "annualChange": -16.7,
-    "salesCount": 17
+    "medianPrice": 1180000,
+    "medianPriceUnit": 760000,
+    "annualChange": -0.4,
+    "salesCount": 43
   },
   "Foster": {
     "medianPrice": 620000,
@@ -1350,29 +1543,34 @@
     "salesCount": 9
   },
   "Frankston": {
-    "medianPrice": 557500,
-    "annualChange": 3.7,
-    "salesCount": 126
+    "medianPrice": 810000,
+    "medianPriceUnit": 557500,
+    "annualChange": 8,
+    "salesCount": 171
   },
   "Frankston North": {
-    "medianPrice": 591000,
-    "annualChange": -3.3,
-    "salesCount": 1
+    "medianPrice": 670000,
+    "medianPriceUnit": 591000,
+    "annualChange": 12.1,
+    "salesCount": 47
   },
   "Frankston South": {
-    "medianPrice": 817000,
-    "annualChange": 4,
-    "salesCount": 3
+    "medianPrice": 1190000,
+    "medianPriceUnit": 792500,
+    "annualChange": 0.2,
+    "salesCount": 69
   },
   "Fraser Rise": {
-    "medianPrice": 374000,
-    "annualChange": 2.5,
-    "salesCount": 199
+    "medianPrice": 695000,
+    "medianPriceUnit": 374000,
+    "annualChange": -0.7,
+    "salesCount": 114
   },
   "Fyansford": {
-    "medianPrice": 468000,
-    "annualChange": 1.7,
-    "salesCount": 10
+    "medianPrice": 955000,
+    "medianPriceUnit": 468000,
+    "annualChange": 4.7,
+    "salesCount": 11
   },
   "Garden City": {
     "medianPrice": 1875000,
@@ -1380,9 +1578,10 @@
     "salesCount": 5
   },
   "Gardenvale": {
-    "medianPrice": 520000,
-    "annualChange": 14,
-    "salesCount": 6
+    "medianPrice": 1764000,
+    "medianPriceUnit": 520000,
+    "annualChange": -24.9,
+    "salesCount": 2
   },
   "Garfield": {
     "medianPrice": 847500,
@@ -1390,14 +1589,16 @@
     "salesCount": 2
   },
   "Geelong": {
-    "medianPrice": 650000,
-    "annualChange": 4,
-    "salesCount": 31
+    "medianPrice": 865500,
+    "medianPriceUnit": 650000,
+    "annualChange": -4.4,
+    "salesCount": 10
   },
   "Geelong West": {
-    "medianPrice": 405000,
-    "annualChange": -3.6,
-    "salesCount": 18
+    "medianPrice": 810000,
+    "medianPriceUnit": 405000,
+    "annualChange": -8,
+    "salesCount": 33
   },
   "Gembrook": {
     "medianPrice": 704300,
@@ -1405,9 +1606,10 @@
     "salesCount": 4
   },
   "Gisborne": {
-    "medianPrice": 477300,
-    "annualChange": 4.3,
-    "salesCount": 44
+    "medianPrice": 927500,
+    "medianPriceUnit": 610000,
+    "annualChange": -5.4,
+    "salesCount": 42
   },
   "Gladstone Park": {
     "medianPrice": 752000,
@@ -1415,19 +1617,22 @@
     "salesCount": 39
   },
   "Glen Huntly": {
-    "medianPrice": 585000,
-    "annualChange": -13.3,
-    "salesCount": 43
+    "medianPrice": 1517500,
+    "medianPriceUnit": 585000,
+    "annualChange": -0.8,
+    "salesCount": 4
   },
   "Glen Iris": {
-    "medianPrice": 647500,
-    "annualChange": -15.4,
-    "salesCount": 90
+    "medianPrice": 2715000,
+    "medianPriceUnit": 647500,
+    "annualChange": 15,
+    "salesCount": 46
   },
   "Glen Waverley": {
-    "medianPrice": 835000,
-    "annualChange": -4.1,
-    "salesCount": 51
+    "medianPrice": 1710000,
+    "medianPriceUnit": 835000,
+    "annualChange": 1.2,
+    "salesCount": 123
   },
   "Glengarry": {
     "medianPrice": 249000,
@@ -1440,29 +1645,34 @@
     "salesCount": 3
   },
   "Glenroy": {
-    "medianPrice": 632000,
-    "annualChange": 3.6,
-    "salesCount": 104
+    "medianPrice": 825000,
+    "medianPriceUnit": 632000,
+    "annualChange": -0.6,
+    "salesCount": 64
   },
   "Golden Beach": {
-    "medianPrice": 127300,
-    "annualChange": 21.2,
-    "salesCount": 13
+    "medianPrice": 400000,
+    "medianPriceUnit": 127300,
+    "annualChange": -12.1,
+    "salesCount": 3
   },
   "Golden Point (Ballarat)": {
-    "medianPrice": 350000,
-    "annualChange": -13.6,
-    "salesCount": 4
+    "medianPrice": 525000,
+    "medianPriceUnit": 350000,
+    "annualChange": -13.9,
+    "salesCount": 15
   },
   "Golden Square": {
-    "medianPrice": 273000,
-    "annualChange": 13.8,
-    "salesCount": 2
+    "medianPrice": 550000,
+    "medianPriceUnit": 525000,
+    "annualChange": 5.8,
+    "salesCount": 65
   },
   "Gowanbrae": {
-    "medianPrice": 735000,
+    "medianPrice": 880000,
+    "medianPriceUnit": 735000,
     "annualChange": -18.9,
-    "salesCount": 0
+    "salesCount": 9
   },
   "Grantville": {
     "medianPrice": 605000,
@@ -1475,54 +1685,64 @@
     "salesCount": 6
   },
   "Greensborough": {
-    "medianPrice": 745800,
-    "annualChange": -1.2,
-    "salesCount": 30
+    "medianPrice": 1028500,
+    "medianPriceUnit": 745800,
+    "annualChange": -5.6,
+    "salesCount": 52
   },
   "Greenvale": {
-    "medianPrice": 430000,
-    "annualChange": -1.1,
-    "salesCount": 78
+    "medianPrice": 882500,
+    "medianPriceUnit": 605000,
+    "annualChange": -4.1,
+    "salesCount": 106
   },
   "Grovedale": {
-    "medianPrice": 507000,
-    "annualChange": 8.2,
-    "salesCount": 17
+    "medianPrice": 675000,
+    "medianPriceUnit": 507000,
+    "annualChange": -1.1,
+    "salesCount": 68
   },
   "Hadfield": {
-    "medianPrice": 635000,
-    "annualChange": 10.4,
-    "salesCount": 26
+    "medianPrice": 816000,
+    "medianPriceUnit": 635000,
+    "annualChange": -2.7,
+    "salesCount": 17
   },
   "Hallam": {
-    "medianPrice": 595000,
-    "annualChange": 0.8,
-    "salesCount": 9
+    "medianPrice": 740000,
+    "medianPriceUnit": 595000,
+    "annualChange": -2,
+    "salesCount": 31
   },
   "Hamilton": {
-    "medianPrice": 270000,
-    "annualChange": -16.3,
-    "salesCount": 7
+    "medianPrice": 389000,
+    "medianPriceUnit": 270000,
+    "annualChange": 9.1,
+    "salesCount": 53
   },
   "Hamlyn Heights": {
-    "medianPrice": 630000,
-    "annualChange": 8.8,
-    "salesCount": 10
+    "medianPrice": 722500,
+    "medianPriceUnit": 630000,
+    "annualChange": 0,
+    "salesCount": 26
   },
   "Hampton": {
-    "medianPrice": 950000,
-    "annualChange": -3.6,
-    "salesCount": 40
+    "medianPrice": 2225000,
+    "medianPriceUnit": 950000,
+    "annualChange": -16.7,
+    "salesCount": 35
   },
   "Hampton East": {
-    "medianPrice": 1050000,
-    "annualChange": 1,
-    "salesCount": 13
+    "medianPrice": 1605000,
+    "medianPriceUnit": 1050000,
+    "annualChange": 9.2,
+    "salesCount": 16
   },
   "Hampton Park": {
-    "medianPrice": 377500,
-    "annualChange": -24.5,
-    "salesCount": 7
+    "medianPrice": 675000,
+    "medianPriceUnit": 560500,
+    "annualChange": 0,
+    "salesCount": 89
   },
   "Harcourt": {
     "medianPrice": 500000,
@@ -1530,14 +1750,16 @@
     "salesCount": 5
   },
   "Harkness": {
-    "medianPrice": 297500,
-    "annualChange": 13.3,
-    "salesCount": 5
+    "medianPrice": 590000,
+    "medianPriceUnit": 400000,
+    "annualChange": 7.8,
+    "salesCount": 67
   },
   "Hastings": {
-    "medianPrice": 550000,
-    "annualChange": -5.6,
-    "salesCount": 19
+    "medianPrice": 725000,
+    "medianPriceUnit": 550000,
+    "annualChange": 8.2,
+    "salesCount": 35
   },
   "Hastings West": {
     "medianPrice": 665000,
@@ -1545,19 +1767,22 @@
     "salesCount": 13
   },
   "Hawthorn": {
-    "medianPrice": 536000,
-    "annualChange": -4.9,
-    "salesCount": 144
+    "medianPrice": 2692500,
+    "medianPriceUnit": 536000,
+    "annualChange": -16.7,
+    "salesCount": 32
   },
   "Hawthorn East": {
-    "medianPrice": 590000,
-    "annualChange": -4.1,
-    "salesCount": 94
+    "medianPrice": 2500000,
+    "medianPriceUnit": 590000,
+    "annualChange": -3.3,
+    "salesCount": 27
   },
   "Healesville": {
-    "medianPrice": 530000,
-    "annualChange": -15.2,
-    "salesCount": 11
+    "medianPrice": 792500,
+    "medianPriceUnit": 530000,
+    "annualChange": 3.3,
+    "salesCount": 22
   },
   "Heathcote": {
     "medianPrice": 460000,
@@ -1570,24 +1795,28 @@
     "salesCount": 6
   },
   "Heathmont": {
-    "medianPrice": 850000,
-    "annualChange": 4.8,
-    "salesCount": 14
+    "medianPrice": 1065500,
+    "medianPriceUnit": 850000,
+    "annualChange": -1.3,
+    "salesCount": 28
   },
   "Heidelberg": {
-    "medianPrice": 620000,
-    "annualChange": -2.4,
-    "salesCount": 25
+    "medianPrice": 1440000,
+    "medianPriceUnit": 620000,
+    "annualChange": 3.8,
+    "salesCount": 14
   },
   "Heidelberg Heights": {
-    "medianPrice": 710500,
-    "annualChange": -5.3,
-    "salesCount": 30
+    "medianPrice": 891500,
+    "medianPriceUnit": 710500,
+    "annualChange": -24,
+    "salesCount": 24
   },
   "Heidelberg West": {
-    "medianPrice": 752500,
-    "annualChange": 45.4,
-    "salesCount": 28
+    "medianPrice": 750000,
+    "medianPriceUnit": 752500,
+    "annualChange": -2,
+    "salesCount": 19
   },
   "Hepburn": {
     "medianPrice": 600000,
@@ -1600,9 +1829,10 @@
     "salesCount": 2
   },
   "Herne Hill": {
-    "medianPrice": 300000,
-    "annualChange": -16.1,
-    "salesCount": 9
+    "medianPrice": 705000,
+    "medianPriceUnit": 300000,
+    "annualChange": 1.4,
+    "salesCount": 22
   },
   "Heyfield": {
     "medianPrice": 396000,
@@ -1615,19 +1845,22 @@
     "salesCount": 12
   },
   "Highett": {
-    "medianPrice": 677000,
-    "annualChange": 2.8,
-    "salesCount": 51
+    "medianPrice": 1555000,
+    "medianPriceUnit": 677000,
+    "annualChange": 7,
+    "salesCount": 39
   },
   "Highton": {
-    "medianPrice": 447500,
-    "annualChange": 35.6,
-    "salesCount": 18
+    "medianPrice": 892500,
+    "medianPriceUnit": 550000,
+    "annualChange": 0.3,
+    "salesCount": 84
   },
   "Hillside (Melton)": {
-    "medianPrice": 565000,
-    "annualChange": 7.1,
-    "salesCount": 4
+    "medianPrice": 789300,
+    "medianPriceUnit": 565000,
+    "annualChange": -10.9,
+    "salesCount": 52
   },
   "Hopetoun": {
     "medianPrice": 155000,
@@ -1635,29 +1868,34 @@
     "salesCount": 3
   },
   "Hoppers Crossing": {
-    "medianPrice": 450000,
-    "annualChange": -1,
-    "salesCount": 16
+    "medianPrice": 660000,
+    "medianPriceUnit": 450000,
+    "annualChange": 3.9,
+    "salesCount": 195
   },
   "Horsham": {
-    "medianPrice": 202000,
-    "annualChange": -1.5,
-    "salesCount": 18
+    "medianPrice": 379500,
+    "medianPriceUnit": 372500,
+    "annualChange": -3.9,
+    "salesCount": 90
   },
   "Hughesdale": {
-    "medianPrice": 670000,
-    "annualChange": -11.3,
-    "salesCount": 21
+    "medianPrice": 1500000,
+    "medianPriceUnit": 670000,
+    "annualChange": 15.4,
+    "salesCount": 10
   },
   "Huntingdale": {
-    "medianPrice": 889500,
-    "annualChange": 33.3,
-    "salesCount": 6
+    "medianPrice": 1155500,
+    "medianPriceUnit": 889500,
+    "annualChange": -7.6,
+    "salesCount": 9
   },
   "Huntly": {
-    "medianPrice": 233000,
-    "annualChange": -7.9,
-    "salesCount": 58
+    "medianPrice": 567500,
+    "medianPriceUnit": 233000,
+    "annualChange": -1.7,
+    "salesCount": 28
   },
   "Hurstbridge": {
     "medianPrice": 910000,
@@ -1675,14 +1913,16 @@
     "salesCount": 8
   },
   "Inverloch": {
-    "medianPrice": 395000,
-    "annualChange": -9.7,
-    "salesCount": 12
+    "medianPrice": 792500,
+    "medianPriceUnit": 727500,
+    "annualChange": 1.3,
+    "salesCount": 36
   },
   "Invermay Park": {
-    "medianPrice": 340000,
-    "annualChange": -6.8,
-    "salesCount": 7
+    "medianPrice": 700000,
+    "medianPriceUnit": 340000,
+    "annualChange": 38.6,
+    "salesCount": 6
   },
   "Ironbark": {
     "medianPrice": 622500,
@@ -1690,29 +1930,34 @@
     "salesCount": 6
   },
   "Irymple": {
-    "medianPrice": 156000,
-    "annualChange": -9.6,
-    "salesCount": 26
+    "medianPrice": 625000,
+    "medianPriceUnit": 156000,
+    "annualChange": 11.6,
+    "salesCount": 25
   },
   "Ivanhoe": {
-    "medianPrice": 650000,
-    "annualChange": -1.9,
-    "salesCount": 65
+    "medianPrice": 2025000,
+    "medianPriceUnit": 650000,
+    "annualChange": 14.7,
+    "salesCount": 23
   },
   "Ivanhoe East": {
-    "medianPrice": 873500,
-    "annualChange": -31.3,
-    "salesCount": 10
+    "medianPrice": 2732500,
+    "medianPriceUnit": 873500,
+    "annualChange": 5.1,
+    "salesCount": 12
   },
   "Jacana": {
-    "medianPrice": 566000,
-    "annualChange": 15.9,
+    "medianPrice": 620000,
+    "medianPriceUnit": 566000,
+    "annualChange": 5.5,
     "salesCount": 7
   },
   "Jackass Flat": {
-    "medianPrice": 262000,
-    "annualChange": -11.9,
-    "salesCount": 12
+    "medianPrice": 632300,
+    "medianPriceUnit": 262000,
+    "annualChange": 15,
+    "salesCount": 16
   },
   "Jamieson": {
     "medianPrice": 525000,
@@ -1740,9 +1985,10 @@
     "salesCount": 7
   },
   "Junction Village": {
-    "medianPrice": 420000,
-    "annualChange": 3.6,
-    "salesCount": 19
+    "medianPrice": 700000,
+    "medianPriceUnit": 420000,
+    "annualChange": -10.3,
+    "salesCount": 15
   },
   "Junortoun": {
     "medianPrice": 967500,
@@ -1755,9 +2001,10 @@
     "salesCount": 11
   },
   "Kalkallo": {
-    "medianPrice": 360000,
-    "annualChange": 18.4,
-    "salesCount": 146
+    "medianPrice": 637500,
+    "medianPriceUnit": 360000,
+    "annualChange": 1.2,
+    "salesCount": 104
   },
   "Kallista": {
     "medianPrice": 890000,
@@ -1770,9 +2017,10 @@
     "salesCount": 4
   },
   "Kangaroo Flat": {
-    "medianPrice": 303500,
-    "annualChange": -0.5,
-    "salesCount": 7
+    "medianPrice": 555000,
+    "medianPriceUnit": 540000,
+    "annualChange": 1.4,
+    "salesCount": 74
   },
   "Kangaroo Ground South": {
     "medianPrice": 1362500,
@@ -1790,19 +2038,22 @@
     "salesCount": 14
   },
   "Keilor": {
-    "medianPrice": 637800,
-    "annualChange": -11.4,
-    "salesCount": 2
+    "medianPrice": 1090000,
+    "medianPriceUnit": 637800,
+    "annualChange": -8.2,
+    "salesCount": 21
   },
   "Keilor Downs": {
-    "medianPrice": 533500,
-    "annualChange": -11.1,
-    "salesCount": 6
+    "medianPrice": 888800,
+    "medianPriceUnit": 533500,
+    "annualChange": 14.8,
+    "salesCount": 28
   },
   "Keilor East": {
-    "medianPrice": 720000,
-    "annualChange": -7.8,
-    "salesCount": 10
+    "medianPrice": 1000000,
+    "medianPriceUnit": 720000,
+    "annualChange": -5.4,
+    "salesCount": 57
   },
   "Keilor Lodge": {
     "medianPrice": 1097500,
@@ -1811,28 +2062,33 @@
   },
   "Keilor Park": {
     "medianPrice": 795000,
-    "annualChange": -6.5,
-    "salesCount": 2
+    "medianPriceUnit": 795000,
+    "annualChange": -6.6,
+    "salesCount": 11
   },
   "Kennington": {
-    "medianPrice": 662500,
-    "annualChange": 51.3,
-    "salesCount": 18
+    "medianPrice": 600000,
+    "medianPriceUnit": 662500,
+    "annualChange": 1.2,
+    "salesCount": 33
   },
   "Kensington": {
-    "medianPrice": 502500,
-    "annualChange": -5,
-    "salesCount": 50
+    "medianPrice": 1138300,
+    "medianPriceUnit": 502500,
+    "annualChange": -3.7,
+    "salesCount": 28
   },
   "Kerang": {
-    "medianPrice": 275000,
-    "annualChange": 6.8,
-    "salesCount": 3
+    "medianPrice": 312500,
+    "medianPriceUnit": 275000,
+    "annualChange": -30.2,
+    "salesCount": 24
   },
   "Kew": {
-    "medianPrice": 861000,
-    "annualChange": -6.4,
-    "salesCount": 82
+    "medianPrice": 2810500,
+    "medianPriceUnit": 861000,
+    "annualChange": -2.8,
+    "salesCount": 56
   },
   "Kew East": {
     "medianPrice": 1396000,
@@ -1840,19 +2096,22 @@
     "salesCount": 5
   },
   "Kew North": {
-    "medianPrice": 977500,
-    "annualChange": 47,
-    "salesCount": 6
+    "medianPrice": 2250000,
+    "medianPriceUnit": 977500,
+    "annualChange": -2.6,
+    "salesCount": 12
   },
   "Keysborough": {
-    "medianPrice": 912500,
-    "annualChange": 6.7,
-    "salesCount": 0
+    "medianPrice": 980000,
+    "medianPriceUnit": 722800,
+    "annualChange": 8.3,
+    "salesCount": 89
   },
   "Kialla": {
-    "medianPrice": 264500,
-    "annualChange": -0.2,
-    "salesCount": 31
+    "medianPrice": 677500,
+    "medianPriceUnit": 264500,
+    "annualChange": 2.7,
+    "salesCount": 42
   },
   "Killara (Wodonga)": {
     "medianPrice": 648900,
@@ -1860,14 +2119,16 @@
     "salesCount": 6
   },
   "Kilmore": {
-    "medianPrice": 298800,
-    "annualChange": -8,
-    "salesCount": 39
+    "medianPrice": 590000,
+    "medianPriceUnit": 438800,
+    "annualChange": -3.7,
+    "salesCount": 31
   },
   "Kilsyth": {
-    "medianPrice": 280000,
-    "annualChange": -14.5,
-    "salesCount": 2
+    "medianPrice": 837500,
+    "medianPriceUnit": 715000,
+    "annualChange": 3.6,
+    "salesCount": 24
   },
   "Kilsyth South": {
     "medianPrice": 994000,
@@ -1885,24 +2146,28 @@
     "salesCount": 26
   },
   "Kingsbury": {
-    "medianPrice": 407500,
-    "annualChange": -29.3,
-    "salesCount": 14
-  },
-  "Kingsville": {
-    "medianPrice": 500000,
-    "annualChange": 17.1,
-    "salesCount": 6
-  },
-  "Knoxfield": {
-    "medianPrice": 793300,
-    "annualChange": -5,
+    "medianPrice": 845000,
+    "medianPriceUnit": 407500,
+    "annualChange": 0,
     "salesCount": 16
   },
+  "Kingsville": {
+    "medianPrice": 1200000,
+    "medianPriceUnit": 500000,
+    "annualChange": 6.7,
+    "salesCount": 17
+  },
+  "Knoxfield": {
+    "medianPrice": 1170000,
+    "medianPriceUnit": 793300,
+    "annualChange": 24.5,
+    "salesCount": 14
+  },
   "Koo Wee Rup": {
-    "medianPrice": 450000,
-    "annualChange": -5.5,
-    "salesCount": 3
+    "medianPrice": 695000,
+    "medianPriceUnit": 450000,
+    "annualChange": 7.8,
+    "salesCount": 14
   },
   "Koondrook": {
     "medianPrice": 350000,
@@ -1920,24 +2185,28 @@
     "salesCount": 9
   },
   "Korumburra": {
-    "medianPrice": 220000,
-    "annualChange": -20.6,
-    "salesCount": 9
+    "medianPrice": 520000,
+    "medianPriceUnit": 404000,
+    "annualChange": -8.8,
+    "salesCount": 21
   },
   "Kurunjang": {
-    "medianPrice": 391000,
-    "annualChange": 4.5,
-    "salesCount": 3
+    "medianPrice": 551000,
+    "medianPriceUnit": 391000,
+    "annualChange": 4.1,
+    "salesCount": 51
   },
   "Kyabram": {
-    "medianPrice": 184800,
-    "annualChange": -7.2,
-    "salesCount": 34
+    "medianPrice": 495000,
+    "medianPriceUnit": 313500,
+    "annualChange": 0,
+    "salesCount": 32
   },
   "Kyneton": {
-    "medianPrice": 580000,
-    "annualChange": -4.1,
-    "salesCount": 5
+    "medianPrice": 797000,
+    "medianPriceUnit": 580000,
+    "annualChange": -5.9,
+    "salesCount": 31
   },
   "Lake Boga": {
     "medianPrice": 370000,
@@ -1955,19 +2224,22 @@
     "salesCount": 6
   },
   "Lake Wendouree": {
-    "medianPrice": 512500,
-    "annualChange": -10.9,
-    "salesCount": 10
+    "medianPrice": 795000,
+    "medianPriceUnit": 512500,
+    "annualChange": -39.3,
+    "salesCount": 11
   },
   "Lakes Entrance": {
-    "medianPrice": 235000,
-    "annualChange": 13,
-    "salesCount": 6
+    "medianPrice": 520000,
+    "medianPriceUnit": 665000,
+    "annualChange": -8,
+    "salesCount": 21
   },
   "Lalor": {
-    "medianPrice": 660000,
-    "annualChange": 7,
-    "salesCount": 1
+    "medianPrice": 737500,
+    "medianPriceUnit": 540500,
+    "annualChange": 5.4,
+    "salesCount": 78
   },
   "Lancefield": {
     "medianPrice": 740000,
@@ -1980,19 +2252,22 @@
     "salesCount": 25
   },
   "Langwarrin": {
-    "medianPrice": 650500,
-    "annualChange": 12.3,
-    "salesCount": 38
+    "medianPrice": 872000,
+    "medianPriceUnit": 650500,
+    "annualChange": 4.7,
+    "salesCount": 83
   },
   "Lara": {
-    "medianPrice": 320900,
-    "annualChange": -14.3,
-    "salesCount": 107
+    "medianPrice": 687500,
+    "medianPriceUnit": 466000,
+    "annualChange": 1.9,
+    "salesCount": 62
   },
   "Lara Lake": {
-    "medianPrice": 570000,
-    "annualChange": 24.6,
-    "salesCount": 7
+    "medianPrice": 688800,
+    "medianPriceUnit": 570000,
+    "annualChange": -1,
+    "salesCount": 56
   },
   "Launching Place": {
     "medianPrice": 706300,
@@ -2000,34 +2275,40 @@
     "salesCount": 10
   },
   "Laverton": {
-    "medianPrice": 555000,
-    "annualChange": -3.8,
-    "salesCount": 24
+    "medianPrice": 605000,
+    "medianPriceUnit": 555000,
+    "annualChange": 1.7,
+    "salesCount": 45
   },
   "Laverton South": {
-    "medianPrice": 596000,
-    "annualChange": 6.4,
-    "salesCount": 2
+    "medianPrice": 755000,
+    "medianPriceUnit": 578800,
+    "annualChange": 0.7,
+    "salesCount": 44
   },
   "Leneva": {
-    "medianPrice": 205000,
-    "annualChange": -2.4,
-    "salesCount": 46
+    "medianPrice": 727500,
+    "medianPriceUnit": 205000,
+    "annualChange": -5.5,
+    "salesCount": 8
   },
   "Leongatha": {
-    "medianPrice": 240000,
-    "annualChange": -39.2,
-    "salesCount": 6
-  },
-  "Leopold": {
-    "medianPrice": 338000,
-    "annualChange": -1,
+    "medianPrice": 615000,
+    "medianPriceUnit": 450000,
+    "annualChange": 18.3,
     "salesCount": 22
   },
+  "Leopold": {
+    "medianPrice": 675000,
+    "medianPriceUnit": 500000,
+    "annualChange": 1.5,
+    "salesCount": 60
+  },
   "Lilydale": {
-    "medianPrice": 755000,
-    "annualChange": 12.6,
-    "salesCount": 3
+    "medianPrice": 957500,
+    "medianPriceUnit": 622500,
+    "annualChange": 10.2,
+    "salesCount": 67
   },
   "Lismore": {
     "medianPrice": 210000,
@@ -2035,9 +2316,10 @@
     "salesCount": 3
   },
   "Loch Sport": {
-    "medianPrice": 87000,
-    "annualChange": -24.3,
-    "salesCount": 19
+    "medianPrice": 315000,
+    "medianPriceUnit": 87000,
+    "annualChange": -7.8,
+    "salesCount": 18
   },
   "Lockington": {
     "medianPrice": 362500,
@@ -2045,19 +2327,22 @@
     "salesCount": 2
   },
   "Long Gully": {
-    "medianPrice": 411500,
-    "annualChange": 6.9,
-    "salesCount": 6
+    "medianPrice": 480000,
+    "medianPriceUnit": 411500,
+    "annualChange": 6.7,
+    "salesCount": 25
   },
   "Longwarry": {
-    "medianPrice": 245000,
-    "annualChange": -25.8,
-    "salesCount": 1
+    "medianPrice": 585000,
+    "medianPriceUnit": 485000,
+    "annualChange": 4.5,
+    "salesCount": 13
   },
   "Lorne": {
-    "medianPrice": 805000,
-    "annualChange": -34.6,
-    "salesCount": 6
+    "medianPrice": 1695000,
+    "medianPriceUnit": 805000,
+    "annualChange": -15.3,
+    "salesCount": 11
   },
   "Lovely Banks": {
     "medianPrice": 698000,
@@ -2065,19 +2350,22 @@
     "salesCount": 5
   },
   "Lower Plenty": {
-    "medianPrice": 684000,
-    "annualChange": -10.9,
-    "salesCount": 14
+    "medianPrice": 1207500,
+    "medianPriceUnit": 684000,
+    "annualChange": -17,
+    "salesCount": 3
   },
   "Lucas": {
-    "medianPrice": 302500,
-    "annualChange": -5.5,
-    "salesCount": 26
+    "medianPrice": 625000,
+    "medianPriceUnit": 302500,
+    "annualChange": 1,
+    "salesCount": 55
   },
   "Lucknow": {
-    "medianPrice": 166000,
-    "annualChange": 3.8,
-    "salesCount": 11
+    "medianPrice": 630000,
+    "medianPriceUnit": 166000,
+    "annualChange": 6.4,
+    "salesCount": 5
   },
   "Lynbrook": {
     "medianPrice": 835000,
@@ -2105,14 +2393,16 @@
     "salesCount": 1
   },
   "Macleod": {
-    "medianPrice": 819000,
-    "annualChange": -1.3,
-    "salesCount": 23
+    "medianPrice": 1122500,
+    "medianPriceUnit": 819000,
+    "annualChange": -12.6,
+    "salesCount": 22
   },
   "Maddingley": {
-    "medianPrice": 305000,
-    "annualChange": 5.2,
-    "salesCount": 39
+    "medianPrice": 650000,
+    "medianPriceUnit": 305000,
+    "annualChange": 5.7,
+    "salesCount": 32
   },
   "Maffra": {
     "medianPrice": 412500,
@@ -2120,14 +2410,16 @@
     "salesCount": 26
   },
   "Maiden Gully": {
-    "medianPrice": 312500,
-    "annualChange": -32.5,
-    "salesCount": 11
+    "medianPrice": 795000,
+    "medianPriceUnit": 312500,
+    "annualChange": -4.2,
+    "salesCount": 17
   },
   "Maidstone": {
-    "medianPrice": 630000,
-    "annualChange": 0.8,
-    "salesCount": 29
+    "medianPrice": 929000,
+    "medianPriceUnit": 630000,
+    "annualChange": 6.2,
+    "salesCount": 24
   },
   "Maldon": {
     "medianPrice": 595000,
@@ -2145,44 +2437,52 @@
     "salesCount": 3
   },
   "Malvern": {
-    "medianPrice": 625000,
-    "annualChange": 5.9,
-    "salesCount": 48
+    "medianPrice": 2500000,
+    "medianPriceUnit": 625000,
+    "annualChange": -26.8,
+    "salesCount": 23
   },
   "Malvern East": {
-    "medianPrice": 541000,
-    "annualChange": -7.1,
-    "salesCount": 76
+    "medianPrice": 2437500,
+    "medianPriceUnit": 541000,
+    "annualChange": 13.8,
+    "salesCount": 54
   },
   "Mambourin": {
-    "medianPrice": 215300,
-    "annualChange": -32.7,
-    "salesCount": 103
+    "medianPrice": 607500,
+    "medianPriceUnit": 215300,
+    "annualChange": -4,
+    "salesCount": 26
   },
   "Manifold Heights": {
-    "medianPrice": 455000,
-    "annualChange": -9,
-    "salesCount": 7
-  },
-  "Manor Lakes": {
-    "medianPrice": 285000,
-    "annualChange": -23.4,
-    "salesCount": 128
-  },
-  "Mansfield": {
-    "medianPrice": 330000,
-    "annualChange": -22.8,
+    "medianPrice": 1200000,
+    "medianPriceUnit": 455000,
+    "annualChange": -8.8,
     "salesCount": 13
   },
+  "Manor Lakes": {
+    "medianPrice": 650000,
+    "medianPriceUnit": 285000,
+    "annualChange": 1.6,
+    "salesCount": 87
+  },
+  "Mansfield": {
+    "medianPrice": 815000,
+    "medianPriceUnit": 395000,
+    "annualChange": 10.1,
+    "salesCount": 18
+  },
   "Maribyrnong": {
-    "medianPrice": 479000,
-    "annualChange": 6.4,
-    "salesCount": 88
+    "medianPrice": 1255000,
+    "medianPriceUnit": 479000,
+    "annualChange": -12.7,
+    "salesCount": 18
   },
   "Marong": {
-    "medianPrice": 265000,
-    "annualChange": -2.2,
-    "salesCount": 11
+    "medianPrice": 672500,
+    "medianPriceUnit": 265000,
+    "annualChange": 1.9,
+    "salesCount": 10
   },
   "Marshall": {
     "medianPrice": 660000,
@@ -2190,14 +2490,16 @@
     "salesCount": 13
   },
   "Maryborough": {
-    "medianPrice": 170000,
-    "annualChange": 3,
-    "salesCount": 6
+    "medianPrice": 379500,
+    "medianPriceUnit": 315000,
+    "annualChange": -1.9,
+    "salesCount": 50
   },
   "Mccrae": {
-    "medianPrice": 965000,
-    "annualChange": -8.1,
-    "salesCount": 4
+    "medianPrice": 1455000,
+    "medianPriceUnit": 965000,
+    "annualChange": -3,
+    "salesCount": 18
   },
   "Mckenzie Hill": {
     "medianPrice": 860000,
@@ -2205,14 +2507,16 @@
     "salesCount": 5
   },
   "Mckinnon": {
-    "medianPrice": 870000,
-    "annualChange": 7.7,
+    "medianPrice": 1850000,
+    "medianPriceUnit": 870000,
+    "annualChange": 2.2,
     "salesCount": 17
   },
   "Meadow Heights": {
-    "medianPrice": 481000,
-    "annualChange": 1.9,
-    "salesCount": 18
+    "medianPrice": 670000,
+    "medianPriceUnit": 481000,
+    "annualChange": 12.1,
+    "salesCount": 44
   },
   "Melbourne": {
     "medianPrice": 567500,
@@ -2220,64 +2524,76 @@
     "salesCount": 666
   },
   "Melton": {
-    "medianPrice": 400000,
-    "annualChange": 5.4,
-    "salesCount": 7
+    "medianPrice": 510000,
+    "medianPriceUnit": 400000,
+    "annualChange": 4.9,
+    "salesCount": 57
   },
   "Melton South": {
-    "medianPrice": 320000,
-    "annualChange": 0,
-    "salesCount": 47
+    "medianPrice": 525500,
+    "medianPriceUnit": 392500,
+    "annualChange": 2.5,
+    "salesCount": 84
   },
   "Melton West": {
-    "medianPrice": 368000,
-    "annualChange": -8,
-    "salesCount": 2
+    "medianPrice": 563500,
+    "medianPriceUnit": 368000,
+    "annualChange": 7.3,
+    "salesCount": 54
   },
   "Mentone": {
-    "medianPrice": 651500,
-    "annualChange": 18.5,
-    "salesCount": 76
+    "medianPrice": 1487000,
+    "medianPriceUnit": 651500,
+    "annualChange": 8.5,
+    "salesCount": 28
   },
   "Merbein": {
-    "medianPrice": 80000,
-    "annualChange": -28.6,
-    "salesCount": 17
+    "medianPrice": 420000,
+    "medianPriceUnit": 171500,
+    "annualChange": 35.5,
+    "salesCount": 25
   },
   "Merinda Park": {
-    "medianPrice": 605000,
-    "annualChange": -5.5,
-    "salesCount": 1
+    "medianPrice": 650000,
+    "medianPriceUnit": 605000,
+    "annualChange": -0.7,
+    "salesCount": 9
   },
   "Mernda": {
-    "medianPrice": 370000,
-    "annualChange": -19,
-    "salesCount": 49
+    "medianPrice": 725000,
+    "medianPriceUnit": 509500,
+    "annualChange": 0.7,
+    "salesCount": 130
   },
   "Metung": {
-    "medianPrice": 199800,
-    "annualChange": -20.1,
-    "salesCount": 16
+    "medianPrice": 520000,
+    "medianPriceUnit": 199800,
+    "annualChange": -23,
+    "salesCount": 8
   },
   "Mickleham": {
-    "medianPrice": 396000,
-    "annualChange": 9.4,
-    "salesCount": 362
+    "medianPrice": 700000,
+    "medianPriceUnit": 624000,
+    "annualChange": 4.5,
+    "salesCount": 239
   },
   "Middle Park": {
-    "medianPrice": 953800,
-    "annualChange": -32.8,
-    "salesCount": 12
+    "medianPrice": 2352500,
+    "medianPriceUnit": 953800,
+    "annualChange": -25.3,
+    "salesCount": 22
   },
   "Mildura": {
-    "medianPrice": 185000,
-    "annualChange": -1.1,
-    "salesCount": 51
+    "medianPrice": 518500,
+    "medianPriceUnit": 355000,
+    "annualChange": 20.6,
+    "salesCount": 211
   },
   "Mill Park": {
-    "medianPrice": 485000,
-    "annualChange": 2.5,
-    "salesCount": 23
+    "medianPrice": 830000,
+    "medianPriceUnit": 485000,
+    "annualChange": 6.3,
+    "salesCount": 105
   },
   "Millgrove": {
     "medianPrice": 620000,
@@ -2300,14 +2616,16 @@
     "salesCount": 5
   },
   "Mitcham": {
-    "medianPrice": 785000,
-    "annualChange": -15.1,
-    "salesCount": 43
+    "medianPrice": 1235000,
+    "medianPriceUnit": 785000,
+    "annualChange": 5.1,
+    "salesCount": 42
   },
   "Moe": {
-    "medianPrice": 230700,
-    "annualChange": 7.3,
-    "salesCount": 20
+    "medianPrice": 433000,
+    "medianPriceUnit": 320000,
+    "annualChange": 15.5,
+    "salesCount": 63
   },
   "Monbulk": {
     "medianPrice": 795000,
@@ -2315,19 +2633,22 @@
     "salesCount": 13
   },
   "Mont Albert": {
-    "medianPrice": 730500,
-    "annualChange": -7.1,
-    "salesCount": 14
+    "medianPrice": 3210000,
+    "medianPriceUnit": 730500,
+    "annualChange": 16.9,
+    "salesCount": 7
   },
   "Mont Albert North": {
-    "medianPrice": 1115000,
-    "annualChange": -3,
+    "medianPrice": 1405000,
+    "medianPriceUnit": 1115000,
+    "annualChange": -14.9,
     "salesCount": 17
   },
   "Montmorency": {
-    "medianPrice": 862500,
-    "annualChange": 9.8,
-    "salesCount": 20
+    "medianPrice": 1150000,
+    "medianPriceUnit": 862500,
+    "annualChange": -1,
+    "salesCount": 23
   },
   "Montrose": {
     "medianPrice": 985000,
@@ -2335,34 +2656,40 @@
     "salesCount": 23
   },
   "Moonee Ponds": {
-    "medianPrice": 545000,
-    "annualChange": -0.5,
-    "salesCount": 74
+    "medianPrice": 1500000,
+    "medianPriceUnit": 545000,
+    "annualChange": -5.1,
+    "salesCount": 45
   },
   "Moorabbin": {
-    "medianPrice": 765000,
-    "annualChange": 27,
-    "salesCount": 32
+    "medianPrice": 1210500,
+    "medianPriceUnit": 765000,
+    "annualChange": -9.7,
+    "salesCount": 18
   },
   "Mooroolbark": {
-    "medianPrice": 700000,
-    "annualChange": -1.4,
-    "salesCount": 31
+    "medianPrice": 880000,
+    "medianPriceUnit": 700000,
+    "annualChange": 0,
+    "salesCount": 73
   },
   "Mooroopna": {
-    "medianPrice": 217500,
-    "annualChange": -7.4,
-    "salesCount": 11
+    "medianPrice": 432500,
+    "medianPriceUnit": 355800,
+    "annualChange": 13.8,
+    "salesCount": 40
   },
   "Mordialloc": {
-    "medianPrice": 670000,
-    "annualChange": -11.6,
-    "salesCount": 35
+    "medianPrice": 1387500,
+    "medianPriceUnit": 670000,
+    "annualChange": 9.9,
+    "salesCount": 14
   },
   "Mornington": {
-    "medianPrice": 775000,
-    "annualChange": -1.9,
-    "salesCount": 49
+    "medianPrice": 925000,
+    "medianPriceUnit": 775000,
+    "annualChange": -14.7,
+    "salesCount": 79
   },
   "Mortlake": {
     "medianPrice": 220000,
@@ -2370,9 +2697,10 @@
     "salesCount": 5
   },
   "Morwell": {
-    "medianPrice": 225000,
-    "annualChange": 0,
-    "salesCount": 15
+    "medianPrice": 355000,
+    "medianPriceUnit": 272500,
+    "annualChange": 7.1,
+    "salesCount": 120
   },
   "Mount Beauty": {
     "medianPrice": 480000,
@@ -2380,14 +2708,16 @@
     "salesCount": 5
   },
   "Mount Clear": {
-    "medianPrice": 450000,
-    "annualChange": 23,
-    "salesCount": 7
+    "medianPrice": 536000,
+    "medianPriceUnit": 450000,
+    "annualChange": 7.2,
+    "salesCount": 23
   },
   "Mount Cottrell": {
-    "medianPrice": 292500,
-    "annualChange": -30.4,
-    "salesCount": 18
+    "medianPrice": 749000,
+    "medianPriceUnit": 292500,
+    "annualChange": 6.1,
+    "salesCount": 5
   },
   "Mount Dandenong": {
     "medianPrice": 1100000,
@@ -2395,19 +2725,22 @@
     "salesCount": 7
   },
   "Mount Duneed": {
-    "medianPrice": 374000,
-    "annualChange": 3.9,
-    "salesCount": 137
+    "medianPrice": 710000,
+    "medianPriceUnit": 374000,
+    "annualChange": 0.7,
+    "salesCount": 60
   },
   "Mount Eliza": {
-    "medianPrice": 886300,
-    "annualChange": 1.9,
-    "salesCount": 8
+    "medianPrice": 1650000,
+    "medianPriceUnit": 886300,
+    "annualChange": 2,
+    "salesCount": 55
   },
   "Mount Evelyn": {
-    "medianPrice": 724300,
-    "annualChange": -5.9,
-    "salesCount": 2
+    "medianPrice": 850000,
+    "medianPriceUnit": 724300,
+    "annualChange": 4,
+    "salesCount": 31
   },
   "Mount Helen": {
     "medianPrice": 597500,
@@ -2415,29 +2748,34 @@
     "salesCount": 22
   },
   "Mount Martha": {
-    "medianPrice": 850500,
-    "annualChange": 24.7,
-    "salesCount": 6
+    "medianPrice": 1710000,
+    "medianPriceUnit": 850500,
+    "annualChange": -18.6,
+    "salesCount": 21
   },
   "Mount Pleasant": {
-    "medianPrice": 442500,
-    "annualChange": 22.9,
-    "salesCount": 2
+    "medianPrice": 500000,
+    "medianPriceUnit": 442500,
+    "annualChange": 7,
+    "salesCount": 19
   },
   "Mount Waverley": {
-    "medianPrice": 1112000,
-    "annualChange": 9.3,
-    "salesCount": 59
+    "medianPrice": 1640000,
+    "medianPriceUnit": 1112000,
+    "annualChange": 4.8,
+    "salesCount": 121
   },
   "Mulgrave": {
-    "medianPrice": 690000,
-    "annualChange": -12.4,
-    "salesCount": 7
+    "medianPrice": 1098500,
+    "medianPriceUnit": 690000,
+    "annualChange": 4.6,
+    "salesCount": 82
   },
   "Murrumbeena": {
-    "medianPrice": 557500,
-    "annualChange": -6.3,
-    "salesCount": 41
+    "medianPrice": 1950000,
+    "medianPriceUnit": 557500,
+    "annualChange": 8.9,
+    "salesCount": 21
   },
   "Murtoa": {
     "medianPrice": 175000,
@@ -2450,9 +2788,10 @@
     "salesCount": 12
   },
   "Nagambie": {
-    "medianPrice": 267500,
-    "annualChange": 7,
-    "salesCount": 11
+    "medianPrice": 518000,
+    "medianPriceUnit": 267500,
+    "annualChange": -18.4,
+    "salesCount": 9
   },
   "Nar Nar Goon": {
     "medianPrice": 440000,
@@ -2460,24 +2799,28 @@
     "salesCount": 21
   },
   "Nar Nar Goon North": {
-    "medianPrice": 397000,
-    "annualChange": 31,
-    "salesCount": 20
+    "medianPrice": 599000,
+    "medianPriceUnit": 397000,
+    "annualChange": -37.3,
+    "salesCount": 2
   },
   "Narre Warren": {
-    "medianPrice": 610000,
-    "annualChange": 11.9,
-    "salesCount": 27
+    "medianPrice": 790000,
+    "medianPriceUnit": 610000,
+    "annualChange": 5.3,
+    "salesCount": 111
   },
   "Narre Warren North": {
-    "medianPrice": 1010000,
-    "annualChange": 16.8,
-    "salesCount": 7
+    "medianPrice": 1700000,
+    "medianPriceUnit": 1010000,
+    "annualChange": 0.4,
+    "salesCount": 13
   },
   "Narre Warren South": {
-    "medianPrice": 832500,
-    "annualChange": 29.1,
-    "salesCount": 5
+    "medianPrice": 820000,
+    "medianPriceUnit": 672500,
+    "annualChange": -3,
+    "salesCount": 100
   },
   "Nathalia": {
     "medianPrice": 378500,
@@ -2495,19 +2838,22 @@
     "salesCount": 7
   },
   "New Gisborne": {
-    "medianPrice": 375500,
-    "annualChange": -12.7,
-    "salesCount": 8
+    "medianPrice": 915000,
+    "medianPriceUnit": 375500,
+    "annualChange": 24.5,
+    "salesCount": 9
   },
   "Newborough": {
-    "medianPrice": 200000,
-    "annualChange": -27.3,
-    "salesCount": 10
+    "medianPrice": 475000,
+    "medianPriceUnit": 318000,
+    "annualChange": 8.6,
+    "salesCount": 33
   },
   "Newcomb": {
-    "medianPrice": 458000,
-    "annualChange": 9.3,
-    "salesCount": 9
+    "medianPrice": 567500,
+    "medianPriceUnit": 458000,
+    "annualChange": 2.1,
+    "salesCount": 22
   },
   "Newington": {
     "medianPrice": 640000,
@@ -2520,14 +2866,16 @@
     "salesCount": 2
   },
   "Newport": {
-    "medianPrice": 690000,
-    "annualChange": -16.4,
-    "salesCount": 39
+    "medianPrice": 1270000,
+    "medianPriceUnit": 690000,
+    "annualChange": -2.9,
+    "salesCount": 61
   },
   "Newtown (Greater Geelong)": {
-    "medianPrice": 627500,
-    "annualChange": -10.4,
-    "salesCount": 14
+    "medianPrice": 900000,
+    "medianPriceUnit": 627500,
+    "annualChange": -28.6,
+    "salesCount": 35
   },
   "Nhill": {
     "medianPrice": 203000,
@@ -2539,39 +2887,46 @@
     "salesCount": 0
   },
   "Niddrie": {
-    "medianPrice": 855000,
-    "annualChange": 17.9,
-    "salesCount": 9
+    "medianPrice": 1375000,
+    "medianPriceUnit": 855000,
+    "annualChange": 18,
+    "salesCount": 33
   },
   "Noble Park": {
-    "medianPrice": 595000,
-    "annualChange": 5.3,
-    "salesCount": 67
+    "medianPrice": 820000,
+    "medianPriceUnit": 595000,
+    "annualChange": 4.5,
+    "salesCount": 47
   },
   "Noble Park North": {
-    "medianPrice": 625000,
+    "medianPrice": 806500,
+    "medianPriceUnit": 625000,
     "annualChange": 0.8,
-    "salesCount": 7
+    "salesCount": 26
   },
   "Norlane": {
-    "medianPrice": 390000,
-    "annualChange": -22.3,
-    "salesCount": 7
+    "medianPrice": 466000,
+    "medianPriceUnit": 438500,
+    "annualChange": 7.4,
+    "salesCount": 90
   },
   "North Bendigo": {
-    "medianPrice": 447500,
-    "annualChange": 0.6,
-    "salesCount": 8
+    "medianPrice": 560000,
+    "medianPriceUnit": 447500,
+    "annualChange": 1.4,
+    "salesCount": 29
   },
   "North Geelong": {
-    "medianPrice": 497500,
-    "annualChange": 8.6,
-    "salesCount": 8
+    "medianPrice": 641000,
+    "medianPriceUnit": 497500,
+    "annualChange": -9.7,
+    "salesCount": 20
   },
   "North Melbourne": {
-    "medianPrice": 517500,
-    "annualChange": 2.5,
-    "salesCount": 95
+    "medianPrice": 1326000,
+    "medianPriceUnit": 517500,
+    "annualChange": 11.4,
+    "salesCount": 19
   },
   "North Shore": {
     "medianPrice": 830000,
@@ -2579,19 +2934,22 @@
     "salesCount": 5
   },
   "North Wonthaggi": {
-    "medianPrice": 265000,
-    "annualChange": 28.6,
-    "salesCount": 2
+    "medianPrice": 614500,
+    "medianPriceUnit": 265000,
+    "annualChange": 12.6,
+    "salesCount": 20
   },
   "Northcote": {
-    "medianPrice": 600000,
-    "annualChange": -18.8,
-    "salesCount": 77
+    "medianPrice": 1724500,
+    "medianPriceUnit": 600000,
+    "annualChange": 12.7,
+    "salesCount": 56
   },
   "Notting Hill": {
-    "medianPrice": 400000,
-    "annualChange": -7,
-    "salesCount": 9
+    "medianPrice": 1175000,
+    "medianPriceUnit": 400000,
+    "annualChange": 17.8,
+    "salesCount": 8
   },
   "Numurkah": {
     "medianPrice": 380000,
@@ -2599,9 +2957,10 @@
     "salesCount": 28
   },
   "Nunawading": {
-    "medianPrice": 838500,
-    "annualChange": -0.3,
-    "salesCount": 24
+    "medianPrice": 1180000,
+    "medianPriceUnit": 838500,
+    "annualChange": -4.8,
+    "salesCount": 27
   },
   "Nyah": {
     "medianPrice": 290000,
@@ -2614,39 +2973,46 @@
     "salesCount": 1
   },
   "Oak Park": {
-    "medianPrice": 630000,
-    "annualChange": -14.3,
-    "salesCount": 25
+    "medianPrice": 1170000,
+    "medianPriceUnit": 630000,
+    "annualChange": -4.9,
+    "salesCount": 17
   },
   "Oakleigh": {
-    "medianPrice": 560000,
-    "annualChange": 0.4,
-    "salesCount": 23
+    "medianPrice": 1351000,
+    "medianPriceUnit": 560000,
+    "annualChange": 0.8,
+    "salesCount": 19
   },
   "Oakleigh East": {
-    "medianPrice": 935500,
-    "annualChange": 8.8,
-    "salesCount": 14
+    "medianPrice": 1135000,
+    "medianPriceUnit": 935500,
+    "annualChange": 2.3,
+    "salesCount": 8
   },
   "Oakleigh South": {
-    "medianPrice": 815000,
-    "annualChange": -1.5,
-    "salesCount": 21
+    "medianPrice": 1245300,
+    "medianPriceUnit": 815000,
+    "annualChange": -2,
+    "salesCount": 20
   },
   "Ocean Grove": {
-    "medianPrice": 462500,
-    "annualChange": -4.6,
-    "salesCount": 34
+    "medianPrice": 960000,
+    "medianPriceUnit": 847000,
+    "annualChange": -3.5,
+    "salesCount": 89
   },
   "Officer": {
-    "medianPrice": 484000,
-    "annualChange": 19.2,
-    "salesCount": 174
+    "medianPrice": 750000,
+    "medianPriceUnit": 529000,
+    "annualChange": 5.3,
+    "salesCount": 132
   },
   "Officer South": {
-    "medianPrice": 449500,
-    "annualChange": -9.2,
-    "salesCount": 8
+    "medianPrice": 896000,
+    "medianPriceUnit": 449500,
+    "annualChange": 35.7,
+    "salesCount": 12
   },
   "Olinda": {
     "medianPrice": 942500,
@@ -2659,14 +3025,16 @@
     "salesCount": 15
   },
   "Ormond": {
-    "medianPrice": 650000,
-    "annualChange": 9.7,
-    "salesCount": 35
+    "medianPrice": 1575000,
+    "medianPriceUnit": 650000,
+    "annualChange": -20.9,
+    "salesCount": 11
   },
   "Osborne": {
-    "medianPrice": 816000,
-    "annualChange": -0.5,
-    "salesCount": 11
+    "medianPrice": 1011500,
+    "medianPriceUnit": 816000,
+    "annualChange": 8.6,
+    "salesCount": 30
   },
   "Ouyen": {
     "medianPrice": 200000,
@@ -2674,13 +3042,15 @@
     "salesCount": 11
   },
   "Pakenham": {
-    "medianPrice": 422500,
-    "annualChange": 50.9,
-    "salesCount": 42
+    "medianPrice": 690000,
+    "medianPriceUnit": 511000,
+    "annualChange": 2.9,
+    "salesCount": 276
   },
   "Paradise Beach": {
-    "medianPrice": 123600,
-    "annualChange": -10.1,
+    "medianPrice": 335000,
+    "medianPriceUnit": 123600,
+    "annualChange": -27.2,
     "salesCount": 2
   },
   "Park Orchards": {
@@ -2689,24 +3059,28 @@
     "salesCount": 6
   },
   "Parkdale": {
-    "medianPrice": 800000,
-    "annualChange": -2.1,
-    "salesCount": 35
+    "medianPrice": 1588000,
+    "medianPriceUnit": 800000,
+    "annualChange": 5.5,
+    "salesCount": 27
   },
   "Parkville": {
-    "medianPrice": 507500,
-    "annualChange": -7.7,
-    "salesCount": 26
+    "medianPrice": 2025000,
+    "medianPriceUnit": 507500,
+    "annualChange": 23.3,
+    "salesCount": 6
   },
   "Pascoe Vale": {
-    "medianPrice": 660000,
-    "annualChange": 2.3,
-    "salesCount": 111
+    "medianPrice": 1207000,
+    "medianPriceUnit": 660000,
+    "annualChange": 15,
+    "salesCount": 27
   },
   "Pascoe Vale South": {
-    "medianPrice": 700000,
-    "annualChange": 8.7,
-    "salesCount": 16
+    "medianPrice": 1227500,
+    "medianPriceUnit": 700000,
+    "annualChange": 16.9,
+    "salesCount": 30
   },
   "Patterson Gardens": {
     "medianPrice": 1265000,
@@ -2714,19 +3088,22 @@
     "salesCount": 5
   },
   "Patterson Lakes": {
-    "medianPrice": 710000,
-    "annualChange": 26.2,
-    "salesCount": 21
+    "medianPrice": 1575000,
+    "medianPriceUnit": 710000,
+    "annualChange": 28,
+    "salesCount": 12
   },
   "Paynesville": {
-    "medianPrice": 194000,
-    "annualChange": -6.7,
-    "salesCount": 19
+    "medianPrice": 521500,
+    "medianPriceUnit": 340000,
+    "annualChange": -4.3,
+    "salesCount": 30
   },
   "Pearcedale": {
-    "medianPrice": 777500,
+    "medianPrice": 952500,
+    "medianPriceUnit": 777500,
     "annualChange": 1.9,
-    "salesCount": 0
+    "salesCount": 12
   },
   "Peterborough": {
     "medianPrice": 650000,
@@ -2739,14 +3116,16 @@
     "salesCount": 2
   },
   "Point Cook": {
-    "medianPrice": 560500,
-    "annualChange": 37,
-    "salesCount": 12
+    "medianPrice": 800000,
+    "medianPriceUnit": 581300,
+    "annualChange": 3.9,
+    "salesCount": 176
   },
   "Point Lonsdale": {
-    "medianPrice": 617000,
-    "annualChange": 6.4,
-    "salesCount": 12
+    "medianPrice": 1200000,
+    "medianPriceUnit": 617000,
+    "annualChange": 3.6,
+    "salesCount": 19
   },
   "Porepunkah": {
     "medianPrice": 925000,
@@ -2759,19 +3138,22 @@
     "salesCount": 10
   },
   "Port Melbourne": {
-    "medianPrice": 685000,
-    "annualChange": -13.8,
-    "salesCount": 83
+    "medianPrice": 1500000,
+    "medianPriceUnit": 685000,
+    "annualChange": -12.8,
+    "salesCount": 41
   },
   "Portarlington": {
-    "medianPrice": 452000,
-    "annualChange": -41.3,
-    "salesCount": 5
+    "medianPrice": 890000,
+    "medianPriceUnit": 520000,
+    "annualChange": 1.3,
+    "salesCount": 21
   },
   "Portland": {
-    "medianPrice": 165000,
-    "annualChange": -21.4,
-    "salesCount": 3
+    "medianPrice": 397500,
+    "medianPriceUnit": 270000,
+    "annualChange": -9.7,
+    "salesCount": 49
   },
   "Portsea": {
     "medianPrice": 2825000,
@@ -2779,14 +3161,16 @@
     "salesCount": 6
   },
   "Prahran": {
-    "medianPrice": 524000,
-    "annualChange": -8.1,
-    "salesCount": 116
+    "medianPrice": 1667500,
+    "medianPriceUnit": 524000,
+    "annualChange": 10.4,
+    "salesCount": 40
   },
   "Preston": {
-    "medianPrice": 523800,
-    "annualChange": -19.4,
-    "salesCount": 140
+    "medianPrice": 1230000,
+    "medianPriceUnit": 523800,
+    "annualChange": -2.1,
+    "salesCount": 88
   },
   "Princes Hill": {
     "medianPrice": 1800000,
@@ -2794,9 +3178,10 @@
     "salesCount": 9
   },
   "Quarry Hill": {
-    "medianPrice": 370000,
-    "annualChange": -7.5,
-    "salesCount": 3
+    "medianPrice": 625000,
+    "medianPriceUnit": 370000,
+    "annualChange": 2,
+    "salesCount": 11
   },
   "Queenscliff": {
     "medianPrice": 1450000,
@@ -2819,9 +3204,10 @@
     "salesCount": 7
   },
   "Red Cliffs": {
-    "medianPrice": 142500,
-    "annualChange": 14,
-    "salesCount": 7
+    "medianPrice": 408800,
+    "medianPriceUnit": 326000,
+    "annualChange": 20.2,
+    "salesCount": 30
   },
   "Red Hill": {
     "medianPrice": 1232500,
@@ -2829,9 +3215,10 @@
     "salesCount": 8
   },
   "Redan": {
-    "medianPrice": 358500,
-    "annualChange": 9.5,
-    "salesCount": 16
+    "medianPrice": 470000,
+    "medianPriceUnit": 358500,
+    "annualChange": -0.5,
+    "salesCount": 22
   },
   "Research": {
     "medianPrice": 1530500,
@@ -2839,9 +3226,10 @@
     "salesCount": 8
   },
   "Reservoir": {
-    "medianPrice": 650000,
-    "annualChange": 3.2,
-    "salesCount": 200
+    "medianPrice": 920000,
+    "medianPriceUnit": 650000,
+    "annualChange": 0.5,
+    "salesCount": 129
   },
   "Rhyll": {
     "medianPrice": 730500,
@@ -2849,39 +3237,46 @@
     "salesCount": 8
   },
   "Richmond": {
-    "medianPrice": 566300,
-    "annualChange": -5.2,
-    "salesCount": 152
+    "medianPrice": 1435000,
+    "medianPriceUnit": 566300,
+    "annualChange": 5.5,
+    "salesCount": 67
   },
   "Riddells Creek": {
-    "medianPrice": 592500,
-    "annualChange": -1.3,
-    "salesCount": 4
+    "medianPrice": 720000,
+    "medianPriceUnit": 592500,
+    "annualChange": -9.4,
+    "salesCount": 9
   },
   "Ringwood": {
-    "medianPrice": 625000,
-    "annualChange": 2.2,
-    "salesCount": 92
+    "medianPrice": 1002500,
+    "medianPriceUnit": 625000,
+    "annualChange": -3.8,
+    "salesCount": 40
   },
   "Ringwood East": {
-    "medianPrice": 690000,
-    "annualChange": -5.5,
-    "salesCount": 23
+    "medianPrice": 1050000,
+    "medianPriceUnit": 690000,
+    "annualChange": 7.7,
+    "salesCount": 25
   },
   "Ringwood North": {
-    "medianPrice": 665000,
-    "annualChange": -39.5,
-    "salesCount": 7
+    "medianPrice": 1182300,
+    "medianPriceUnit": 665000,
+    "annualChange": -3.9,
+    "salesCount": 34
   },
   "Rippleside": {
-    "medianPrice": 680000,
-    "annualChange": -43.2,
-    "salesCount": 2
+    "medianPrice": 1230000,
+    "medianPriceUnit": 680000,
+    "annualChange": 16.6,
+    "salesCount": 1
   },
   "Ripponlea": {
-    "medianPrice": 476300,
-    "annualChange": -23.5,
-    "salesCount": 12
+    "medianPrice": 1870000,
+    "medianPriceUnit": 476300,
+    "annualChange": -7,
+    "salesCount": 5
   },
   "Robinvale": {
     "medianPrice": 364400,
@@ -2894,29 +3289,34 @@
     "salesCount": 21
   },
   "Rockbank": {
-    "medianPrice": 347000,
-    "annualChange": 15.7,
-    "salesCount": 38
+    "medianPrice": 620800,
+    "medianPriceUnit": 576500,
+    "annualChange": -2.4,
+    "salesCount": 66
   },
   "Romsey": {
-    "medianPrice": 290000,
-    "annualChange": -21.6,
-    "salesCount": 4
-  },
-  "Rosanna": {
-    "medianPrice": 774000,
-    "annualChange": -20.6,
-    "salesCount": 27
-  },
-  "Rosebud": {
-    "medianPrice": 728000,
-    "annualChange": 6.1,
+    "medianPrice": 705000,
+    "medianPriceUnit": 553500,
+    "annualChange": 0,
     "salesCount": 18
   },
+  "Rosanna": {
+    "medianPrice": 1365500,
+    "medianPriceUnit": 774000,
+    "annualChange": -9.6,
+    "salesCount": 24
+  },
+  "Rosebud": {
+    "medianPrice": 756300,
+    "medianPriceUnit": 728000,
+    "annualChange": 3.2,
+    "salesCount": 60
+  },
   "Rosebud South": {
-    "medianPrice": 935000,
-    "annualChange": 14.9,
-    "salesCount": 4
+    "medianPrice": 1002500,
+    "medianPriceUnit": 935000,
+    "annualChange": -8.4,
+    "salesCount": 21
   },
   "Rosedale": {
     "medianPrice": 440000,
@@ -2924,19 +3324,22 @@
     "salesCount": 5
   },
   "Rowville": {
-    "medianPrice": 857500,
-    "annualChange": 10.4,
-    "salesCount": 7
+    "medianPrice": 1150000,
+    "medianPriceUnit": 697500,
+    "annualChange": 9.1,
+    "salesCount": 93
   },
   "Roxburgh Park": {
-    "medianPrice": 505000,
-    "annualChange": 9.3,
-    "salesCount": 10
+    "medianPrice": 683000,
+    "medianPriceUnit": 505000,
+    "annualChange": 1.7,
+    "salesCount": 88
   },
   "Rupanyup": {
-    "medianPrice": 83276,
+    "medianPrice": 185000,
+    "medianPriceUnit": 83276,
     "annualChange": -38.3,
-    "salesCount": 0
+    "salesCount": 5
   },
   "Rutherglen": {
     "medianPrice": 545000,
@@ -2944,14 +3347,16 @@
     "salesCount": 13
   },
   "Rye": {
-    "medianPrice": 578500,
-    "annualChange": 9.2,
-    "salesCount": 4
+    "medianPrice": 960000,
+    "medianPriceUnit": 546800,
+    "annualChange": -11.3,
+    "salesCount": 78
   },
   "Safety Beach": {
-    "medianPrice": 710000,
-    "annualChange": -14.7,
-    "salesCount": 9
+    "medianPrice": 1055000,
+    "medianPriceUnit": 710000,
+    "annualChange": -12.1,
+    "salesCount": 13
   },
   "Sailors Gully": {
     "medianPrice": 460000,
@@ -2959,19 +3364,22 @@
     "salesCount": 5
   },
   "Sale": {
-    "medianPrice": 260000,
-    "annualChange": -7.1,
-    "salesCount": 5
+    "medianPrice": 488000,
+    "medianPriceUnit": 325000,
+    "annualChange": 1.1,
+    "salesCount": 96
   },
   "San Remo": {
-    "medianPrice": 440000,
-    "annualChange": -11.1,
-    "salesCount": 10
+    "medianPrice": 965000,
+    "medianPriceUnit": 632500,
+    "annualChange": -2.5,
+    "salesCount": 11
   },
   "Sanctuary Lakes": {
-    "medianPrice": 445000,
-    "annualChange": -15.2,
-    "salesCount": 12
+    "medianPrice": 845800,
+    "medianPriceUnit": 677500,
+    "annualChange": 17,
+    "salesCount": 109
   },
   "Sandhurst": {
     "medianPrice": 1100000,
@@ -2979,9 +3387,10 @@
     "salesCount": 28
   },
   "Sandringham": {
-    "medianPrice": 706300,
-    "annualChange": -19.7,
-    "salesCount": 40
+    "medianPrice": 2107500,
+    "medianPriceUnit": 706300,
+    "annualChange": 3.8,
+    "salesCount": 22
   },
   "Sassafras": {
     "medianPrice": 940000,
@@ -2989,9 +3398,10 @@
     "salesCount": 7
   },
   "Scoresby": {
-    "medianPrice": 1092500,
-    "annualChange": 44.3,
-    "salesCount": 1
+    "medianPrice": 1000000,
+    "medianPriceUnit": 1092500,
+    "annualChange": 3.6,
+    "salesCount": 25
   },
   "Sea Lake": {
     "medianPrice": 230000,
@@ -3004,9 +3414,10 @@
     "salesCount": 13
   },
   "Seaford": {
-    "medianPrice": 577500,
-    "annualChange": -9.8,
-    "salesCount": 50
+    "medianPrice": 880000,
+    "medianPriceUnit": 577500,
+    "annualChange": 4.1,
+    "salesCount": 79
   },
   "Seaholme": {
     "medianPrice": 1055000,
@@ -3014,14 +3425,16 @@
     "salesCount": 6
   },
   "Sebastopol": {
-    "medianPrice": 152500,
-    "annualChange": -36.5,
-    "salesCount": 7
+    "medianPrice": 465000,
+    "medianPriceUnit": 365000,
+    "annualChange": 16,
+    "salesCount": 73
   },
   "Seddon": {
-    "medianPrice": 850000,
-    "annualChange": 88.4,
-    "salesCount": 3
+    "medianPrice": 1100000,
+    "medianPriceUnit": 850000,
+    "annualChange": 0,
+    "salesCount": 25
   },
   "Selby": {
     "medianPrice": 930000,
@@ -3034,19 +3447,22 @@
     "salesCount": 5
   },
   "Seymour": {
-    "medianPrice": 235000,
-    "annualChange": -7.4,
-    "salesCount": 7
+    "medianPrice": 467500,
+    "medianPriceUnit": 233000,
+    "annualChange": 9.7,
+    "salesCount": 32
   },
   "Shepparton": {
-    "medianPrice": 272500,
-    "annualChange": -0.9,
-    "salesCount": 54
+    "medianPrice": 476000,
+    "medianPriceUnit": 380000,
+    "annualChange": 6.5,
+    "salesCount": 214
   },
   "Shepparton North": {
-    "medianPrice": 292500,
-    "annualChange": -12.7,
-    "salesCount": 33
+    "medianPrice": 680000,
+    "medianPriceUnit": 292500,
+    "annualChange": -20.9,
+    "salesCount": 9
   },
   "Shoreham": {
     "medianPrice": 1637500,
@@ -3054,9 +3470,10 @@
     "salesCount": 4
   },
   "Skye": {
-    "medianPrice": 575000,
-    "annualChange": 4.2,
-    "salesCount": 34
+    "medianPrice": 817000,
+    "medianPriceUnit": 559000,
+    "annualChange": 2.1,
+    "salesCount": 39
   },
   "Smiths Beach": {
     "medianPrice": 846000,
@@ -3074,9 +3491,10 @@
     "salesCount": 1
   },
   "Soldiers Hill": {
-    "medianPrice": 380000,
-    "annualChange": 1.3,
-    "salesCount": 4
+    "medianPrice": 574000,
+    "medianPriceUnit": 380000,
+    "annualChange": -13,
+    "salesCount": 16
   },
   "Somers": {
     "medianPrice": 1387500,
@@ -3084,9 +3502,10 @@
     "salesCount": 6
   },
   "Somerville": {
-    "medianPrice": 605000,
-    "annualChange": -7.3,
-    "salesCount": 13
+    "medianPrice": 790000,
+    "medianPriceUnit": 605000,
+    "annualChange": 1,
+    "salesCount": 42
   },
   "Sorrento": {
     "medianPrice": 1642500,
@@ -3104,24 +3523,28 @@
     "salesCount": 3
   },
   "South Kingsville": {
-    "medianPrice": 520000,
-    "annualChange": -36.6,
-    "salesCount": 7
+    "medianPrice": 1306300,
+    "medianPriceUnit": 520000,
+    "annualChange": 22.7,
+    "salesCount": 10
   },
   "South Melbourne": {
-    "medianPrice": 587500,
+    "medianPrice": 1760000,
+    "medianPriceUnit": 587500,
     "annualChange": 8.9,
-    "salesCount": 82
+    "salesCount": 17
   },
   "South Morang": {
-    "medianPrice": 567500,
-    "annualChange": 86.9,
-    "salesCount": 9
+    "medianPrice": 805000,
+    "medianPriceUnit": 535000,
+    "annualChange": 8.3,
+    "salesCount": 97
   },
   "South Yarra": {
-    "medianPrice": 585000,
-    "annualChange": 9.3,
-    "salesCount": 254
+    "medianPrice": 2100000,
+    "medianPriceUnit": 585000,
+    "annualChange": -4.7,
+    "salesCount": 33
   },
   "Southbank": {
     "medianPrice": 549800,
@@ -3129,34 +3552,40 @@
     "salesCount": 290
   },
   "Spotswood": {
-    "medianPrice": 1170000,
-    "annualChange": 59.3,
-    "salesCount": 2
+    "medianPrice": 1200000,
+    "medianPriceUnit": 1170000,
+    "annualChange": 7.1,
+    "salesCount": 11
   },
   "Spring Gully": {
-    "medianPrice": 398500,
-    "annualChange": 18.8,
-    "salesCount": 4
+    "medianPrice": 616300,
+    "medianPriceUnit": 398500,
+    "annualChange": -2.6,
+    "salesCount": 10
   },
   "Springvale": {
-    "medianPrice": 627500,
-    "annualChange": -3.5,
-    "salesCount": 30
+    "medianPrice": 931500,
+    "medianPriceUnit": 627500,
+    "annualChange": 8.9,
+    "salesCount": 32
   },
   "Springvale South": {
-    "medianPrice": 520000,
-    "annualChange": 1.5,
-    "salesCount": 8
+    "medianPrice": 830000,
+    "medianPriceUnit": 600000,
+    "annualChange": 3.8,
+    "salesCount": 29
   },
   "St Albans": {
-    "medianPrice": 542000,
-    "annualChange": 5.2,
-    "salesCount": 62
+    "medianPrice": 680000,
+    "medianPriceUnit": 542000,
+    "annualChange": 4.6,
+    "salesCount": 106
   },
   "St Albans Park": {
-    "medianPrice": 496500,
-    "annualChange": 4.5,
-    "salesCount": 4
+    "medianPrice": 651300,
+    "medianPriceUnit": 496500,
+    "annualChange": 8.5,
+    "salesCount": 20
   },
   "St Andrews Beach": {
     "medianPrice": 1355000,
@@ -3174,24 +3603,28 @@
     "salesCount": 5
   },
   "St Kilda": {
-    "medianPrice": 487500,
-    "annualChange": -9.8,
-    "salesCount": 184
+    "medianPrice": 1810000,
+    "medianPriceUnit": 487500,
+    "annualChange": 26.1,
+    "salesCount": 16
   },
   "St Kilda East": {
-    "medianPrice": 615000,
-    "annualChange": 6,
-    "salesCount": 83
+    "medianPrice": 1520000,
+    "medianPriceUnit": 615000,
+    "annualChange": -2.6,
+    "salesCount": 19
   },
   "St Kilda West": {
-    "medianPrice": 572500,
-    "annualChange": -3,
-    "salesCount": 24
+    "medianPrice": 2300000,
+    "medianPriceUnit": 572500,
+    "annualChange": 59.2,
+    "salesCount": 3
   },
   "St Leonards": {
-    "medianPrice": 385000,
-    "annualChange": 20.3,
-    "salesCount": 17
+    "medianPrice": 650000,
+    "medianPriceUnit": 415000,
+    "annualChange": -7.8,
+    "salesCount": 31
   },
   "Stanhope": {
     "medianPrice": 319000,
@@ -3199,24 +3632,28 @@
     "salesCount": 4
   },
   "Stawell": {
-    "medianPrice": 290000,
-    "annualChange": 34.9,
-    "salesCount": 5
+    "medianPrice": 380000,
+    "medianPriceUnit": 290000,
+    "annualChange": 20.6,
+    "salesCount": 37
   },
   "Stratford": {
-    "medianPrice": 210000,
-    "annualChange": 10.5,
-    "salesCount": 4
+    "medianPrice": 486500,
+    "medianPriceUnit": 210000,
+    "annualChange": 8.1,
+    "salesCount": 16
   },
   "Strathdale": {
-    "medianPrice": 400000,
-    "annualChange": 13.6,
-    "salesCount": 3
+    "medianPrice": 660000,
+    "medianPriceUnit": 400000,
+    "annualChange": -2.9,
+    "salesCount": 37
   },
   "Strathfieldsaye": {
-    "medianPrice": 292500,
-    "annualChange": -1.7,
-    "salesCount": 35
+    "medianPrice": 680000,
+    "medianPriceUnit": 680000,
+    "annualChange": 7.3,
+    "salesCount": 33
   },
   "Strathmerton": {
     "medianPrice": 440000,
@@ -3224,9 +3661,10 @@
     "salesCount": 1
   },
   "Strathmore": {
-    "medianPrice": 730000,
-    "annualChange": 9,
-    "salesCount": 14
+    "medianPrice": 1705000,
+    "medianPriceUnit": 730000,
+    "annualChange": 11.1,
+    "salesCount": 26
   },
   "Strathmore Heights": {
     "medianPrice": 1080000,
@@ -3234,19 +3672,22 @@
     "salesCount": 10
   },
   "Strathtulloh": {
-    "medianPrice": 297000,
-    "annualChange": 0.7,
-    "salesCount": 37
+    "medianPrice": 635000,
+    "medianPriceUnit": 297000,
+    "annualChange": -0.6,
+    "salesCount": 65
   },
   "Studfield": {
-    "medianPrice": 725000,
-    "annualChange": 3.3,
-    "salesCount": 4
+    "medianPrice": 1043500,
+    "medianPriceUnit": 725000,
+    "annualChange": -3.8,
+    "salesCount": 18
   },
   "Sunbury": {
-    "medianPrice": 355000,
-    "annualChange": 5.7,
-    "salesCount": 243
+    "medianPrice": 675000,
+    "medianPriceUnit": 495300,
+    "annualChange": 1.2,
+    "salesCount": 247
   },
   "Sunderland Bay": {
     "medianPrice": 635000,
@@ -3264,19 +3705,22 @@
     "salesCount": 1
   },
   "Sunshine": {
-    "medianPrice": 610000,
-    "annualChange": 49.9,
-    "salesCount": 22
+    "medianPrice": 823000,
+    "medianPriceUnit": 610000,
+    "annualChange": 1,
+    "salesCount": 32
   },
   "Sunshine North": {
-    "medianPrice": 576000,
-    "annualChange": 92,
-    "salesCount": 6
+    "medianPrice": 755000,
+    "medianPriceUnit": 415000,
+    "annualChange": -0.3,
+    "salesCount": 37
   },
   "Sunshine West": {
-    "medianPrice": 646500,
-    "annualChange": 2.6,
-    "salesCount": 18
+    "medianPrice": 712500,
+    "medianPriceUnit": 646500,
+    "annualChange": 4.4,
+    "salesCount": 60
   },
   "Surf Beach": {
     "medianPrice": 740000,
@@ -3284,14 +3728,16 @@
     "salesCount": 3
   },
   "Surrey Hills": {
-    "medianPrice": 1068000,
-    "annualChange": 22.1,
-    "salesCount": 22
+    "medianPrice": 2260000,
+    "medianPriceUnit": 1068000,
+    "annualChange": 0.4,
+    "salesCount": 26
   },
   "Swan Hill": {
-    "medianPrice": 157000,
-    "annualChange": -21.5,
-    "salesCount": 10
+    "medianPrice": 480300,
+    "medianPriceUnit": 390000,
+    "annualChange": 0.1,
+    "salesCount": 45
   },
   "Swan Reach": {
     "medianPrice": 638500,
@@ -3299,14 +3745,16 @@
     "salesCount": 5
   },
   "Sydenham": {
-    "medianPrice": 487000,
-    "annualChange": -2.6,
-    "salesCount": 25
+    "medianPrice": 750500,
+    "medianPriceUnit": 487000,
+    "annualChange": 6.8,
+    "salesCount": 21
   },
   "Syndal": {
-    "medianPrice": 1215000,
-    "annualChange": 52.3,
-    "salesCount": 16
+    "medianPrice": 1753000,
+    "medianPriceUnit": 1215000,
+    "annualChange": -16.9,
+    "salesCount": 12
   },
   "Tallangatta": {
     "medianPrice": 535000,
@@ -3319,14 +3767,16 @@
     "salesCount": 5
   },
   "Tarneit": {
-    "medianPrice": 370000,
-    "annualChange": 8.5,
-    "salesCount": 491
+    "medianPrice": 665000,
+    "medianPriceUnit": 480000,
+    "annualChange": 3,
+    "salesCount": 440
   },
   "Tatura": {
-    "medianPrice": 215000,
-    "annualChange": -6.3,
-    "salesCount": 15
+    "medianPrice": 521000,
+    "medianPriceUnit": 300000,
+    "annualChange": 2.2,
+    "salesCount": 14
   },
   "Tawonga South": {
     "medianPrice": 780000,
@@ -3334,14 +3784,16 @@
     "salesCount": 5
   },
   "Taylors Hill": {
-    "medianPrice": 562000,
-    "annualChange": 2,
-    "salesCount": 3
+    "medianPrice": 932000,
+    "medianPriceUnit": 562000,
+    "annualChange": 1.5,
+    "salesCount": 19
   },
   "Taylors Lakes": {
-    "medianPrice": 553500,
-    "annualChange": -9.3,
-    "salesCount": 5
+    "medianPrice": 908000,
+    "medianPriceUnit": 553500,
+    "annualChange": -8.1,
+    "salesCount": 34
   },
   "Tecoma": {
     "medianPrice": 912500,
@@ -3349,14 +3801,16 @@
     "salesCount": 8
   },
   "Templestowe": {
-    "medianPrice": 955000,
-    "annualChange": -19.1,
-    "salesCount": 3
+    "medianPrice": 1587500,
+    "medianPriceUnit": 956300,
+    "annualChange": 0.8,
+    "salesCount": 42
   },
   "Templestowe Lower": {
-    "medianPrice": 920000,
-    "annualChange": -19.1,
-    "salesCount": 25
+    "medianPrice": 1350000,
+    "medianPriceUnit": 920000,
+    "annualChange": -3.2,
+    "salesCount": 51
   },
   "Terang": {
     "medianPrice": 365000,
@@ -3369,24 +3823,28 @@
     "salesCount": 11
   },
   "Thomastown": {
-    "medianPrice": 554100,
-    "annualChange": 7.2,
-    "salesCount": 6
+    "medianPrice": 755000,
+    "medianPriceUnit": 560000,
+    "annualChange": 4.1,
+    "salesCount": 83
   },
   "Thomson (Greater Geelong)": {
-    "medianPrice": 275000,
-    "annualChange": -28.9,
-    "salesCount": 1
+    "medianPrice": 583000,
+    "medianPriceUnit": 275000,
+    "annualChange": 4.6,
+    "salesCount": 10
   },
   "Thornbury": {
-    "medianPrice": 470000,
-    "annualChange": -24.3,
-    "salesCount": 69
+    "medianPrice": 1390000,
+    "medianPriceUnit": 470000,
+    "annualChange": 0.5,
+    "salesCount": 50
   },
   "Thornhill Park": {
-    "medianPrice": 335500,
-    "annualChange": 16.1,
-    "salesCount": 40
+    "medianPrice": 600700,
+    "medianPriceUnit": 335500,
+    "annualChange": 0.2,
+    "salesCount": 74
   },
   "Timboon": {
     "medianPrice": 577500,
@@ -3409,9 +3867,10 @@
     "salesCount": 4
   },
   "Toorak": {
-    "medianPrice": 950000,
-    "annualChange": -27.6,
-    "salesCount": 61
+    "medianPrice": 5000000,
+    "medianPriceUnit": 950000,
+    "annualChange": -16.7,
+    "salesCount": 23
   },
   "Tootgarook": {
     "medianPrice": 915000,
@@ -3419,19 +3878,22 @@
     "salesCount": 17
   },
   "Torquay": {
-    "medianPrice": 640000,
-    "annualChange": -3.4,
-    "salesCount": 44
+    "medianPrice": 1180000,
+    "medianPriceUnit": 827500,
+    "annualChange": -2.5,
+    "salesCount": 73
   },
   "Trafalgar": {
-    "medianPrice": 535000,
-    "annualChange": 25.9,
-    "salesCount": 4
+    "medianPrice": 625000,
+    "medianPriceUnit": 535000,
+    "annualChange": 5.9,
+    "salesCount": 30
   },
   "Traralgon": {
-    "medianPrice": 280500,
-    "annualChange": -1.2,
-    "salesCount": 73
+    "medianPrice": 522500,
+    "medianPriceUnit": 315000,
+    "annualChange": 7.3,
+    "salesCount": 175
   },
   "Traralgon East": {
     "medianPrice": 735000,
@@ -3449,14 +3911,16 @@
     "salesCount": 7
   },
   "Truganina": {
-    "medianPrice": 361800,
-    "annualChange": 3.4,
-    "salesCount": 225
+    "medianPrice": 670800,
+    "medianPriceUnit": 515000,
+    "annualChange": 4.7,
+    "salesCount": 240
   },
   "Tullamarine": {
-    "medianPrice": 535000,
-    "annualChange": -6.3,
-    "salesCount": 23
+    "medianPrice": 800000,
+    "medianPriceUnit": 535000,
+    "annualChange": 10.4,
+    "salesCount": 21
   },
   "Tungamah": {
     "medianPrice": 327500,
@@ -3464,9 +3928,10 @@
     "salesCount": 4
   },
   "Tyabb": {
-    "medianPrice": 705000,
-    "annualChange": 20.5,
-    "salesCount": 2
+    "medianPrice": 790000,
+    "medianPriceUnit": 705000,
+    "annualChange": -6.5,
+    "salesCount": 15
   },
   "Underbool": {
     "medianPrice": 200000,
@@ -3474,9 +3939,10 @@
     "salesCount": 3
   },
   "Upper Ferntree Gully": {
-    "medianPrice": 422500,
-    "annualChange": -15.6,
-    "salesCount": 2
+    "medianPrice": 920000,
+    "medianPriceUnit": 422500,
+    "annualChange": 9,
+    "salesCount": 11
   },
   "Upwey": {
     "medianPrice": 895000,
@@ -3489,24 +3955,28 @@
     "salesCount": 10
   },
   "Venus Bay": {
-    "medianPrice": 155000,
-    "annualChange": -36.7,
-    "salesCount": 10
+    "medianPrice": 454000,
+    "medianPriceUnit": 155000,
+    "annualChange": -13.2,
+    "salesCount": 14
   },
   "Vermont": {
-    "medianPrice": 1005000,
-    "annualChange": 7.4,
-    "salesCount": 16
+    "medianPrice": 1395500,
+    "medianPriceUnit": 1005000,
+    "annualChange": 4.6,
+    "salesCount": 25
   },
   "Vermont South": {
-    "medianPrice": 875000,
-    "annualChange": -9.6,
-    "salesCount": 11
+    "medianPrice": 1510500,
+    "medianPriceUnit": 875000,
+    "annualChange": 2.1,
+    "salesCount": 36
   },
   "Viewbank": {
-    "medianPrice": 750000,
-    "annualChange": 7.2,
-    "salesCount": 9
+    "medianPrice": 1120000,
+    "medianPriceUnit": 750000,
+    "annualChange": -8,
+    "salesCount": 19
   },
   "Wahgunyah": {
     "medianPrice": 638500,
@@ -3514,14 +3984,16 @@
     "salesCount": 6
   },
   "Wallan": {
-    "medianPrice": 340000,
-    "annualChange": 2.7,
-    "salesCount": 28
+    "medianPrice": 640000,
+    "medianPriceUnit": 452000,
+    "annualChange": -2.7,
+    "salesCount": 61
   },
   "Wallan East": {
-    "medianPrice": 380500,
-    "annualChange": 20.8,
-    "salesCount": 18
+    "medianPrice": 587500,
+    "medianPriceUnit": 445000,
+    "annualChange": -2.2,
+    "salesCount": 40
   },
   "Wandana Heights": {
     "medianPrice": 1212000,
@@ -3539,19 +4011,22 @@
     "salesCount": 7
   },
   "Wangaratta": {
-    "medianPrice": 274000,
-    "annualChange": -5.1,
-    "salesCount": 33
+    "medianPrice": 516300,
+    "medianPriceUnit": 320000,
+    "annualChange": -1.7,
+    "salesCount": 92
   },
   "Wantirna": {
-    "medianPrice": 675000,
-    "annualChange": 4.7,
-    "salesCount": 15
+    "medianPrice": 1230000,
+    "medianPriceUnit": 675000,
+    "annualChange": 15.5,
+    "salesCount": 50
   },
   "Wantirna South": {
-    "medianPrice": 522500,
-    "annualChange": -17.1,
-    "salesCount": 14
+    "medianPrice": 1362000,
+    "medianPriceUnit": 522500,
+    "annualChange": 8.1,
+    "salesCount": 40
   },
   "Warburton": {
     "medianPrice": 745000,
@@ -3564,9 +4039,10 @@
     "salesCount": 14
   },
   "Warragul": {
-    "medianPrice": 294900,
-    "annualChange": -6.4,
-    "salesCount": 96
+    "medianPrice": 650000,
+    "medianPriceUnit": 425000,
+    "annualChange": 1.6,
+    "salesCount": 126
   },
   "Warrandyte": {
     "medianPrice": 1330000,
@@ -3579,9 +4055,10 @@
     "salesCount": 19
   },
   "Warrnambool": {
-    "medianPrice": 251000,
-    "annualChange": -1.6,
-    "salesCount": 82
+    "medianPrice": 609000,
+    "medianPriceUnit": 433000,
+    "annualChange": 1.1,
+    "salesCount": 159
   },
   "Waterways": {
     "medianPrice": 1635000,
@@ -3589,9 +4066,10 @@
     "salesCount": 11
   },
   "Watsonia": {
-    "medianPrice": 682000,
-    "annualChange": -16,
-    "salesCount": 4
+    "medianPrice": 941000,
+    "medianPriceUnit": 682000,
+    "annualChange": 4.5,
+    "salesCount": 19
   },
   "Watsonia North": {
     "medianPrice": 863500,
@@ -3604,9 +4082,10 @@
     "salesCount": 7
   },
   "Waurn Ponds": {
-    "medianPrice": 429500,
-    "annualChange": -0.1,
-    "salesCount": 18
+    "medianPrice": 780000,
+    "medianPriceUnit": 429500,
+    "annualChange": 2.6,
+    "salesCount": 14
   },
   "Wedderburn": {
     "medianPrice": 257000,
@@ -3614,14 +4093,16 @@
     "salesCount": 4
   },
   "Weir Views": {
-    "medianPrice": 320000,
-    "annualChange": -9.9,
-    "salesCount": 46
+    "medianPrice": 565000,
+    "medianPriceUnit": 320000,
+    "annualChange": 0,
+    "salesCount": 61
   },
   "Wendouree": {
-    "medianPrice": 362500,
-    "annualChange": -1.4,
-    "salesCount": 8
+    "medianPrice": 502000,
+    "medianPriceUnit": 362500,
+    "annualChange": 14.1,
+    "salesCount": 65
   },
   "Wendouree West": {
     "medianPrice": 380000,
@@ -3629,79 +4110,94 @@
     "salesCount": 9
   },
   "Werribee": {
-    "medianPrice": 349000,
-    "annualChange": -0.6,
-    "salesCount": 205
+    "medianPrice": 641000,
+    "medianPriceUnit": 440000,
+    "annualChange": 2.3,
+    "salesCount": 289
   },
   "Werribee South": {
-    "medianPrice": 515000,
-    "annualChange": -1.2,
-    "salesCount": 10
+    "medianPrice": 850000,
+    "medianPriceUnit": 515000,
+    "annualChange": -8.7,
+    "salesCount": 7
   },
   "West Footscray": {
-    "medianPrice": 461500,
-    "annualChange": -19,
-    "salesCount": 55
+    "medianPrice": 945000,
+    "medianPriceUnit": 461500,
+    "annualChange": -7.4,
+    "salesCount": 30
   },
   "West Melbourne": {
-    "medianPrice": 515000,
-    "annualChange": -13.4,
-    "salesCount": 86
-  },
-  "West Wodonga": {
-    "medianPrice": 200000,
-    "annualChange": -21.6,
-    "salesCount": 33
-  },
-  "Westall": {
-    "medianPrice": 638000,
-    "annualChange": 17.1,
-    "salesCount": 23
-  },
-  "Westgarth": {
-    "medianPrice": 650000,
-    "annualChange": -15.8,
-    "salesCount": 15
-  },
-  "Westmeadows": {
-    "medianPrice": 620000,
-    "annualChange": 9.7,
-    "salesCount": 15
-  },
-  "Wheelers Hill": {
-    "medianPrice": 1006500,
-    "annualChange": -16.1,
-    "salesCount": 4
-  },
-  "White Hills": {
-    "medianPrice": 455000,
-    "annualChange": -17.1,
-    "salesCount": 3
-  },
-  "Whittington": {
-    "medianPrice": 405000,
-    "annualChange": 8.7,
-    "salesCount": 9
-  },
-  "Whittlesea": {
-    "medianPrice": 510000,
-    "annualChange": 18.6,
+    "medianPrice": 1430000,
+    "medianPriceUnit": 515000,
+    "annualChange": 16.2,
     "salesCount": 5
   },
-  "Williams Landing": {
-    "medianPrice": 420000,
-    "annualChange": 0,
+  "West Wodonga": {
+    "medianPrice": 610000,
+    "medianPriceUnit": 381500,
+    "annualChange": 11.1,
+    "salesCount": 63
+  },
+  "Westall": {
+    "medianPrice": 905000,
+    "medianPriceUnit": 638000,
+    "annualChange": 2,
+    "salesCount": 17
+  },
+  "Westgarth": {
+    "medianPrice": 1912500,
+    "medianPriceUnit": 650000,
+    "annualChange": 2.7,
+    "salesCount": 14
+  },
+  "Westmeadows": {
+    "medianPrice": 740000,
+    "medianPriceUnit": 620000,
+    "annualChange": -3.3,
     "salesCount": 13
   },
+  "Wheelers Hill": {
+    "medianPrice": 1430000,
+    "medianPriceUnit": 1006500,
+    "annualChange": 2.8,
+    "salesCount": 63
+  },
+  "White Hills": {
+    "medianPrice": 598000,
+    "medianPriceUnit": 455000,
+    "annualChange": 23.3,
+    "salesCount": 21
+  },
+  "Whittington": {
+    "medianPrice": 557500,
+    "medianPriceUnit": 405000,
+    "annualChange": 9.9,
+    "salesCount": 12
+  },
+  "Whittlesea": {
+    "medianPrice": 735000,
+    "medianPriceUnit": 510000,
+    "annualChange": -1,
+    "salesCount": 25
+  },
+  "Williams Landing": {
+    "medianPrice": 840000,
+    "medianPriceUnit": 420000,
+    "annualChange": 5,
+    "salesCount": 45
+  },
   "Williamstown": {
-    "medianPrice": 906000,
-    "annualChange": 16.2,
-    "salesCount": 26
+    "medianPrice": 1600000,
+    "medianPriceUnit": 906000,
+    "annualChange": 0,
+    "salesCount": 35
   },
   "Williamstown North": {
-    "medianPrice": 910000,
-    "annualChange": 5.8,
-    "salesCount": 6
+    "medianPrice": 1392500,
+    "medianPriceUnit": 910000,
+    "annualChange": -1.2,
+    "salesCount": 2
   },
   "Wimbledon Heights": {
     "medianPrice": 561300,
@@ -3709,29 +4205,34 @@
     "salesCount": 2
   },
   "Winchelsea": {
-    "medianPrice": 355000,
-    "annualChange": -10.1,
-    "salesCount": 11
+    "medianPrice": 590000,
+    "medianPriceUnit": 355000,
+    "annualChange": -20.3,
+    "salesCount": 22
   },
   "Windsor": {
-    "medianPrice": 520000,
-    "annualChange": -11.1,
-    "salesCount": 43
+    "medianPrice": 1400000,
+    "medianPriceUnit": 520000,
+    "annualChange": -14.4,
+    "salesCount": 19
   },
   "Winter Valley": {
-    "medianPrice": 245000,
-    "annualChange": -5.8,
-    "salesCount": 57
+    "medianPrice": 565000,
+    "medianPriceUnit": 245000,
+    "annualChange": 5.2,
+    "salesCount": 61
   },
   "Wodonga": {
-    "medianPrice": 250000,
-    "annualChange": 11.1,
-    "salesCount": 14
+    "medianPrice": 601000,
+    "medianPriceUnit": 360000,
+    "annualChange": 14.9,
+    "salesCount": 120
   },
   "Wollert": {
-    "medianPrice": 355000,
-    "annualChange": 5.9,
-    "salesCount": 302
+    "medianPrice": 705000,
+    "medianPriceUnit": 510000,
+    "annualChange": 2.9,
+    "salesCount": 243
   },
   "Wonga Park": {
     "medianPrice": 1073500,
@@ -3739,19 +4240,22 @@
     "salesCount": 6
   },
   "Wonthaggi": {
-    "medianPrice": 236000,
-    "annualChange": -42.4,
-    "salesCount": 30
+    "medianPrice": 490000,
+    "medianPriceUnit": 385000,
+    "annualChange": -16.9,
+    "salesCount": 13
   },
   "Woodend": {
-    "medianPrice": 800000,
-    "annualChange": 9.4,
-    "salesCount": 3
+    "medianPrice": 892500,
+    "medianPriceUnit": 800000,
+    "annualChange": -4.8,
+    "salesCount": 26
   },
   "Woodstock": {
-    "medianPrice": 304500,
-    "annualChange": 76,
-    "salesCount": 15
+    "medianPrice": 627000,
+    "medianPriceUnit": 304500,
+    "annualChange": 0,
+    "salesCount": 10
   },
   "Woolamai Waters": {
     "medianPrice": 648000,
@@ -3769,9 +4273,10 @@
     "salesCount": 4
   },
   "Wyndham Vale": {
-    "medianPrice": 313900,
-    "annualChange": 2.9,
-    "salesCount": 93
+    "medianPrice": 590000,
+    "medianPriceUnit": 477500,
+    "annualChange": 2.5,
+    "salesCount": 184
   },
   "Yackandandah": {
     "medianPrice": 833000,
@@ -3794,9 +4299,10 @@
     "salesCount": 7
   },
   "Yarra Junction": {
-    "medianPrice": 380000,
-    "annualChange": 15.1,
-    "salesCount": 2
+    "medianPrice": 748000,
+    "medianPriceUnit": 717500,
+    "annualChange": 4.6,
+    "salesCount": 11
   },
   "Yarragon": {
     "medianPrice": 645000,
@@ -3809,14 +4315,16 @@
     "salesCount": 8
   },
   "Yarraville": {
-    "medianPrice": 572500,
-    "annualChange": -4.6,
-    "salesCount": 24
+    "medianPrice": 1140000,
+    "medianPriceUnit": 572500,
+    "annualChange": 2.2,
+    "salesCount": 69
   },
   "Yarrawonga": {
-    "medianPrice": 222000,
-    "annualChange": -3.1,
-    "salesCount": 78
+    "medianPrice": 615000,
+    "medianPriceUnit": 452500,
+    "annualChange": -6.8,
+    "salesCount": 46
   },
   "Yea": {
     "medianPrice": 525000,
