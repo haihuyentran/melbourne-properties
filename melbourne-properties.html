@@ -851,10 +851,9 @@
 
         function updateCompassVisibility() {
             Object.entries(suburbMarkers).forEach(([name, obj]) => {
-                if (obj.marker.hasLayer(map)) map.removeLayer(obj.marker);
+                if (map.hasLayer(obj.marker)) map.removeLayer(obj.marker);
             });
             if (!selectedDirection) return;
-            const [lo, hi] = COMPASS_SECTORS[selectedDirection];
             Object.entries(suburbMarkers).forEach(([name, obj]) => {
                 if (isInSector(obj.bearing, selectedDirection)) obj.marker.addTo(map);
             });
