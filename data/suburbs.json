@@ -2976,6 +2976,48 @@
         "Jells Park",
         "Wheelers Hill Library"
       ]
+    },
+    "Lara": {
+      "postcode": "3212",
+      "municipality": "Greater Geelong",
+      "coords": [-38.0167, 144.4333],
+      "medianPrice": 687500,
+      "medianPriceUnit": 466000,
+      "annualChange": 5.0,
+      "salesCount": 96,
+      "priceHistory": {
+        "2015": 385000, "2016": 420000, "2017": 465000, "2018": 495000, "2019": 480000,
+        "2020": 510000, "2021": 585000, "2022": 655000, "2023": 655000, "2024": 670000, "2025": 687500
+      },
+      "demographics": { "population": 22000, "medianAge": 34, "familyHouseholds": "78%", "ownerOccupied": "72%", "bornOverseas": "38%" },
+      "schools": [
+        { "name": "Lara Secondary College", "type": "Government", "rating": "Good" },
+        { "name": "Lara Primary School", "type": "Government", "rating": "Good" },
+        { "name": "Lara Lake Primary School", "type": "Government", "rating": "Good" }
+      ],
+      "transport": { "trainStation": "Lara", "trainLine": "Geelong Line (V/Line)", "busRoutes": ["1", "2", "3"], "commuteToCity": "45 min by train" },
+      "amenities": ["Lara Village", "Lara Lake", "Lara Railway Station"]
+    },
+    "Geelong": {
+      "postcode": "3220",
+      "municipality": "Greater Geelong",
+      "coords": [-38.1499, 144.3617],
+      "medianPrice": 865500,
+      "medianPriceUnit": 650000,
+      "annualChange": -4.4,
+      "salesCount": 24,
+      "priceHistory": {
+        "2015": 520000, "2016": 565000, "2017": 625000, "2018": 680000, "2019": 665000,
+        "2020": 700000, "2021": 820000, "2022": 910000, "2023": 890000, "2024": 905000, "2025": 865500
+      },
+      "demographics": { "population": 16000, "medianAge": 36, "familyHouseholds": "52%", "ownerOccupied": "48%", "bornOverseas": "28%" },
+      "schools": [
+        { "name": "Geelong High School", "type": "Government", "rating": "Good" },
+        { "name": "Geelong College", "type": "Independent", "rating": "Excellent" },
+        { "name": "Geelong Grammar School", "type": "Independent", "rating": "Excellent" }
+      ],
+      "transport": { "trainStation": "Geelong", "trainLine": "Geelong Line (V/Line)", "busRoutes": ["10", "30", "40", "50"], "commuteToCity": "~1h by train" },
+      "amenities": ["Westfield Geelong", "Geelong Waterfront", "Eastern Beach", "GMHBA Stadium"]
     }
   }
 }

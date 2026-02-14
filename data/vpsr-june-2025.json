@@ -48,5 +48,7 @@
   "Thornbury": { "medianPrice": 1390000, "annualChange": -0.7, "salesCount": 76 },
   "Werribee": { "medianPrice": 641000, "annualChange": 6.3, "salesCount": 527 },
   "Wheelers Hill": { "medianPrice": 1430000, "annualChange": -5.5, "salesCount": 121 },
-  "Williamstown": { "medianPrice": 1600000, "annualChange": 10.2, "salesCount": 67 }
+  "Williamstown": { "medianPrice": 1600000, "annualChange": 10.2, "salesCount": 67 },
+  "Lara": { "medianPrice": 687500, "medianPriceUnit": 466000, "annualChange": 5.0, "salesCount": 96 },
+  "Geelong": { "medianPrice": 865500, "medianPriceUnit": 650000, "annualChange": -4.4, "salesCount": 24 }
 }

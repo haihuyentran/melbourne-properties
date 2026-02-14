@@ -306,7 +306,7 @@ const COMMUTE_TO_SOUTHERN_CROSS = {
     'Niddrie': '25 min by bus', 'Northcote': '20 min by train', 'Thornbury': '22 min by train',
     'Fairfield': '20 min by train', 'Mount Waverley': '40 min by train', 'Mulgrave': '45 min by bus',
     'Wheelers Hill': '50 min by bus', 'Mill Park': '40 min by train', 'Doreen': '55 min by bus',
-    'Mernda': '55 min by train'
+    'Mernda': '55 min by train', 'Lara': '45 min by train (V/Line)', 'Geelong': '~1h by train (V/Line)'
 };
 const COMMUTE_TO_COLLINGWOOD = {
     'Glen Waverley': '55 min', 'Box Hill': '50 min', 'Doncaster': '40 min', 'Ringwood': '1h 10min',
@@ -321,7 +321,8 @@ const COMMUTE_TO_COLLINGWOOD = {
     'Williamstown': '35 min', 'Altona': '45 min', 'Newport': '30 min', 'Essendon': '30 min',
     'Moonee Ponds': '25 min', 'Pascoe Vale': '30 min', 'Niddrie': '35 min', 'Northcote': '15 min',
     'Thornbury': '18 min', 'Fairfield': '15 min', 'Mount Waverley': '50 min', 'Mulgrave': '55 min',
-    'Wheelers Hill': '1h', 'Mill Park': '35 min', 'Doreen': '50 min', 'Mernda': '50 min'
+    'Wheelers Hill': '1h', 'Mill Park': '35 min', 'Doreen': '50 min', 'Mernda': '50 min',
+    'Lara': '1h 5min', 'Geelong': '1h 15min'
 };
 
 // Office locations for distance display (listing → office)

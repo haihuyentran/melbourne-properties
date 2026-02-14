@@ -687,7 +687,9 @@
             'Wheelers Hill': { southernCross: '50 min by bus', collingwood: '1h' },
             'Mill Park': { southernCross: '40 min by train', collingwood: '35 min' },
             'Doreen': { southernCross: '55 min by bus', collingwood: '50 min' },
-            'Mernda': { southernCross: '55 min by train', collingwood: '50 min' }
+            'Mernda': { southernCross: '55 min by train', collingwood: '50 min' },
+            'Lara': { southernCross: '45 min by train (V/Line)', collingwood: '1h 5min' },
+            'Geelong': { southernCross: '~1h by train (V/Line)', collingwood: '1h 15min' }
         };
 
         // Fetch all suburb data from local API
@@ -813,6 +815,13 @@
 
                 suburbMarkers[suburbName] = marker;
             });
+
+            // Fit map to show all suburbs (Melbourne + Geelong/Lara) with padding
+            const coords = Object.values(allSuburbsData).map(s => s.coords).filter(Boolean);
+            if (coords.length > 0) {
+                const bounds = L.latLngBounds(coords.map(c => [c[0], c[1]]));
+                map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
+            }
 
             // Update API status
             const apiStatus = document.querySelector('.api-status');
