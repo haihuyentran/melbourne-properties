@@ -332,6 +332,48 @@ function haversineKm(lat1, lon1, lat2, lon2) {
     return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
+// Fetch nearest train, tram, bus stops from OpenStreetMap (Overpass). Used for suburb analysis.
+async function fetchNearbyStopsFromOSM(lat, lon, radiusM = 2500) {
+    const overpassUrl = 'https://overpass-api.de/api/interpreter';
+    const overpassQuery = `[out:json][timeout:12];(node["railway"="station"](around:${radiusM},${lat},${lon});node["railway"="halt"](around:${radiusM},${lat},${lon});node["public_transport"="stop_position"](around:${radiusM},${lat},${lon});node["highway"="bus_stop"](around:${radiusM},${lat},${lon}););out body;`;
+    const res = await fetch(overpassUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'data=' + encodeURIComponent(overpassQuery)
+    });
+    const data = await res.json();
+    const elements = data.elements || [];
+    const stops = elements.map(el => {
+        const name = el.tags?.name || el.tags?.station || 'Stop';
+        let type = 'Bus';
+        if (el.tags?.railway === 'station' || el.tags?.railway === 'halt') type = 'Train';
+        else if (el.tags?.tram === 'yes' || el.tags?.light_rail === 'yes' || (el.tags?.public_transport && !el.tags?.bus)) type = 'Tram';
+        const dist = haversineKm(lat, lon, el.lat, el.lon);
+        return { name, type, distanceKm: Math.round(dist * 100) / 100 };
+    });
+    stops.sort((a, b) => a.distanceKm - b.distanceKm);
+    const byType = { Train: null, Tram: null, Bus: null };
+    for (const s of stops) {
+        if (!byType[s.type]) byType[s.type] = s;
+    }
+    return { train: byType.Train, tram: byType.Tram, bus: byType.Bus };
+}
+
+app.get('/api/nearby-stops', async (req, res) => {
+    const lat = parseFloat(req.query.lat);
+    const lon = parseFloat(req.query.lon);
+    if (isNaN(lat) || isNaN(lon)) {
+        return res.status(400).json({ error: 'Missing or invalid lat, lon' });
+    }
+    try {
+        const result = await fetchNearbyStopsFromOSM(lat, lon);
+        return res.json(result);
+    } catch (error) {
+        console.error('Nearby stops error:', error);
+        return res.status(500).json({ error: error.message });
+    }
+});
+
 // Transit info using OpenStreetMap (Nominatim + Overpass). No API key required.
 app.get('/api/transit-to-southern-cross', async (req, res) => {
     const address = (req.query.address || '').trim();

@@ -828,10 +828,9 @@
 
         let priceChart = null;
 
-        function displaySuburbInfo(name, suburb, matchScore) {
+        async function displaySuburbInfo(name, suburb, matchScore) {
             const info = document.getElementById('suburbInfo');
             
-            // Destroy existing chart if it exists
             if (priceChart) {
                 priceChart.destroy();
             }
@@ -839,15 +838,34 @@
             const recommendation = getRecommendation(matchScore);
             const commute = commuteTimes[name] || { southernCross: 'N/A', collingwood: 'N/A' };
             
-            // Format schools
             const schoolsList = suburb.schools.map(s => 
                 `<div style="padding:5px 0;color:#555;">• ${s.name} <span style="color:#888;font-size:12px;">(${s.type}, ${s.rating})</span></div>`
             ).join('');
             
-            // Format transport
-            const transportInfo = suburb.transport.trainStation 
-                ? `${suburb.transport.trainLine} line (${suburb.transport.trainStation} station). Bus routes: ${suburb.transport.busRoutes.join(', ')}`
-                : `Bus routes: ${suburb.transport.busRoutes.join(', ')}. No direct train.`;
+            let transportInfo;
+            const lat = suburb.coords && suburb.coords[0];
+            const lon = suburb.coords && suburb.coords[1];
+            if (lat != null && lon != null) {
+                try {
+                    const res = await fetch(`${API_BASE}/nearby-stops?lat=${lat}&lon=${lon}`);
+                    const data = await res.json();
+                    const parts = [];
+                    if (data.train) parts.push(`<strong>Train:</strong> ${data.train.name} (${data.train.distanceKm} km)`);
+                    if (data.tram) parts.push(`<strong>Tram:</strong> ${data.tram.name} (${data.tram.distanceKm} km)`);
+                    if (data.bus) parts.push(`<strong>Bus:</strong> ${data.bus.name} (${data.bus.distanceKm} km)`);
+                    transportInfo = parts.length
+                        ? parts.join(' &nbsp;|&nbsp; ') + ' <span style="font-size:11px;color:#888;">(OpenStreetMap)</span>'
+                        : 'No nearby stops found in OpenStreetMap.';
+                } catch (e) {
+                    transportInfo = suburb.transport.trainStation
+                        ? `${suburb.transport.trainLine} line (${suburb.transport.trainStation} station). Bus: ${(suburb.transport.busRoutes || []).join(', ')} <span style="font-size:11px;color:#888;">(fallback)</span>`
+                        : `Bus: ${(suburb.transport.busRoutes || []).join(', ') || 'N/A'} <span style="font-size:11px;color:#888;">(fallback)</span>`;
+                }
+            } else {
+                transportInfo = suburb.transport.trainStation
+                    ? `${suburb.transport.trainLine} line (${suburb.transport.trainStation} station). Bus: ${(suburb.transport.busRoutes || []).join(', ')}`
+                    : `Bus: ${(suburb.transport.busRoutes || []).join(', ') || 'N/A'}`;
+            }
             
             // Format demographics
             const demo = suburb.demographics;
@@ -1003,6 +1021,7 @@
         // --- Assess a listing (URL or manual entry) ---
         const BUDGET_MIN = 1000000;
         const BUDGET_MAX = 1400000;
+        const BUDGET_MAX_10_PCT = BUDGET_MAX * 1.10; // more than 10% over = 0% match
         const MAX_COMMUTE_MIN = 75; // 1h 15min
 
         function parseCommuteToMinutes(str) {
@@ -1021,13 +1040,19 @@
         function assessListing(normalized) {
             const c = [];
             let score = 50;
+            let priceDisqualifies = false;
 
             const price = normalized.price;
+            const overBudget10Pct = price != null && price > BUDGET_MAX_10_PCT;
             const inBudget = price != null && price >= BUDGET_MIN && price <= BUDGET_MAX;
             const underBudget = price != null && price < BUDGET_MIN;
-            const overBudget = price != null && price > BUDGET_MAX;
+            const overBudget = price != null && price > BUDGET_MAX && !overBudget10Pct;
+
             if (price == null) {
                 c.push({ text: 'Budget $1.0M – $1.4M', status: 'unknown', detail: 'Price not available' });
+            } else if (overBudget10Pct) {
+                c.push({ text: 'Budget $1.0M – $1.4M', status: 'fail', detail: `Over budget by more than 10%: $${(price / 1e6).toFixed(2)}M (limit $1.54M) — no match` });
+                priceDisqualifies = true;
             } else if (inBudget) {
                 c.push({ text: 'Budget $1.0M – $1.4M', status: 'pass', detail: `$${(price / 1e6).toFixed(2)}M` });
                 score += 25;
@@ -1115,10 +1140,16 @@
                 });
             }
 
-            score = Math.max(0, Math.min(100, score));
+            if (priceDisqualifies) {
+                score = 0;
+            } else {
+                score = Math.max(0, Math.min(100, score));
+            }
             let summaryClass = 'poor';
             let summaryText = 'Does not meet most criteria.';
-            if (score >= 75) {
+            if (priceDisqualifies) {
+                summaryText = 'Price is more than 10% over your upper limit ($1.4M). No match.';
+            } else if (score >= 75) {
                 summaryClass = 'good';
                 summaryText = 'Meets most or all of your criteria. Worth a look.';
             } else if (score >= 55) {
