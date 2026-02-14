@@ -517,6 +517,81 @@
             background: #eee;
             color: #333;
         }
+
+        /* Mobile and small screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                min-height: 100vh;
+            }
+            #map {
+                min-height: 45vh;
+                height: 45vh;
+                flex: none;
+                order: 1;
+            }
+            .sidebar {
+                width: 100%;
+                max-height: 55vh;
+                flex: 1;
+                order: 2;
+                min-height: 0;
+            }
+            .sidebar-content {
+                padding: 16px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .transit-box .transit-input-row {
+                flex-wrap: wrap;
+            }
+            .transit-box .transit-input-row input {
+                min-width: 100%;
+            }
+            .transit-box .transit-input-row button {
+                width: 100%;
+            }
+            .api-status {
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                font-size: 11px;
+            }
+        }
+        @media (max-width: 480px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .manual-form .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .suburb-name {
+                font-size: 22px;
+            }
+            .criteria-box, .assess-listing-box {
+                padding: 14px;
+            }
+            .assess-url-row {
+                flex-direction: column;
+            }
+            .assess-url-row button {
+                width: 100%;
+            }
+            .chart-container {
+                height: 180px;
+            }
+        }
+        /* Touch-friendly tap targets */
+        @media (hover: none) and (pointer: coarse) {
+            button, .reset-btn, [role="button"], .help-icon {
+                min-height: 44px;
+            }
+            .leaflet-popup-content {
+                min-width: 180px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -606,7 +681,7 @@
                     <div class="transit-box" style="margin-top:20px;padding:16px;background:#f9f9f9;border-radius:8px;border:1px solid #e0e0e0;">
                         <h4 style="margin-bottom:8px;color:#1976d2;">Distance &amp; commute to offices</h4>
                         <p class="assess-note" style="margin-bottom:10px;">Shown automatically after pasting a listing. Or enter a suburb/address and click Get transit for distance to Siemens (Docklands) and Canva (Collingwood), plus commute times.</p>
-                        <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+                        <div class="transit-input-row" style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
                             <input type="text" id="transitAddressInput" placeholder="e.g. South Morang or 5 Wilton Vale Road, South Morang" style="flex:1;min-width:200px;padding:10px;border:1px solid #ccc;border-radius:6px;" />
                             <button type="button" id="getTransitBtn" style="padding:10px 16px;background:#1976d2;color:white;border:none;border-radius:6px;cursor:pointer;font-weight:500;">Get transit</button>
                         </div>
@@ -762,6 +837,8 @@
             attribution: '© OpenStreetMap contributors',
             maxZoom: 18
         }).addTo(map);
+
+        window.addEventListener('resize', () => map.invalidateSize());
 
         // Reference point icons
         const southernCrossIcon = L.divIcon({
